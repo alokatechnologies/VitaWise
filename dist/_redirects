@@ -1,0 +1,18 @@
+# ==============================================================================
+# VitaWise Netlify Redirects & Edge Reverse-Proxy Rules
+# ==============================================================================
+# 1. API Reverse-Proxy Rule
+# Requests to /api/* are proxied to the existing backend hosting URL.
+# Replace 'https://your-backend-api-url.example.com' with your actual production backend URL.
+/api/*  https://your-backend-api-url.example.com/api/:splat  200!
+
+# 2. Multi-Page Entry Point Clean URLs
+/login            /login.html            200
+/signup           /signup.html           200
+/onboarding       /onboarding.html       200
+/profile          /profile.html          200
+/forgot-password  /forgot-password.html  200
+
+# 3. Single-Page Application (SPA) Deep-Link Fallback Rule
+# Any unmatched route serves the main application shell
+/*                /index.html            200

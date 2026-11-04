@@ -1,0 +1,522 @@
+[
+  {
+    "id": "4b69f986-cf55-44f4-a819-d60ed70ae275",
+    "user_id": "1fb81ca9-8a3a-435c-889b-ff47807f3886",
+    "title": "hlo",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T20:44:09.889Z",
+    "updated_at": "2026-09-30T20:44:19.922Z",
+    "messages": [
+      {
+        "id": "d1c5a576-00c4-4125-8d2c-2699557ee6f4",
+        "role": "user",
+        "content": "hlo",
+        "created_at": "2026-09-30T20:44:09.890Z"
+      },
+      {
+        "id": "e0403585-37de-4989-a829-3490c496ab7a",
+        "role": "assistant",
+        "content": "Hello! 👋 I'm **Aloka AI**, your dedicated health, nutrition, and metabolic intelligence assistant for the **VitaWise** platform.\n\nI'm here to help you with:\n- 🥗 **Personalized nutrition** (ICMR-NIN guidelines, low-GI South Indian diets)\n- 🌸 **PCOS & hormonal health** management\n- 🏃 **Exercise & lifestyle** optimization\n- 📊 **Metabolic wellness** tracking\n- 📱 **VitaWise app** guidance\n\nHow can I support your health journey today?",
+        "created_at": "2026-09-30T20:44:19.922Z"
+      }
+    ]
+  },
+  {
+    "id": "78bfd7ac-8da7-42b5-8b6e-1a84ddc550a6",
+    "user_id": "usr_g_41re98wohgvmuo8wfyc",
+    "title": "hlo",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T19:36:10.397Z",
+    "updated_at": "2026-09-30T19:36:12.980Z",
+    "messages": [
+      {
+        "id": "bf0c78fc-8778-443c-b4b8-86ca9c5c27bc",
+        "role": "user",
+        "content": "hlo",
+        "created_at": "2026-09-30T19:36:10.400Z"
+      },
+      {
+        "id": "2d3b3437-a38d-4944-b27e-f1023b3981fd",
+        "role": "assistant",
+        "content": "Hello! 👋 Welcome to VitaWise. I'm **Aloka**, your dedicated health, nutrition, and metabolic intelligence assistant.\n\nI'm here to help you with:\n*   **PCOS & Hormonal Health** management strategies\n*   **Low-Glycemic South Indian Meal Planning** (ICMR-NIN aligned)\n*   **Metabolic Wellness** & Blood Sugar Regulation\n*   **Nutrition Science** & Supplement Guidance\n*   **Lifestyle & Exercise** protocols for insulin sensitivity\n*   **VitaWise App** feature navigation\n\nHow can I support your health journey today?",
+        "created_at": "2026-09-30T19:36:12.980Z"
+      }
+    ]
+  },
+  {
+    "id": "e212d672-57aa-481a-9628-5bf692b3c2a6",
+    "user_id": "usr_g_41re98wohgvmuo8wfyc",
+    "title": "hlo",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T19:09:56.573Z",
+    "updated_at": "2026-09-30T19:09:57.714Z",
+    "messages": [
+      {
+        "id": "616116f3-e4dc-4346-97ce-f3220da288f9",
+        "role": "user",
+        "content": "hlo",
+        "created_at": "2026-09-30T19:09:56.573Z"
+      },
+      {
+        "id": "6235b88f-a988-4868-9be3-caa9f81e3d44",
+        "role": "assistant",
+        "content": "Clinical Synthesis: Grounded in ICMR-NIN guidelines and endocrine research, prioritizing low-glycemic traditional foods (sprouted moong, foxtail millets, and unrefined grains) helps maintain steady postprandial glucose. Pairing meals with a 15-minute zone-1 stroll supports GLUT4 glucose uptake without requiring insulin spikes.",
+        "created_at": "2026-09-30T19:09:57.714Z"
+      }
+    ]
+  },
+  {
+    "id": "c9da7196-da55-45e5-8ce3-e158fdbb62b5",
+    "user_id": "1fb81ca9-8a3a-435c-889b-ff47807f3886",
+    "title": "hlo",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T19:05:23.218Z",
+    "updated_at": "2026-09-30T19:05:34.260Z",
+    "messages": [
+      {
+        "id": "202015cc-d2d6-451a-95e5-e244de6c4902",
+        "role": "user",
+        "content": "hlo",
+        "created_at": "2026-09-30T19:05:23.219Z"
+      },
+      {
+        "id": "d5008060-2295-4bb5-901f-a83ec687232c",
+        "role": "assistant",
+        "content": "Hello! 👋 I'm **Aloka AI**, your dedicated health, nutrition, and metabolic wellness assistant for the **VitaWise** platform.\n\nI specialize in evidence-based guidance rooted in:\n*   **ICMR-NIN** (Indian Council of Medical Research & National Institute of Nutrition) dietary guidelines\n*   **PCOS & Hormonal Health** management\n*   **Low-Glycemic South Indian Diet** planning\n*   **Metabolic Wellness** & Lifestyle optimization\n\nHow can I support your health journey today? You can ask me about:\n*   Personalized meal plans or recipe modifications\n*   Managing PCOS symptoms through diet & lifestyle\n*   Blood sugar regulation & glycemic index of Indian foods\n*   Nutrient requirements (Protein, Iron, Calcium, Vitamin D, B12)\n*   Exercise, sleep, or stress management strategies\n*   Navigating the VitaWise app features\n\nWhat's on your mind?",
+        "created_at": "2026-09-30T19:05:34.260Z"
+      }
+    ]
+  },
+  {
+    "id": "e302dca7-eb8d-402c-9848-a2395132b782",
+    "user_id": "1fb81ca9-8a3a-435c-889b-ff47807f3886",
+    "title": "klo",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T19:05:10.332Z",
+    "updated_at": "2026-09-30T19:05:11.424Z",
+    "messages": [
+      {
+        "id": "e1c2b80e-9567-4e60-8709-4d52fe1da1d1",
+        "role": "user",
+        "content": "klo",
+        "created_at": "2026-09-30T19:05:10.332Z"
+      },
+      {
+        "id": "a1e9ee1d-c706-452c-ba0e-4cdc38377c55",
+        "role": "assistant",
+        "content": "Clinical Synthesis: Grounded in ICMR-NIN guidelines and endocrine research, prioritizing low-glycemic traditional foods (sprouted moong, foxtail millets, and unrefined grains) helps maintain steady postprandial glucose. Pairing meals with a 15-minute zone-1 stroll supports GLUT4 glucose uptake without requiring insulin spikes.",
+        "created_at": "2026-09-30T19:05:11.423Z"
+      }
+    ]
+  },
+  {
+    "id": "961d6278-a196-45e0-81d6-946a80643a12",
+    "user_id": "1fb81ca9-8a3a-435c-889b-ff47807f3886",
+    "title": "hlo",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T19:04:58.372Z",
+    "updated_at": "2026-09-30T19:04:59.537Z",
+    "messages": [
+      {
+        "id": "b3d32968-82f4-4712-bd55-8581e89a769b",
+        "role": "user",
+        "content": "hlo",
+        "created_at": "2026-09-30T19:04:58.373Z"
+      },
+      {
+        "id": "3e36b5f2-1733-4d6b-ae4a-5990e427c802",
+        "role": "assistant",
+        "content": "Clinical Synthesis: Grounded in ICMR-NIN guidelines and endocrine research, prioritizing low-glycemic traditional foods (sprouted moong, foxtail millets, and unrefined grains) helps maintain steady postprandial glucose. Pairing meals with a 15-minute zone-1 stroll supports GLUT4 glucose uptake without requiring insulin spikes.",
+        "created_at": "2026-09-30T19:04:59.537Z"
+      }
+    ]
+  },
+  {
+    "id": "156668ce-0aaa-4a36-80f6-19b4f1ae54c5",
+    "user_id": "1fb81ca9-8a3a-435c-889b-ff47807f3886",
+    "title": "suggest me a dite plan for 10000 rs in...",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T15:20:58.921Z",
+    "updated_at": "2026-09-30T15:21:28.857Z",
+    "messages": [
+      {
+        "id": "43f268e2-ec26-4a95-90d0-0605d547d774",
+        "role": "user",
+        "content": "suggest me a dite plan for 10000 rs in a week",
+        "created_at": "2026-09-30T15:20:58.921Z"
+      },
+      {
+        "id": "330fe933-f955-434e-bd90-f67ed7ac7d95",
+        "role": "assistant",
+        "content": "Here is a **Budget-Friendly, Low-GI, South Indian Metabolic Health Diet Plan** tailored for **₹10,000/week (approx. ₹1,430/day)** for **one person**.\n\nThis plan prioritizes **protein adequacy (ICMR-NIN: 0.8–1g/kg body weight)**, **fiber diversity**, **healthy fats**, and **low Glycemic Load**—critical for PCOS/insulin resistance—while maximizing seasonal, local produce.\n\n---\n\n### 💰 **Weekly Budget Breakdown (Estimated Chennai/Bangalore/Hyderabad Prices)**\n\n| Category | Est. Cost | Key Items |\n| :--- | :--- | :--- |\n| **Millets & Whole Grains** | ₹1,200 | Foxtail/Barnyard/Kodo Millet (2kg), Brown Rice/Hand-pounded Rice (2kg), Whole Wheat Atta (2kg), Oats (500g), Poha (500g) |\n| **Pulses & Legumes** | ₹1,000 | Toor/Chana/Moong Dal (2kg each), Rajma/Chickpeas (500g dry), Sprouting seeds (Moong/Chana 200g) |\n| **Protein (Veg + Egg/Dairy)** | ₹2,500 | Eggs (30 pcs), Curd/Yogurt (2kg), Paneer/Tofu (500g), Soy chunks (200g), Peanuts (500g), Roasted Chana (200g) |\n| **Vegetables (Low GI + Fiber)** | ₹2,000 | Greens (Palak/Moringa/Amaranth - 7 bunches), Gourds (Bottle/Ridge/Snake - 3kg), Beans/Cluster beans (1kg), Cauliflower/Cabbage (2kg), Carrot/Beetroot (1kg), Onion/Tomato (3kg each), Drumstick, Brinjal, Green Chili, Coriander, Mint, Curry leaves |\n| **Fruits (Low GI)** | ₹1,000 | Guava (1kg), Papaya (1 large), Apple/Pear (1kg), Orange/Mosambi (1kg), Watermelon (1 small",
+        "created_at": "2026-09-30T15:21:28.857Z"
+      }
+    ]
+  },
+  {
+    "id": "ad63c968-ebc4-4e24-bc48-ddebdaeab980",
+    "user_id": "1fb81ca9-8a3a-435c-889b-ff47807f3886",
+    "title": "hello",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T15:18:23.881Z",
+    "updated_at": "2026-09-30T15:19:46.499Z",
+    "messages": [
+      {
+        "id": "b9ebcacb-951e-4a04-ba24-cf9a262389f3",
+        "role": "user",
+        "content": "hello",
+        "created_at": "2026-09-30T15:18:23.882Z"
+      },
+      {
+        "id": "ed372128-e1ed-4836-83b4-19d2e03cb955",
+        "role": "assistant",
+        "content": "Hello! 👋 I'm **Aloka AI**, your dedicated health, nutrition, and metabolic intelligence assistant for the **VitaWise** platform.\n\nI'm here to provide evidence-based guidance grounded in **ICMR-NIN guidelines**, specializing in:\n*   **PCOS & Hormonal Health**\n*   **Low-Glycemic South Indian Diets**\n*   **Metabolic Wellness & Weight Management**\n*   **VitaWise App Features & Tracking**\n\nHow can I support your wellness journey today?",
+        "created_at": "2026-09-30T15:18:30.501Z"
+      },
+      {
+        "id": "fa3d4261-806c-4a84-9eb4-e31ca17f03e4",
+        "role": "user",
+        "content": "hlo",
+        "created_at": "2026-09-30T15:19:28.174Z"
+      },
+      {
+        "id": "10a9e494-abcc-4768-a4da-3d86b1c67b4a",
+        "role": "assistant",
+        "content": "Hello!  👋 I'm **Aloka AI**, your dedicated health, nutrition, and metabolic wellness assistant for the **VitaWise** platform.\n\nI'm here to help you with evidence-based guidance on:\n*   **PCOS & Hormonal Health** management\n*   **Low-Glycemic South Indian Diet** planning (aligned with ICMR-NIN guidelines)\n*   **Metabolic Wellness** & Blood Sugar regulation\n*   **Nutrition, Exercise & Lifestyle** strategies\n*   Navigating the **VitaWise App** features\n\nHow can I support your health journey today?",
+        "created_at": "2026-09-30T15:19:46.499Z"
+      }
+    ]
+  },
+  {
+    "id": "46d24df1-f86c-48a5-8dee-434a2c41f542",
+    "user_id": "usr_ravi_default",
+    "title": "Test layout prompt",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T13:46:58.062Z",
+    "updated_at": "2026-09-30T13:47:57.982Z",
+    "messages": [
+      {
+        "id": "cde0d471-5f9a-4317-a80e-88a90f402d8d",
+        "role": "user",
+        "content": "Test layout prompt",
+        "created_at": "2026-09-30T13:46:58.062Z"
+      },
+      {
+        "id": "1c107104-f8e7-4cde-8199-4623efea831e",
+        "role": "assistant",
+        "content": "Hello! I'm Aloka AI, your dedicated health, nutrition, and metabolic intelligence assistant for the VitaWise platform.\n\nI'm ready to assist you with evidence-based guidance on:\n*   **PCOS & Hormonal Health** management\n*   **Low-Glycemic South Indian Diet** planning\n*   **Metabolic Wellness** & Insulin Resistance\n*   **ICMR-NIN** aligned nutrition standards\n*   **Exercise, Lifestyle, & Supplement** strategies\n\nHow can I support your health journey today?",
+        "created_at": "2026-09-30T13:47:57.982Z"
+      }
+    ]
+  },
+  {
+    "id": "c3dc4e95-ba93-4bab-941a-c7a2191713ae",
+    "user_id": "usr_g_inlkfkszsqmuo1t8sf",
+    "title": "hello",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T13:43:36.485Z",
+    "updated_at": "2026-09-30T13:43:41.288Z",
+    "messages": [
+      {
+        "id": "513a55ac-7e79-461f-b801-d668939dda48",
+        "role": "user",
+        "content": "hello",
+        "created_at": "2026-09-30T13:43:36.485Z"
+      },
+      {
+        "id": "5d2d3f17-e992-4350-bcf8-561a825fe1e5",
+        "role": "assistant",
+        "content": "Hello! I'm **Aloka AI**, your dedicated health, nutrition, and metabolic intelligence assistant for the **VitaWise** platform.\n\nI'm here to provide evidence-based guidance grounded in **ICMR-NIN guidelines**, specializing in:\n*   **PCOS & Hormonal Health**\n*   **Low-Glycemic South Indian Diets**\n*   **Metabolic Wellness & Weight Management**\n*   **Exercise & Lifestyle Optimization**\n\nHow can I support your health journey today?",
+        "created_at": "2026-09-30T13:43:41.288Z"
+      }
+    ]
+  },
+  {
+    "id": "225307bc-b24d-433c-a013-498a593ac71e",
+    "user_id": "usr_g_dy6mrs691cumtwpc91d",
+    "title": "hello",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T13:29:35.889Z",
+    "updated_at": "2026-09-30T13:29:39.535Z",
+    "messages": [
+      {
+        "id": "c97da8cc-849a-4d13-af40-54c6a0a79717",
+        "role": "user",
+        "content": "hello",
+        "created_at": "2026-09-30T13:29:35.889Z"
+      },
+      {
+        "id": "23947d2e-b05f-4e19-806c-95bb0c55140b",
+        "role": "assistant",
+        "content": "Hello! I'm Aloka AI, your dedicated health, nutrition, and metabolic intelligence assistant for the VitaWise platform.\n\nI'm here to provide evidence-based guidance grounded in **ICMR-NIN guidelines**, specializing in:\n*   **PCOS & Hormonal Health**\n*   **Low-Glycemic South Indian Diets**\n*   **Metabolic Wellness & Weight Management**\n*   **Lifestyle & Exercise Strategies**\n\nHow can I support your health journey today?",
+        "created_at": "2026-09-30T13:29:39.535Z"
+      }
+    ]
+  },
+  {
+    "id": "6901baf6-17c9-4999-ae1a-9e2fc6ee0476",
+    "user_id": "usr_ravi_default",
+    "title": "Explain millets in diet",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T13:28:27.177Z",
+    "updated_at": "2026-09-30T13:28:45.348Z",
+    "messages": [
+      {
+        "id": "77648306-98aa-412a-b8a1-3d6b10dda284",
+        "role": "user",
+        "content": "Explain millets in diet",
+        "created_at": "2026-09-30T13:28:27.177Z"
+      },
+      {
+        "id": "3714f554-4853-45bb-9a21-d27620b3b1c4",
+        "role": "assistant",
+        "content": "# Millets in Your Diet: The ICMR-NIN & Metabolic Health Perspective\n\nMillets are **small-seeded grasses** cultivated as cereal crops, traditionally the staple of dryland India. ICMR-NIN (2024 Dietary Guidelines) classifies them as **\"Nutri-Cereals\"** and explicitly recommends **replacing a portion of refined rice/wheat with millets** for metabolic health, micronutrient density, and dietary diversity.\n\n---\n\n## 1. Classification & Common Indian Varieties\n\n| Category | Millets | Key Traits |\n| :--- | :--- | :--- |\n| **Major Millets** | **Sorghum (Jowar)**, **Pearl Millet (Bajra)**, **Finger Millet (Ragi/Nachni)** | Higher yield, widely grown, robust nutrition. |\n| **Minor Millets** | **Foxtail (Kangni/Thinai)**, **Little (Kutki/Saamai)**, **Kodo (Varagu)**, **Proso (Barri/Panivaragu)**, **Barnyard (Sanwa/Kuthiraivali)** | Higher fiber/mineral density, shorter growing cycle, climate-resilient. |\n| **Pseudo-Millets** | **Buckwheat (Kuttu)**, **Amaranth (Rajgira/Chaulai)** | Botanically distinct (dicots), gluten-free, complete protein profiles. |\n\n---\n\n## 2. Nutritional Superiority (Per 100g, ICMR-NIN IFCT 2017)\n\n| Nutrient | Polished White Rice | Whole Wheat | **Ragi (Finger Millet)** | **Foxtail Millet** | **Barnyard Millet** |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| **Energy (kcal)** | 356 | 341 | 328 | 331 | 307 |\n| **Protein (g)** | 6.8 | 10.6 | **7.3** | **12.3** | **11.2** |\n| **Total Fiber (g)** | 1.0 | 11.3 | **11.5** | **6.7** | **13.6** |\n|",
+        "created_at": "2026-09-30T13:28:45.348Z"
+      }
+    ]
+  },
+  {
+    "id": "9144fd31-2c2c-4649-8a62-9ba939c486ee",
+    "user_id": "usr_g_dy6mrs691cumtwpc91d",
+    "title": "hello",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T13:17:53.333Z",
+    "updated_at": "2026-09-30T13:18:21.743Z",
+    "messages": [
+      {
+        "id": "f82868c9-4bf2-45b5-a956-a2b6a8a6cc73",
+        "role": "user",
+        "content": "hello",
+        "created_at": "2026-09-30T13:17:53.333Z"
+      },
+      {
+        "id": "6b899790-9c50-49df-8759-b58c76f3aa22",
+        "role": "assistant",
+        "content": "Hello! I'm **Aloka AI**, your dedicated health, nutrition, and metabolic intelligence assistant for the **VitaWise** platform.\n\nI'm here to provide evidence-based guidance rooted in **ICMR-NIN guidelines**, specializing in:\n*   **PCOS & Hormonal Health**\n*   **Low-Glycemic South Indian Nutrition**\n*   **Metabolic Wellness & Weight Management**\n*   **Lifestyle & Exercise Strategies**\n*   **VitaWise App Navigation & Features**\n\nHow can I support your wellness journey today?",
+        "created_at": "2026-09-30T13:17:58.131Z"
+      },
+      {
+        "id": "9010514d-4bd6-44e7-adfc-6e8985874b4e",
+        "role": "user",
+        "content": "what is your name",
+        "created_at": "2026-09-30T13:18:11.935Z"
+      },
+      {
+        "id": "af73894c-89f7-43d9-a0d9-c8c7369707e1",
+        "role": "assistant",
+        "content": "I am **Aloka AI**, your dedicated health, nutrition, and metabolic intelligence assistant for the VitaWise platform. How can I help you today?",
+        "created_at": "2026-09-30T13:18:21.743Z"
+      }
+    ]
+  },
+  {
+    "id": "b7cf7f8b-dbb7-45be-9422-b71654da0dc4",
+    "user_id": "usr_ravi_default",
+    "title": "Explain daily water intake",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T13:14:47.357Z",
+    "updated_at": "2026-09-30T13:15:03.107Z",
+    "messages": [
+      {
+        "id": "7e7320e5-c763-461b-bb63-0d39bdbc1dda",
+        "role": "user",
+        "content": "Explain daily water intake",
+        "created_at": "2026-09-30T13:14:47.357Z"
+      },
+      {
+        "id": "1d087c1d-4cd2-479c-82c1-7f79fa80538e",
+        "role": "assistant",
+        "content": "### Daily Water Intake: The VitaWise & ICMR-NIN Perspective\n\nWater is not just a beverage; it is the primary medium for every metabolic reaction in your body—including insulin signaling, hormone transport, and fat oxidation.\n\n---\n\n#### **1. The Official Baseline (ICMR-NIN 2020 Guidelines)**\nThe **ICMR-NIN Recommended Dietary Allowances (RDA) 2020** define **Adequate Intake (AI)** for water (from *all sources*: beverages + food moisture) as:\n\n| Group | Total Water AI (Liters/Day) | Approx. Plain Water Target (Glasses/Day)* |\n| :--- | :--- | :--- |\n| **Adult Men** | **3.2 L** | **8–10 glasses (200ml each)** |\n| **Adult Women** | **2.7 L** | **7–8 glasses (200ml each)** |\n| **Pregnant Women** | **3.0 L** | **8–9 glasses** |\n| **Lactating Women** | **3.5 L** | **10–12 glasses** |\n\n> **\\*Note:** \"Plain water target\" assumes ~20–25% of water comes from food (dal, sabzi, curd, fruits, rice). If you eat low-moisture foods (roti, dry snacks), you must drink more.\n\n---\n\n#### **2. The \"VitaWise Precision\" Formula (Body-Weight Based)**\nFor metabolic health (PCOS, insulin resistance, weight loss), static numbers are insufficient. Use this dynamic calculation:\n\n> **Target (ml) = Body Weight (kg) × 35–40 ml**\n>\n> *   **Sedentary / AC Environment:** × 35 ml\n> *   **Active / Hot Climate / PCOS/Insulin Resistance:** × 40 ml\n\n**Example:** 70 kg woman with PCOS, moderate activity → `70 × 40 = 2,800 ml (2.8 L)` plain water minimum.\n\n---\n\n#### **3. Critical Nuances for Indian Metabolic Context**\n\n| Factor | Adjustment Strategy |\n| :--- | :--- |\n| **High Carb / High Salt Diet** (Pickles, Papad, Restaurant food) | **+ 500 ml/day** to flush sodium & reduce water retention. |\n| **PCOS / Insulin Resistance** | **Prioritize 500 ml within 90 mins of waking.** Rehyd",
+        "created_at": "2026-09-30T13:15:03.107Z"
+      }
+    ]
+  },
+  {
+    "id": "9efc43c9-9064-415a-91ca-bc522e64a4f6",
+    "user_id": "usr_ravi_default",
+    "title": "Explain daily water intake",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T13:13:49.078Z",
+    "updated_at": "2026-09-30T13:14:10.420Z",
+    "messages": [
+      {
+        "id": "7e0f8e42-d949-427e-831d-6eab15746dd3",
+        "role": "user",
+        "content": "Explain daily water intake",
+        "created_at": "2026-09-30T13:13:49.078Z"
+      },
+      {
+        "id": "ca6a475b-87d4-48d7-b1db-c4410c4c1c03",
+        "role": "assistant",
+        "content": "### **Daily Water Intake: The VitaWise Evidence-Based Guide**\n\nHydration is the foundation of metabolic health, hormonal balance (critical for PCOS), digestion, and cognitive function. At VitaWise, we move beyond the generic \"8 glasses\" rule and personalize targets based on **ICMR-NIN 2020 Guidelines**, body composition, activity level, and climate.\n\n---\n\n### **1. The ICMR-NIN Baseline (Sedentary Adults)**\nThe **ICMR-NIN (2020) Recommended Dietary Allowances (RDA)** for total water intake (from beverages + food moisture) are:\n\n| Group | Total Water Intake (Liters/Day) | Approx. Plain Water Target (Liters/Day)* |\n| :--- | :--- | :--- |\n| **Adult Men** | **3.2 L** | **~2.5 – 3.0 L** |\n| **Adult Women** | **2.7 L** | **~2.0 – 2.5 L** |\n| **Pregnancy** | **+ 0.3 L** | **+ 300 ml** |\n| **Lactation** | **+ 0.7 L** | **+ 700 ml** |\n\n> ***Note:** ~20–25% of water comes from food (fruits, vegetables, curd, sambar, rasam). The \"Plain Water Target\" above is what you need to actively drink.*\n\n---\n\n### **2. The VitaWise Personalization Formula**\nYour actual need depends on **Metabolic Load**. Use this formula for your baseline target:\n\n> **Baseline (ml) = Body Weight (kg) × 35 ml**\n> *Example: 70 kg × 35 ml = **2,450 ml (2.45 L) plain water/day.***\n\n#### **Mandatory Adjustments (Add to Baseline):**\n| Factor | Additional Intake |\n| :--- | :--- |\n| **Exercise / Sweating** | **+ 500–1000 ml** per hour of moderate-intense activity. |\n| **Hot/Humid Climate (South Indian Summers)** | **+ 300–500 ml** daily. |\n| **High Protein / High Fiber Diet** | **+ 300–500 ml** (kidneys need water to excrete urea; fiber needs water to move). |\n| **PCOS / Insulin Resistance** | **+ 200",
+        "created_at": "2026-09-30T13:14:10.420Z"
+      }
+    ]
+  },
+  {
+    "id": "3ff256e2-b1cf-4907-acb2-46f06abf590f",
+    "user_id": "usr_g_dy6mrs691cumtwpc91d",
+    "title": "Explain my goal progress based on my a...",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T13:01:09.826Z",
+    "updated_at": "2026-09-30T13:01:44.103Z",
+    "messages": [
+      {
+        "id": "86beeb88-ac98-4897-8234-63d12343c952",
+        "role": "user",
+        "content": "Explain my goal progress based on my active targets\n\n[AUTHENTICATED PATIENT TELEMETRY CONTEXT]\nUser Profile:\n- Gender: female\n- Recorded Weight: not specified\n- Height: not specified\n- Total Logged Meals: 0 entries\n- Total Wellness Check-ins: 0 entries\n- Latest Blood Pressure: not recorded\n- Latest Resting Heart Rate: not recorded",
+        "created_at": "2026-09-30T13:01:09.827Z"
+      },
+      {
+        "id": "581f9cf1-c5e2-4d41-9af3-2fa963d1114f",
+        "role": "assistant",
+        "content": "I don't have enough data to assess your goal progress right now. Your telemetry shows:\n\n**Missing baseline data:**\n- No recorded weight or height (needed for BMI, BMR, calorie targets)\n- No logged meals (0 entries) — can't evaluate nutrition, glycemic load, or macro distribution\n- No wellness check-ins (0 entries) — no symptom, energy, sleep, or cycle tracking\n- No vitals (BP, resting HR) — can't assess cardiovascular/metabolic trends\n\n**What you can do next:**\n1. **Enter your height & weight** in the app → Profile → Body Metrics. This unlocks personalized calorie, protein, and fiber targets.\n2. **Log at least 3–5 days of meals** (photos or text) so I can analyze:\n   - Glycemic load & carb quality (critical for PCOS/insulin resistance)\n   - Protein distribution across meals\n   - Fiber, micronutrient gaps, meal timing\n3. **Complete a daily wellness check-in** (takes 30 sec) — tracks energy, cravings, sleep, stress, cycle phase.\n4. **Record BP & resting HR** weekly — helps monitor metabolic & cardiovascular response.\n\nOnce you have 3–7 days of data, I can:\n- Show progress against your active targets (calories, protein, fiber, steps, sleep, etc.)\n- Identify patterns (e.g., post-lunch crashes, late-night cravings, cycle-related shifts)\n- Give specific, South Indian–friendly adjustments (millet swaps, dal timing, tempering oil control, etc.)\n\nWould you like help setting up your first meal log or choosing which targets to activate in the app?",
+        "created_at": "2026-09-30T13:01:44.103Z"
+      }
+    ]
+  },
+  {
+    "id": "7aeb4df9-7f72-4bdd-8c0f-547fc86c79be",
+    "user_id": "usr_member_head",
+    "title": "Explain my nutrition progress based on...",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T12:52:50.369Z",
+    "updated_at": "2026-09-30T12:53:26.486Z",
+    "messages": [
+      {
+        "id": "bbd2cc34-000a-4ea3-a060-1f71601b4672",
+        "role": "user",
+        "content": "Explain my nutrition progress based on my recorded meals",
+        "created_at": "2026-09-30T12:52:50.369Z"
+      },
+      {
+        "id": "a472a904-6469-4ab7-97b0-343a0b2b9948",
+        "role": "assistant",
+        "content": "I'd be happy to analyze your nutrition progress! However, **I don't have access to your personal meal logs or VitaWise app data** in this chat.\n\nTo give you an evidence-based analysis grounded in **ICMR-NIN guidelines, PCOS hormonal health, and Low-GI South Indian dietary principles**, please share a summary of your recent intake. You can provide:\n\n### **Option 1: Quick Daily Summary (Last 3–7 Days)**\n| Meal | Typical Foods & Portions | Time |\n| :--- | :--- | :--- |\n| **Early Morning** | (e.g., Methi water, 5 almonds) | 6:30 AM |\n| **Breakfast** | (e.g., 2 Ragi idlis, sambar, chutney) | 8:30 AM |\n| **Mid-Morning** | (e.g., 1 Guava, green tea) | 11:00 AM |\n| **Lunch** | (e.g., 1 cup brown rice/millets, ½ cup dal, 1 cup poriyal, curd) | 1:30 PM |\n| **Evening Snack** | (e.g., Sundal / Makhana / Egg white) | 5:00 PM |\n| **Dinner** | (e.g., 2 Millet dosas, chutney, veg soup) | 8:00 PM |\n| **Hydration** | Total water (liters) | — |\n\n### **Option 2: Key Metrics (If you track them in VitaWise)**\n*   **Average Daily Calories:**\n*   **Average Protein (g):**\n*   **Average Fiber (g):**\n*   **Carb Quality:** % from Whole Grains/Millets vs. Refined (White Rice/Maida)\n*   **Sugar Intake (Added vs. Natural):**\n*   **Meal Timing Consistency:** (e.g., Eating window 8 AM – 8 PM?)\n\n---\n\n### **What I Will Analyze For You (ICMR-NIN / PCOS Lens)**\nOnce you share the data, I will assess:\n\n1.  **Protein Adequacy:** Are you hitting **0.8–1.0 g/kg body weight** (ICMR RDA) or the **1.2–1.5 g",
+        "created_at": "2026-09-30T12:53:26.486Z"
+      }
+    ]
+  },
+  {
+    "id": "0f39546c-f0bc-4c82-8348-692c3a4cf34b",
+    "user_id": "usr_member_head",
+    "title": "What are low-glycemic South Indian bre...",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T12:27:53.605Z",
+    "updated_at": "2026-09-30T12:28:19.240Z",
+    "messages": [
+      {
+        "id": "e8c921de-2280-4ae8-b1dc-fc418d41a836",
+        "role": "user",
+        "content": "What are low-glycemic South Indian breakfast options?",
+        "created_at": "2026-09-30T12:27:53.605Z"
+      },
+      {
+        "id": "a40739fd-26b9-4f03-aef1-7a86379fc7ec",
+        "role": "assistant",
+        "content": "Here are evidence-based, **low-glycemic South Indian breakfast options** aligned with **ICMR-NIN guidelines** and **PCOS/metabolic health** principles.\n\nThe core strategy: **Swap refined grains (white rice, maida, rava/semolina) for whole grains, millets, pulses, and fiber-rich vegetables. Always pair carbs with protein + healthy fat + fiber.**\n\n---\n\n## ✅ Top Low-GI South Indian Breakfasts (GI ≤ 55)\n\n| Breakfast | Key Ingredients | Why Low-GI | PCOS/Metabolic Benefit |\n|-----------|----------------|------------|------------------------|\n| **Millet Idli/Dosa** | Foxtail (Thinai), Little (Samai), Kodo (Varagu), Barnyard (Kuthiraivali) millet + urad dal (3:1 or 4:1) | Millets GI 50–55; fermentation lowers GI further | Improves insulin sensitivity; high fiber, magnesium |\n| **Whole Moong Dal Dosa (Pesarattu)** | Whole green gram (with skin) + minimal rice/millet | Whole pulses GI ~25–30; protein-rich | High protein (6–8g/serving); stabilizes post-prandial glucose |\n| **Chana Dal / Mixed Dal Adai** | Chana dal, toor dal, urad dal, moong dal + red rice/millet (1:1) | Dal GI ~30; coarse texture slows digestion | Sustained energy; reduces androgen-driven cravings |\n| **Ragi (Finger Millet) Idli/Dosa/Roti** | Ragi + urad dal (idli/dosa) or hot water knead (roti) | Ragi GI ~50–55; polyphenols inhibit α-amylase | High calcium, iron; improves lipid profile |\n| **Broken Wheat (Dalia/Samba Godhumai) Upma** | Coarse broken wheat + vegetables + moong dal | GI ~45–50 (vs. rava upma GI ~70) | 2× fiber of rava; adds protein via dal |\n| **Red/Brown Rice Puttu** | Kerala Matta/Red rice + coconut (steamed) | Parboiled red rice GI ~50–55; coconut adds fat | Resistant starch ↑ with cooling; MCTs from coconut |\n| **Kambu (Pearl Millet) Koozh (Porridge)** |",
+        "created_at": "2026-09-30T12:28:19.240Z"
+      }
+    ]
+  },
+  {
+    "id": "9a818cac-07e4-4715-bf46-f979e8607dd7",
+    "user_id": "usr_ravi_default",
+    "title": "What are the benefits of ragi malt in ...",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T11:14:17.836Z",
+    "updated_at": "2026-09-30T11:14:45.659Z",
+    "messages": [
+      {
+        "id": "11241b0a-9678-49e2-8786-303d82868789",
+        "role": "user",
+        "content": "What are the benefits of ragi malt in breakfast?",
+        "created_at": "2026-09-30T11:14:17.837Z"
+      },
+      {
+        "id": "c76c1439-c777-4818-8949-28d28770c369",
+        "role": "assistant",
+        "content": "**Ragi Malt (Ragi Ambali / Ragi Kanji)** is a **nutritional powerhouse** and an excellent breakfast choice, especially within a South Indian metabolic health framework. Here is the evidence-based breakdown aligned with **ICMR-NIN guidelines** and **PCOS/Metabolic wellness** principles:\n\n---\n\n### 🌾 **Core Nutritional Profile (per 100g Ragi Flour - ICMR-NIN IFCT 2017)**\n*   **Calcium:** **344 mg** (Highest among cereals; ~3x milk per 100g dry weight) → Critical for bone health & insulin signaling.\n*   **Dietary Fiber:** **11.5 g** (High soluble & insoluble) → Lowers Glycemic Index (GI), feeds gut microbiome.\n*   **Protein:** **7.3 g** (Rich in **Methionine** & **Tryptophan** – essential amino acids lacking in rice/wheat).\n*   **Iron:** **3.9 mg** → Supports hemoglobin (pair with Vitamin C for absorption).\n*   **Polyphenols & Antioxidants:** Ferulic acid, catechins, quercetin → Anti-inflammatory, combat oxidative stress.\n*   **Low Glycemic Index (GI):** **~50–55** (Whole grain, minimally processed) vs. White Rice (~73) or Wheat Roti (~62).\n\n---\n\n### ✅ **Top Benefits for Breakfast**\n\n| Benefit | Mechanism & Evidence |\n| :--- | :--- |\n| **1. Superior Glycemic Control** | High **viscous soluble fiber (β-glucan)** slows gastric emptying & glucose absorption. **ICMR-NIN** classifies whole millets as **Low GI foods** ideal for T2DM/PCOS/Insulin Resistance. Prevents the \"mid-morning crash.\" |\n| **2. Sustained Satiety & Weight Management** | High fiber + protein + low energy density → **High Satiety Index**. Reduces *ghrelin* (hunger hormone), lowers subsequent meal intake. Supports caloric deficit without starvation. |\n| **3. Bone & Metabolic Health (Calcium)** | **344 mg Calcium/100g**. Critical for **PCOS women** (higher osteoporosis risk) & perimenopausal women. Calcium also regulates **adipocyte lipolysis** & **insulin secretion**. |\n| **4. Gut Microbiome & SCFA Production** | Resistant starch & fermentable fibers → **Butyrate/Propionate** production",
+        "created_at": "2026-09-30T11:14:45.659Z"
+      }
+    ]
+  },
+  {
+    "id": "conv_today_1",
+    "user_id": "usr_ravi_default",
+    "title": "PCOS Nutrition & Low-GI Pacing",
+    "date": "2026-09-30",
+    "created_at": "2026-09-30T10:15:00.000Z",
+    "updated_at": "2026-09-30T10:18:28.000Z",
+    "messages": [
+      {
+        "id": "msg_1",
+        "role": "user",
+        "content": "What are the best low-glycemic foods for PCOS?",
+        "created_at": "2026-09-30T10:15:00.000Z"
+      },
+      {
+        "id": "msg_2",
+        "role": "assistant",
+        "content": "**Aloka AI PCOS Clinical Protocol (ICMR-NIN Aligned):**\n\n1. **Low-GI Carbohydrates:** Swap refined white rice with Foxtail (Korra) or Barnyard millet batters for steady postprandial glucose.\n2. **Protein Pacing:** Pair breakfasts with sprouted moong or chana to slow gastric emptying.\n3. **Postprandial Walking:** A 10-15 minute gentle walk after meals activates non-insulin GLUT4 glucose uptake.",
+        "created_at": "2026-09-30T10:15:08.000Z"
+      },
+      {
+        "id": "msg_3",
+        "role": "user",
+        "content": "Can I take fenugreek seeds daily?",
+        "created_at": "2026-09-30T10:18:20.000Z"
+      },
+      {
+        "id": "msg_4",
+        "role": "assistant",
+        "content": "Yes! Soaking 1 teaspoon (5g) of fenugreek (methi) seeds overnight in water and consuming them in the morning is clinically documented to improve glucose tolerance and optimize peripheral insulin sensitivity.",
+        "created_at": "2026-09-30T10:18:28.000Z"
+      }
+    ]
+  },
+  {
+    "id": "conv_yest_1",
+    "user_id": "usr_ravi_default",
+    "title": "Sleep Quality & Herbal Infusions",
+    "date": "2026-09-29",
+    "created_at": "2026-09-29T21:40:00.000Z",
+    "updated_at": "2026-09-29T21:40:12.000Z",
+    "messages": [
+      {
+        "id": "msg_5",
+        "role": "user",
+        "content": "How can I improve deep sleep without supplements?",
+        "created_at": "2026-09-29T21:40:00.000Z"
+      },
+      {
+        "id": "msg_6",
+        "role": "assistant",
+        "content": "**Circadian Restorative Sleep Protocol:**\n\n1. **Dim Blue Light:** Disconnect from screens 45-60 minutes before bedtime to prevent melatonin suppression.\n2. **Thermoregulation:** Keep room ambient temperature around 20-22°C to facilitate natural nocturnal core cooling.\n3. **Calming Infusion:** Warm chamomile or spiced milk with a pinch of nutmeg promotes parasympathetic relaxation.",
+        "created_at": "2026-09-29T21:40:12.000Z"
+      }
+    ]
+  },
+  {
+    "id": "conv_prev_1",
+    "user_id": "usr_ravi_default",
+    "title": "South Indian Breakfast Science",
+    "date": "2026-09-28",
+    "created_at": "2026-09-28T08:30:00.000Z",
+    "updated_at": "2026-09-28T08:30:15.000Z",
+    "messages": [
+      {
+        "id": "msg_7",
+        "role": "user",
+        "content": "Is traditional idli or dosa better for metabolic health?",
+        "created_at": "2026-09-28T08:30:00.000Z"
+      },
+      {
+        "id": "msg_8",
+        "role": "assistant",
+        "content": "**Metabolic Comparison:**\n\n• **Steamed Idli:** Steaming generates zero lipid oxidation products and preserves bioavailable B-vitamins from fermentation.\n• **Dosa:** Griddling in oil adds calories, though fermentation remains beneficial.\n• **Clinical Optimization:** Substitute 50% white polished rice with foxtail or barnyard millet to reduce glycemic index from ~70 down to ~52.",
+        "created_at": "2026-09-28T08:30:15.000Z"
+      }
+    ]
+  }
+]

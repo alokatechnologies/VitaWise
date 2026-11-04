@@ -1,0 +1,57 @@
+{
+<<<<<<< HEAD
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "VitaWise frontend dev server",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"dev",
+				"--",
+				"--host",
+				"127.0.0.1"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
+=======
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start VitaWise Development Server",
+      "type": "shell",
+      "command": "node",
+      "args": ["start-vitawise.mjs"],
+      "isBackground": true,
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Stop VitaWise Server",
+      "type": "shell",
+      "command": "node",
+      "args": ["stop-vitawise.mjs"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    }
+  ]
+}
+>>>>>>> 08403a69f6d6e336c03c965487f5630401f70698

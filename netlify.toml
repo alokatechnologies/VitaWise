@@ -1,0 +1,85 @@
+# ==============================================================================
+# VitaWise Frontend-Only Netlify Deployment Configuration
+# ==============================================================================
+
+[build]
+  # Build command that prepares production-ready distribution
+  command = "npm run build"
+  # Output folder published by Netlify to the Edge CDN
+  publish = "dist"
+
+# ------------------------------------------------------------------------------
+# API Reverse-Proxy Redirect
+# ------------------------------------------------------------------------------
+# Directs browser API requests seamlessly to your existing backend server.
+# IMPORTANT: Replace 'https://your-backend-api-url.example.com' with your actual
+# production backend HTTPS URL (e.g. Render, Railway, Fly.io, AWS, Heroku, etc.)
+[[redirects]]
+  from = "/api/*"
+  to = "https://your-backend-api-url.example.com/api/:splat"
+  status = 200
+  force = true
+
+# ------------------------------------------------------------------------------
+# Clean Multi-Page Entrypoint Routes
+# ------------------------------------------------------------------------------
+[[redirects]]
+  from = "/login"
+  to = "/login.html"
+  status = 200
+
+[[redirects]]
+  from = "/signup"
+  to = "/signup.html"
+  status = 200
+
+[[redirects]]
+  from = "/onboarding"
+  to = "/onboarding.html"
+  status = 200
+
+[[redirects]]
+  from = "/profile"
+  to = "/profile.html"
+  status = 200
+
+[[redirects]]
+  from = "/forgot-password"
+  to = "/forgot-password.html"
+  status = 200
+
+# ------------------------------------------------------------------------------
+# Single-Page Application (SPA) Deep-Linking Fallback
+# ------------------------------------------------------------------------------
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# ------------------------------------------------------------------------------
+# Security & Performance Headers
+# ------------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache 3D models, textures, sounds, and media assets immutably
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache CSS and JS assets with revalidation
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"

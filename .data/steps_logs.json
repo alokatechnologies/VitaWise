@@ -1,0 +1,20 @@
+[
+  {
+    "user_id": "c0293e61-7b13-462d-8d05-1945c24bdd26",
+    "date": "2026-10-02",
+    "steps": 0,
+    "target": 10000,
+    "distance_km": 0,
+    "calories_kcal": 0,
+    "updated_at": "2026-10-02T14:25:36.272Z"
+  },
+  {
+    "user_id": "usr_ravi_default",
+    "date": "2026-10-02",
+    "steps": 6850,
+    "target": 10000,
+    "distance_km": 5.22,
+    "calories_kcal": 274,
+    "updated_at": "2026-10-02T02:49:26.056Z"
+  }
+]

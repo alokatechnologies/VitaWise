@@ -1,0 +1,137 @@
+{
+  "version": "1.0.0",
+  "source": "https://github.com/zengyh1900/3D-Human-Body-Shape.git",
+  "presets": [
+    "lean",
+    "balanced",
+    "athletic",
+    "broad",
+    "fuller"
+  ],
+  "genders": [
+    "female",
+    "male"
+  ],
+  "models": {
+    "female_lean": {
+      "json": "./assets/body-wise-3d/generated/female_lean.json",
+      "obj": "./assets/body-wise-3d/generated/female_lean.obj",
+      "metrics": {
+        "heightCm": 164.8,
+        "widthCm": 81.8,
+        "depthCm": 25.1,
+        "gender": "female",
+        "vertexCount": 12500,
+        "faceCount": 25000
+      }
+    },
+    "female_balanced": {
+      "json": "./assets/body-wise-3d/generated/female_balanced.json",
+      "obj": "./assets/body-wise-3d/generated/female_balanced.obj",
+      "metrics": {
+        "heightCm": 163.4,
+        "widthCm": 89.9,
+        "depthCm": 28.7,
+        "gender": "female",
+        "vertexCount": 12500,
+        "faceCount": 25000
+      }
+    },
+    "female_athletic": {
+      "json": "./assets/body-wise-3d/generated/female_athletic.json",
+      "obj": "./assets/body-wise-3d/generated/female_athletic.obj",
+      "metrics": {
+        "heightCm": 163.7,
+        "widthCm": 90.6,
+        "depthCm": 30.1,
+        "gender": "female",
+        "vertexCount": 12500,
+        "faceCount": 25000
+      }
+    },
+    "female_broad": {
+      "json": "./assets/body-wise-3d/generated/female_broad.json",
+      "obj": "./assets/body-wise-3d/generated/female_broad.obj",
+      "metrics": {
+        "heightCm": 165.7,
+        "widthCm": 87.8,
+        "depthCm": 28.0,
+        "gender": "female",
+        "vertexCount": 12500,
+        "faceCount": 25000
+      }
+    },
+    "female_fuller": {
+      "json": "./assets/body-wise-3d/generated/female_fuller.json",
+      "obj": "./assets/body-wise-3d/generated/female_fuller.obj",
+      "metrics": {
+        "heightCm": 161.3,
+        "widthCm": 100.3,
+        "depthCm": 38.6,
+        "gender": "female",
+        "vertexCount": 12500,
+        "faceCount": 25000
+      }
+    },
+    "male_lean": {
+      "json": "./assets/body-wise-3d/generated/male_lean.json",
+      "obj": "./assets/body-wise-3d/generated/male_lean.obj",
+      "metrics": {
+        "heightCm": 177.4,
+        "widthCm": 86.0,
+        "depthCm": 28.7,
+        "gender": "male",
+        "vertexCount": 12500,
+        "faceCount": 25000
+      }
+    },
+    "male_balanced": {
+      "json": "./assets/body-wise-3d/generated/male_balanced.json",
+      "obj": "./assets/body-wise-3d/generated/male_balanced.obj",
+      "metrics": {
+        "heightCm": 176.9,
+        "widthCm": 90.2,
+        "depthCm": 30.2,
+        "gender": "male",
+        "vertexCount": 12500,
+        "faceCount": 25000
+      }
+    },
+    "male_athletic": {
+      "json": "./assets/body-wise-3d/generated/male_athletic.json",
+      "obj": "./assets/body-wise-3d/generated/male_athletic.obj",
+      "metrics": {
+        "heightCm": 175.7,
+        "widthCm": 91.1,
+        "depthCm": 30.4,
+        "gender": "male",
+        "vertexCount": 12500,
+        "faceCount": 25000
+      }
+    },
+    "male_broad": {
+      "json": "./assets/body-wise-3d/generated/male_broad.json",
+      "obj": "./assets/body-wise-3d/generated/male_broad.obj",
+      "metrics": {
+        "heightCm": 177.3,
+        "widthCm": 89.4,
+        "depthCm": 29.7,
+        "gender": "male",
+        "vertexCount": 12500,
+        "faceCount": 25000
+      }
+    },
+    "male_fuller": {
+      "json": "./assets/body-wise-3d/generated/male_fuller.json",
+      "obj": "./assets/body-wise-3d/generated/male_fuller.obj",
+      "metrics": {
+        "heightCm": 175.6,
+        "widthCm": 96.7,
+        "depthCm": 40.0,
+        "gender": "male",
+        "vertexCount": 12500,
+        "faceCount": 25000
+      }
+    }
+  }
+}

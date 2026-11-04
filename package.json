@@ -1,0 +1,36 @@
+{
+<<<<<<< HEAD
+  "name": "vitawise",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "build": "node build.js",
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^9.25.0",
+    "@babylonjs/loaders": "^9.25.0",
+    "@supabase/supabase-js": "^2.115.0",
+    "dotenv": "^17.4.2",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+=======
+  "name": "vitawise-launcher",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "VitaWise Health Intelligence Development Launcher",
+  "scripts": {
+    "start": "node start-vitawise.mjs",
+    "dev": "node start-vitawise.mjs",
+    "stop": "node stop-vitawise.mjs",
+    "build": "npm run build --prefix vitawise(2)/vitawise"
+>>>>>>> 08403a69f6d6e336c03c965487f5630401f70698
+  }
+}

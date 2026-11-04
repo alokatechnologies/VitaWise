@@ -1,0 +1,16 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^Push-Location vitawise; git diff --stat; git diff --check; Pop-Location$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^Push-Location vitawise; node --check public/js/body-wise-human-generator\\.js; node -e \"const fs=require\\('fs'\\),vm=require\\('vm'\\); import\\('@babylonjs/core'\\)\\.then\\(BABYLON=>\\{ const engine=new BABYLON\\.NullEngine\\(\\); const scene=new BABYLON\\.Scene\\(engine\\); const context=\\{window:\\{\\},console\\}; vm\\.createContext\\(context\\); vm\\.runInContext\\(fs\\.readFileSync\\('public/js/body-wise-human-generator\\.js','utf8'\\),context\\); const generator=context\\.window\\.BodyWiseHumanGenerator; for\\(const id of \\['lean','balanced','athletic','broad','fuller'\\]\\)\\{ const result=generator\\.generate\\(BABYLON,scene,id\\); if\\(result\\.meshes\\.length<8\\) process\\.exit\\(1\\); if\\(result\\.semanticRegions\\.length!==15\\) process\\.exit\\(1\\); result\\.animate\\(1200\\); if\\(!\\(result\\.root\\.getHierarchyBoundingVectors\\(\\)\\.max\\.y>result\\.root\\.getHierarchyBoundingVectors\\(\\)\\.min\\.y\\)\\) process\\.exit\\(1\\); generator\\.dispose\\(result\\); \\} if\\(scene\\.meshes\\.length!==0\\) process\\.exit\\(1\\); console\\.log\\('Refined geometry, motion, regions, and disposal passed'\\); scene\\.dispose\\(\\); engine\\.dispose\\(\\); \\}\\)\\.catch\\(error=>\\{ console\\.error\\(error\\); process\\.exit\\(1\\); \\}\\);\"; Pop-Location$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^Set-Location 'e:\\\\vitawise\\(2\\)\\\\vitawise'; node -e \"const fs=require\\('fs'\\); console\\.log\\('loaded'\\);\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

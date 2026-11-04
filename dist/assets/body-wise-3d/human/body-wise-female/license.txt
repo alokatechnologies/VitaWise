@@ -1,0 +1,6 @@
+PRODUCTION LICENSE VERIFICATION REQUIRED
+
+The supplied BODY WISE 3D female GLB asset has no verified production license file in the shipped workspace asset folder.
+Do not mark the female asset as production-cleared unless a confirmed license record is supplied.
+
+Male asset license remains preserved as CC-BY-4.0 attribution in the supplied male asset source directory and should remain credited as required.

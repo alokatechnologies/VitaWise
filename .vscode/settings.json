@@ -1,0 +1,17 @@
+{
+<<<<<<< HEAD
+  "liveServer.settings.root": "/public"
+}
+=======
+  "liveServer.settings.ignoreFiles": [
+    "**/data/**",
+    "**/.data/**",
+    "**/dist/**",
+    "**/scratch/**",
+    "**/*.json",
+    "**/*.log",
+    "**/.git/**"
+  ],
+  "liveServer.settings.port": 5501
+}
+>>>>>>> 08403a69f6d6e336c03c965487f5630401f70698

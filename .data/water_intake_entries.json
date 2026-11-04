@@ -1,0 +1,171 @@
+[
+  {
+    "id": "d68c51fb-4166-4737-9c64-4cf9265f204c",
+    "user_id": "5b5b0341-0556-4161-8e06-bb1b65bebf8e",
+    "member_id": "self",
+    "member_name": "Self",
+    "record_date": "2026-10-04",
+    "current_ml": 500,
+    "target_ml": 2500,
+    "status": "in_progress",
+    "logs": [
+      {
+        "amount_ml": 500,
+        "logged_at": "2026-10-04T01:55:33.967Z"
+      }
+    ],
+    "created_at": "2026-10-04T01:55:33.967Z",
+    "updated_at": "2026-10-04T01:55:33.967Z"
+  },
+  {
+    "id": "32f5a150-1ca1-43d7-baa4-ff0a0cdf4791",
+    "user_id": "5b5b0341-0556-4161-8e06-bb1b65bebf8e",
+    "member_id": "5b5b0341-0556-4161-8e06-bb1b65bebf8e",
+    "member_name": "UDAY",
+    "record_date": "2026-10-04",
+    "current_ml": 150,
+    "target_ml": 2500,
+    "status": "in_progress",
+    "logs": [
+      {
+        "amount_ml": 150,
+        "logged_at": "2026-10-04T01:31:16.639Z"
+      }
+    ],
+    "created_at": "2026-10-04T01:31:16.639Z",
+    "updated_at": "2026-10-04T01:31:16.640Z"
+  },
+  {
+    "id": "2182768c-e11d-49a6-ad04-76accfe92ca4",
+    "user_id": "8b8995ec-dcbc-4db6-b06e-dd44c8577a39",
+    "member_id": "8b8995ec-dcbc-4db6-b06e-dd44c8577a39",
+    "member_name": "rishi",
+    "record_date": "2026-10-02",
+    "current_ml": 300,
+    "target_ml": 2500,
+    "status": "in_progress",
+    "logs": [
+      {
+        "amount_ml": 300,
+        "logged_at": "2026-10-02T03:21:42.303Z"
+      }
+    ],
+    "created_at": "2026-10-02T03:21:42.303Z",
+    "updated_at": "2026-10-02T03:21:42.303Z"
+  },
+  {
+    "id": "0a3af2a3-da9f-4361-8d6e-8a8f909339e7",
+    "user_id": "000de72f-ff9e-46b2-bf67-317f275fae06",
+    "member_id": "000de72f-ff9e-46b2-bf67-317f275fae06",
+    "member_name": "Family Head",
+    "record_date": "2026-10-02",
+    "current_ml": 300,
+    "target_ml": 2500,
+    "status": "in_progress",
+    "logs": [
+      {
+        "amount_ml": 300,
+        "logged_at": "2026-10-02T02:23:46.967Z"
+      }
+    ],
+    "created_at": "2026-10-02T02:23:46.967Z",
+    "updated_at": "2026-10-02T02:23:46.967Z"
+  },
+  {
+    "id": "74bb3efe-623d-4fde-b3b1-d28e4de851a5",
+    "user_id": "usr_ravi_default",
+    "member_id": "self",
+    "member_name": "Test User",
+    "record_date": "2026-10-02",
+    "current_ml": 0,
+    "target_ml": 2500,
+    "status": "not_completed",
+    "logs": [],
+    "created_at": "2026-10-02T02:19:47.983Z",
+    "updated_at": "2026-10-02T02:19:51.834Z"
+  },
+  {
+    "id": "6f217bf0-4eb6-4b35-8d3f-5e9631ddd2ea",
+    "user_id": "usr_vekkthkb6oo",
+    "member_id": "usr_vekkthkb6oo",
+    "member_name": "Family Head",
+    "record_date": "2026-10-02",
+    "current_ml": 250,
+    "target_ml": 2500,
+    "status": "in_progress",
+    "logs": [
+      {
+        "amount_ml": 250,
+        "logged_at": "2026-10-02T02:18:56.364Z"
+      }
+    ],
+    "created_at": "2026-10-02T02:18:56.364Z",
+    "updated_at": "2026-10-02T02:18:56.364Z"
+  },
+  {
+    "id": "34a87013-dad4-41ae-a5fb-c0f5a6c31eab",
+    "user_id": "1fb81ca9-8a3a-435c-889b-ff47807f3886",
+    "member_id": "1fb81ca9-8a3a-435c-889b-ff47807f3886",
+    "member_name": "Sairishi",
+    "record_date": "2026-10-02",
+    "current_ml": 50,
+    "target_ml": 2500,
+    "status": "not_completed",
+    "logs": [
+      {
+        "amount_ml": 50,
+        "logged_at": "2026-10-02T02:15:15.624Z"
+      }
+    ],
+    "created_at": "2026-10-02T02:15:15.624Z",
+    "updated_at": "2026-10-02T02:15:15.624Z"
+  },
+  {
+    "id": "44908372-e9e6-42d5-8133-0e345c32b019",
+    "user_id": "usr_g_1x4xtblee0qmup410wm",
+    "member_id": "usr_g_1x4xtblee0qmup410wm",
+    "member_name": "Family Head",
+    "record_date": "2026-10-02",
+    "current_ml": 800,
+    "target_ml": 2500,
+    "status": "not_completed",
+    "logs": [
+      {
+        "amount_ml": 250,
+        "logged_at": "2026-10-02T01:50:42.381Z"
+      },
+      {
+        "amount_ml": 250,
+        "logged_at": "2026-10-02T01:50:50.970Z"
+      },
+      {
+        "amount_ml": 250,
+        "logged_at": "2026-10-02T02:04:29.447Z"
+      },
+      {
+        "amount_ml": 50,
+        "logged_at": "2026-10-02T02:14:02.868Z"
+      }
+    ],
+    "created_at": "2026-10-02T01:50:42.381Z",
+    "updated_at": "2026-10-02T02:14:02.868Z"
+  },
+  {
+    "id": "30eaea66-549c-488f-8c88-44ff01e23f8e",
+    "user_id": "usr_ravi_default",
+    "member_id": "self",
+    "member_name": "Ravi",
+    "record_date": "2026-10-01",
+    "current_ml": 500,
+    "target_ml": 2800,
+    "status": "not_completed",
+    "logs": [
+      {
+        "amount_ml": 500,
+        "logged_at": "2026-10-01T05:16:30.243Z"
+      }
+    ],
+    "created_at": "2026-10-01T05:16:30.243Z",
+    "updated_at": "2026-10-01T05:16:35.253Z"
+  }
+]

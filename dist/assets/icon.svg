@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <!-- Royal Dark Obsidian Base Container Tile -->
+  <rect width="512" height="512" rx="110" fill="#0A0A0F" />
+  <rect width="508" height="508" x="2" y="2" rx="109" stroke="#1E1E2A" stroke-width="3" />
+
+  <!-- Iconic Geometric V/W Monogram (VitaWise Emblem) -->
+  <g fill="#FFFFFF">
+    <!-- Top-Left Pillar with Smooth Rounded Corner -->
+    <path d="M 112 256
+             V 184
+             C 112 144, 144 112, 184 112
+             H 208
+             V 256
+             H 112 Z" />
+
+    <!-- Bottom Stem with Smooth Rounded Corner -->
+    <path d="M 184 256
+             H 208
+             V 376
+             C 208 416, 176 448, 136 448
+             C 120 448, 112 440, 112 424
+             C 112 408, 120 400, 136 400
+             C 162 400, 184 378, 184 352
+             V 256 Z" />
+
+    <!-- Diagonal Arm & Top-Right Wing -->
+    <path d="M 208 256
+             L 344 112
+             H 392
+             C 416 112, 432 128, 432 152
+             V 256
+             H 336
+             L 208 384
+             V 256 Z" />
+  </g>
+</svg>

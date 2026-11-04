@@ -1,0 +1,13 @@
+{
+  "name": "vitawise-launcher-subfolder",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "VitaWise Health Intelligence Subfolder Launcher",
+  "scripts": {
+    "start": "node start-vitawise.mjs",
+    "dev": "node start-vitawise.mjs",
+    "stop": "node stop-vitawise.mjs",
+    "build": "npm run build --prefix vitawise"
+  }
+}

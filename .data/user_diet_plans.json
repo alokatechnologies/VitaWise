@@ -1,0 +1,1025 @@
+[
+  {
+    "id": "ad302c2f-3d54-4a13-b8f6-2f39fe748b71",
+    "user_id": "d6877d54-7a7b-4c6a-aecd-38063163a750",
+    "goalKey": "balanced_healthy",
+    "goalName": "Balanced Healthy Diet",
+    "profileSnapshot": {
+      "age": 26,
+      "weightKg": 72,
+      "heightCm": 178,
+      "bmi": 22.7,
+      "gender": "male",
+      "activityLevel": "moderate",
+      "dietaryPreference": "vegetarian",
+      "allergies": "none reported"
+    },
+    "targets": {
+      "bmr": 1708,
+      "tdee": 2647,
+      "calories": 2647,
+      "caloriePill": "ICMR-NIN Aligned",
+      "proteinG": 86,
+      "proteinPerKg": "1.2",
+      "carbsG": 410,
+      "fatsG": 74,
+      "waterL": 2.7,
+      "strategy": "ICMR-NIN aligned balanced whole-food nutrition emphasizing vibrant dietary diversity, gut microbiome prebiotic fiber, anti-inflammatory whole grains, and micronutrient fullness."
+    },
+    "meals": [
+      {
+        "slot": "tiffin",
+        "label": "Morning Tiffin (Breakfast)",
+        "icon": "🥣",
+        "timing": "08:00 AM - 08:30 AM",
+        "foods": "Sprouted Moong & Vegetable Poha or 3 Ragi Idlis + Protein-Rich Sambar + Fresh Mint Chutney",
+        "portion": "3 Idlis or 1 large bowl Poha, 1 bowl Sambar (200ml)",
+        "protein": "~19g protein (Plant & legume balance)",
+        "hydration": "300-400ml warm water 20 mins before breakfast"
+      },
+      {
+        "slot": "midmorning",
+        "label": "Mid-Morning Snack",
+        "icon": "🍎",
+        "timing": "11:00 AM - 11:30 AM",
+        "foods": "Fresh Tender Coconut Water + Soaked almonds & walnuts with roasted makhana",
+        "portion": "250ml coconut water, 30g nuts",
+        "protein": "Natural micronutrients, potassium & healthy lipids",
+        "hydration": "Electrolyte replenishment / coconut water"
+      },
+      {
+        "slot": "lunch",
+        "label": "Afternoon Lunch",
+        "icon": "🍛",
+        "timing": "01:00 PM - 01:45 PM",
+        "foods": "1 cup Unpolished Brown Rice or 2-3 multigrain phulkas / whole wheat toast + Palak Paneer (Low-fat Paneer) + Dal Tadka + Fresh Curd",
+        "portion": "1 cup grain / 2-3 rotis, 1 cup dal, 100g paneer/tofu",
+        "protein": "~28g protein",
+        "hydration": "Sip water slowly; avoid drinking large volumes during meals"
+      },
+      {
+        "slot": "snacks",
+        "label": "Evening Snack",
+        "icon": "☕",
+        "timing": "04:45 PM - 05:30 PM",
+        "foods": "Roasted Chana Chaat with diced cucumber & tomato + Green Tea",
+        "portion": "1 medium bowl (50g) chana chaat",
+        "protein": "Pre-workout fueling / sustained energy crunch",
+        "hydration": "1 cup green tea / warm water"
+      },
+      {
+        "slot": "dinner",
+        "label": "Night Dinner",
+        "icon": "🍽️",
+        "timing": "08:00 PM - 08:45 PM",
+        "foods": "Clear Vegetable Herb Broth + 2 multigrain phulkas / whole wheat toast + Yellow Moong Dal + Steamed Bottle Gourd (Lauki)",
+        "portion": "1 large bowl warm broth, 2 rotis, 1 cup dal",
+        "protein": "~21g protein",
+        "hydration": "Gentle hydration, minimum 2 hours prior to sleep"
+      },
+      {
+        "slot": "extra",
+        "label": "Late-Night / Recovery",
+        "icon": "🌙",
+        "timing": "10:00 PM - 10:30 PM",
+        "foods": "Warm chamomile or fennel infusion (Digestive reset)",
+        "portion": "1 cup warm herbal infusion",
+        "protein": "Digestive ease",
+        "hydration": "Sip warm infusion"
+      }
+    ],
+    "medicalDisclaimer": "Medical Disclaimer: This personalized nutrition guide is designed for educational and wellness lifestyle planning based on general nutritional guidelines (ICMR-NIN & sports nutrition evidence). It is not a clinical medical diagnosis, prescription, or treatment. Please consult a registered dietitian or medical practitioner before making drastic dietary changes if you have underlying medical conditions.",
+    "created_at": "2026-09-30T06:03:14.549Z",
+    "updated_at": "2026-09-30T06:03:14.549Z"
+  },
+  {
+    "id": "549b31cc-bdf8-4bcf-9415-532d170dbd25",
+    "user_id": "usr_ravi_default",
+    "goalKey": "protein_focus",
+    "goalName": "Protein Focus",
+    "profileSnapshot": {
+      "age": 27,
+      "weightKg": 75,
+      "heightCm": 180,
+      "bmi": 23.1,
+      "gender": "male",
+      "activityLevel": "very_active",
+      "dietaryPreference": "non_vegetarian",
+      "allergies": "none"
+    },
+    "targets": {
+      "bmr": 1745,
+      "tdee": 3010,
+      "calories": 3010,
+      "caloriePill": "High Protein / TDEE",
+      "proteinG": 165,
+      "proteinPerKg": "2.2",
+      "carbsG": 399,
+      "fatsG": 84,
+      "waterL": 2.9,
+      "strategy": "Evenly partitioned protein distribution (~25–35g per feeding window) with high biological value sources to stimulate muscle protein synthesis and accelerate musculoskeletal recovery."
+    },
+    "meals": [
+      {
+        "slot": "tiffin",
+        "label": "Morning Tiffin (Breakfast)",
+        "icon": "🥣",
+        "timing": "08:00 AM - 08:30 AM",
+        "foods": "3 Whole Egg / White Omelette with spinach & mushrooms + 2 slices whole wheat toast + warm lemon water",
+        "portion": "2-3 eggs, 2 slices toast/idlis",
+        "protein": "~36g protein (High bioavailability)",
+        "hydration": "300-400ml warm water 20 mins before breakfast"
+      },
+      {
+        "slot": "midmorning",
+        "label": "Mid-Morning Snack",
+        "icon": "🍎",
+        "timing": "11:00 AM - 11:30 AM",
+        "foods": "Fresh tender coconut water or seasonal guava bowl + Soaked almonds & walnuts with roasted makhana",
+        "portion": "1 whole fruit or 250ml coconut water, 30g nuts/seeds",
+        "protein": "Natural micronutrients, potassium & healthy lipids",
+        "hydration": "Electrolyte replenishment / coconut water"
+      },
+      {
+        "slot": "lunch",
+        "label": "Afternoon Lunch",
+        "icon": "🍛",
+        "timing": "01:00 PM - 01:45 PM",
+        "foods": "Herb Grilled Chicken Breast or Steamed Fish Curry + 1 cup Brown Rice / 2 multigrain phulkas / whole wheat toast + Mixed Veggie Salad + Dal Tadka",
+        "portion": "120g lean chicken/fish, 1 cup cooked grain, 1 bowl dal & greens",
+        "protein": "~53g protein",
+        "hydration": "Sip water slowly; avoid drinking large volumes during meals"
+      },
+      {
+        "slot": "snacks",
+        "label": "Evening Snack",
+        "icon": "☕",
+        "timing": "04:45 PM - 05:30 PM",
+        "foods": "2 Boiled Egg Whites or Sprouted Moong Chaat with lemon & cucumber + Green tea",
+        "portion": "2 egg whites or 1 bowl (60g) sprouted chaat",
+        "protein": "Pre-workout fueling / sustained energy crunch",
+        "hydration": "1 cup green tea / warm water"
+      },
+      {
+        "slot": "dinner",
+        "label": "Night Dinner",
+        "icon": "🍽️",
+        "timing": "08:00 PM - 08:45 PM",
+        "foods": "Clear Lemon Coriander Soup + 2 multigrain phulkas / whole wheat toast + Grilled Fish/Chicken or Yellow Moong Dal + Steamed Bottle Gourd",
+        "portion": "1 bowl soup, 2 rotis, 1 cup lean protein/dal",
+        "protein": "~43g protein",
+        "hydration": "Gentle hydration, minimum 2 hours prior to sleep"
+      },
+      {
+        "slot": "extra",
+        "label": "Late-Night / Recovery",
+        "icon": "🌙",
+        "timing": "10:00 PM - 10:30 PM",
+        "foods": "Warm turmeric milk with pinch of cinnamon + 6 soaked almonds",
+        "portion": "1 small glass (180ml)",
+        "protein": "~10g recovery protein",
+        "hydration": "Sip warm infusion"
+      }
+    ],
+    "medicalDisclaimer": "Medical Disclaimer: This personalized nutrition guide is designed for educational and wellness lifestyle planning based on general nutritional guidelines (ICMR-NIN & sports nutrition evidence). It is not a clinical medical diagnosis, prescription, or treatment. Please consult a registered dietitian or medical practitioner before making drastic dietary changes if you have underlying medical conditions.",
+    "created_at": "2026-09-30T07:45:19.977Z",
+    "updated_at": "2026-09-30T07:45:19.977Z"
+  },
+  {
+    "id": "ba51db48-5219-476c-a37b-29192af9d648",
+    "user_id": "1fb81ca9-8a3a-435c-889b-ff47807f3886",
+    "goalKey": "bulking",
+    "goalName": "Bulking / Muscle Gain",
+    "profileSnapshot": {
+      "age": 25,
+      "weightKg": 75,
+      "heightCm": 175,
+      "bmi": 24.5,
+      "gender": "male",
+      "activityLevel": "moderate",
+      "dietaryPreference": "vegetarian",
+      "allergies": "none reported"
+    },
+    "targets": {
+      "bmr": 1724,
+      "tdee": 2672,
+      "calories": 3092,
+      "caloriePill": "+420 kcal Surplus",
+      "proteinG": 143,
+      "proteinPerKg": "1.9",
+      "carbsG": 437,
+      "fatsG": 86,
+      "waterL": 2.9,
+      "strategy": "Calculated 15% caloric surplus with progressive complex carbohydrates and 1.9g/kg protein to drive lean muscle hypertrophy and optimize post-workout glycogen recovery without excess adiposity."
+    },
+    "meals": [
+      {
+        "slot": "tiffin",
+        "label": "Morning Tiffin (Breakfast)",
+        "icon": "🥣",
+        "timing": "08:00 AM - 08:30 AM",
+        "foods": "Sprouted Moong & Vegetable Poha or 3 Ragi Idlis + Protein-Rich Sambar + Fresh Mint Chutney",
+        "portion": "3 Idlis or 1 large bowl Poha, 1 bowl Sambar (200ml)",
+        "protein": "~31g protein (Plant & legume balance)",
+        "hydration": "300-400ml warm water 20 mins before breakfast"
+      },
+      {
+        "slot": "midmorning",
+        "label": "Mid-Morning Snack",
+        "icon": "🍎",
+        "timing": "11:00 AM - 11:30 AM",
+        "foods": "Fresh Tender Coconut Water + Soaked almonds & walnuts with roasted makhana",
+        "portion": "250ml coconut water, 30g nuts",
+        "protein": "Natural micronutrients, potassium & healthy lipids",
+        "hydration": "Electrolyte replenishment / coconut water"
+      },
+      {
+        "slot": "lunch",
+        "label": "Afternoon Lunch",
+        "icon": "🍛",
+        "timing": "01:00 PM - 01:45 PM",
+        "foods": "1 cup Unpolished Brown Rice or 2-3 multigrain phulkas / whole wheat toast + Palak Paneer (Low-fat Paneer) + Dal Tadka + Fresh Curd",
+        "portion": "1 cup grain / 2-3 rotis, 1 cup dal, 100g paneer/tofu",
+        "protein": "~46g protein",
+        "hydration": "Sip water slowly; avoid drinking large volumes during meals"
+      },
+      {
+        "slot": "snacks",
+        "label": "Evening Snack",
+        "icon": "☕",
+        "timing": "04:45 PM - 05:30 PM",
+        "foods": "Roasted Chana Chaat with diced cucumber & tomato + Green Tea",
+        "portion": "1 medium bowl (50g) chana chaat",
+        "protein": "Pre-workout fueling / sustained energy crunch",
+        "hydration": "1 cup green tea / warm water"
+      },
+      {
+        "slot": "dinner",
+        "label": "Night Dinner",
+        "icon": "🍽️",
+        "timing": "08:00 PM - 08:45 PM",
+        "foods": "Clear Vegetable Herb Broth + 2 multigrain phulkas / whole wheat toast + Yellow Moong Dal + Steamed Bottle Gourd (Lauki)",
+        "portion": "1 large bowl warm broth, 2 rotis, 1 cup dal",
+        "protein": "~34g protein",
+        "hydration": "Gentle hydration, minimum 2 hours prior to sleep"
+      },
+      {
+        "slot": "extra",
+        "label": "Late-Night / Recovery",
+        "icon": "🌙",
+        "timing": "10:00 PM - 10:30 PM",
+        "foods": "Warm turmeric milk with pinch of cinnamon + 6 soaked almonds",
+        "portion": "1 small glass (180ml)",
+        "protein": "~10g recovery protein",
+        "hydration": "Sip warm infusion"
+      }
+    ],
+    "medicalDisclaimer": "Medical Disclaimer: This personalized nutrition guide is designed for educational and wellness lifestyle planning based on general nutritional guidelines (ICMR-NIN & sports nutrition evidence). It is not a clinical medical diagnosis, prescription, or treatment. Please consult a registered dietitian or medical practitioner before making drastic dietary changes if you have underlying medical conditions.",
+    "created_at": "2026-09-30T09:37:04.981Z",
+    "updated_at": "2026-09-30T09:37:04.981Z"
+  },
+  {
+    "id": "aaba991f-962e-4274-8a3a-a0773e4e6afa",
+    "user_id": "00f4c2f9-b332-49bf-841e-13e4833f825a",
+    "goalKey": "weight_maintenance",
+    "goalName": "Weight Maintenance",
+    "profileSnapshot": {
+      "age": 25,
+      "weightKg": 70,
+      "heightCm": 175,
+      "bmi": 22.9,
+      "gender": "male",
+      "activityLevel": "moderate",
+      "dietaryPreference": "vegetarian",
+      "allergies": "None reported"
+    },
+    "targets": {
+      "bmr": 1674,
+      "tdee": 2595,
+      "calories": 2595,
+      "caloriePill": "Isocaloric Balance",
+      "proteinG": 98,
+      "proteinPerKg": "1.4",
+      "carbsG": 389,
+      "fatsG": 72,
+      "waterL": 2.7,
+      "strategy": "Energy equilibrium protocol designed to sustain basal metabolic health, continuous daytime stamina, and long-term body composition stability."
+    },
+    "meals": [
+      {
+        "slot": "tiffin",
+        "label": "Morning Tiffin (Breakfast)",
+        "icon": "🥣",
+        "timing": "08:00 AM - 08:30 AM",
+        "foods": "Sprouted Moong & Vegetable Poha or 3 Ragi Idlis + Protein-Rich Sambar + Fresh Mint Chutney",
+        "portion": "3 Idlis or 1 large bowl Poha, 1 bowl Sambar (200ml)",
+        "protein": "~22g protein (Plant & legume balance)",
+        "hydration": "300-400ml warm water 20 mins before breakfast"
+      },
+      {
+        "slot": "midmorning",
+        "label": "Mid-Morning Snack",
+        "icon": "🍎",
+        "timing": "11:00 AM - 11:30 AM",
+        "foods": "Fresh Tender Coconut Water + Soaked almonds & walnuts with roasted makhana",
+        "portion": "250ml coconut water, 30g nuts",
+        "protein": "Natural micronutrients, potassium & healthy lipids",
+        "hydration": "Electrolyte replenishment / coconut water"
+      },
+      {
+        "slot": "lunch",
+        "label": "Afternoon Lunch",
+        "icon": "🍛",
+        "timing": "01:00 PM - 01:45 PM",
+        "foods": "1 cup Unpolished Brown Rice or 2-3 multigrain phulkas / whole wheat toast + Palak Paneer (Low-fat Paneer) + Dal Tadka + Fresh Curd",
+        "portion": "1 cup grain / 2-3 rotis, 1 cup dal, 100g paneer/tofu",
+        "protein": "~31g protein",
+        "hydration": "Sip water slowly; avoid drinking large volumes during meals"
+      },
+      {
+        "slot": "snacks",
+        "label": "Evening Snack",
+        "icon": "☕",
+        "timing": "04:45 PM - 05:30 PM",
+        "foods": "Roasted Chana Chaat with diced cucumber & tomato + Green Tea",
+        "portion": "1 medium bowl (50g) chana chaat",
+        "protein": "Pre-workout fueling / sustained energy crunch",
+        "hydration": "1 cup green tea / warm water"
+      },
+      {
+        "slot": "dinner",
+        "label": "Night Dinner",
+        "icon": "🍽️",
+        "timing": "08:00 PM - 08:45 PM",
+        "foods": "Clear Vegetable Herb Broth + 2 multigrain phulkas / whole wheat toast + Yellow Moong Dal + Steamed Bottle Gourd (Lauki)",
+        "portion": "1 large bowl warm broth, 2 rotis, 1 cup dal",
+        "protein": "~24g protein",
+        "hydration": "Gentle hydration, minimum 2 hours prior to sleep"
+      },
+      {
+        "slot": "extra",
+        "label": "Late-Night / Recovery",
+        "icon": "🌙",
+        "timing": "10:00 PM - 10:30 PM",
+        "foods": "Warm chamomile or fennel infusion (Digestive reset)",
+        "portion": "1 cup warm herbal infusion",
+        "protein": "Digestive ease",
+        "hydration": "Sip warm infusion"
+      }
+    ],
+    "medicalDisclaimer": "Medical Disclaimer: This personalized nutrition guide is designed for educational and wellness lifestyle planning based on general nutritional guidelines (ICMR-NIN & sports nutrition evidence). It is not a clinical medical diagnosis, prescription, or treatment. Please consult a registered dietitian or medical practitioner before making drastic dietary changes if you have underlying medical conditions.",
+    "created_at": "2026-09-30T09:24:18.769Z",
+    "updated_at": "2026-09-30T09:24:18.769Z"
+  },
+  {
+    "id": "1f046f91-797c-4f17-93b8-394e3e3b4428",
+    "user_id": "6be50ff3-9165-4852-99db-e976c6355b67",
+    "goalKey": "balanced_healthy",
+    "goalName": "Balanced Healthy Diet",
+    "profileSnapshot": {
+      "age": 25,
+      "weightKg": 70,
+      "heightCm": 175,
+      "bmi": 22.9,
+      "gender": "female",
+      "activityLevel": "moderate",
+      "dietaryPreference": "vegetarian",
+      "allergies": "None reported"
+    },
+    "targets": {
+      "bmr": 1508,
+      "tdee": 2337,
+      "calories": 2337,
+      "caloriePill": "ICMR-NIN Aligned",
+      "proteinG": 84,
+      "proteinPerKg": "1.2",
+      "carbsG": 354,
+      "fatsG": 65,
+      "waterL": 2.7,
+      "strategy": "ICMR-NIN aligned balanced whole-food nutrition emphasizing vibrant dietary diversity, gut microbiome prebiotic fiber, anti-inflammatory whole grains, and micronutrient fullness."
+    },
+    "meals": [
+      {
+        "slot": "tiffin",
+        "label": "Morning Tiffin (Breakfast)",
+        "icon": "soup",
+        "timing": "08:00 AM - 08:30 AM",
+        "foods": "Barnyard Millet (Kuthiraivali) Vegetable Upma packed with carrots, beans & curry leaves + Protein-Rich Sambar",
+        "portion": "1 large bowl upma (200g), 1 bowl sambar",
+        "protein": "~17g protein (ICMR-NIN biodiversity)",
+        "hydration": "300-400ml warm water 20 mins before breakfast"
+      },
+      {
+        "slot": "midmorning",
+        "label": "Mid-Morning Snack",
+        "icon": "apple",
+        "timing": "11:00 AM - 11:30 AM",
+        "foods": "Fresh Sweet Lime (Mosambi) or Papaya bowl + 6 soaked walnuts & pumpkin seeds",
+        "portion": "1 fruit bowl, 20g nuts/seeds",
+        "protein": "Natural micronutrients, potassium & healthy lipids",
+        "hydration": "Electrolyte replenishment / coconut water"
+      },
+      {
+        "slot": "lunch",
+        "label": "Afternoon Lunch",
+        "icon": "utensils",
+        "timing": "01:00 PM - 01:45 PM",
+        "foods": "1 cup Unpolished Red Rice or 2 Jowar Rotis + Mixed Vegetable Sambar + Homemade Probiotic Curd + Methi Dal",
+        "portion": "1 cup red rice / 2 jowar rotis, 1 bowl sambar, 1 cup curd, 1 bowl dal",
+        "protein": "~25g protein",
+        "hydration": "Sip water slowly; avoid drinking large volumes during meals"
+      },
+      {
+        "slot": "snacks",
+        "label": "Evening Snack",
+        "icon": "coffee",
+        "timing": "04:45 PM - 05:30 PM",
+        "foods": "Roasted Black Chana Chaat with lemon & fresh mint + Tulsi herbal tea",
+        "portion": "1 medium cup (45g) chana",
+        "protein": "Pre-workout fueling / sustained energy crunch",
+        "hydration": "1 cup green tea / warm water"
+      },
+      {
+        "slot": "dinner",
+        "label": "Night Dinner",
+        "icon": "utensils",
+        "timing": "08:00 PM - 08:45 PM",
+        "foods": "Steamed Bottle Gourd (Lauki) & Moong Dal Khichdi or 2 multigrain phulkas / whole wheat toast with Palak Dal & Cucumber Raita",
+        "portion": "1.5 cups light khichdi / 2 rotis, 1 cup dal",
+        "protein": "~20g protein",
+        "hydration": "Gentle hydration, minimum 2 hours prior to sleep"
+      },
+      {
+        "slot": "extra",
+        "label": "Late-Night / Recovery",
+        "icon": "moon",
+        "timing": "10:00 PM - 10:30 PM",
+        "foods": "Warm water with roasted cumin & ajwain (Nocturnal gut reset)",
+        "portion": "1 warm cup (180ml)",
+        "protein": "Digestive ease",
+        "hydration": "Sip warm infusion"
+      }
+    ],
+    "medicalDisclaimer": "Medical Disclaimer: This personalized nutrition guide is designed for educational and wellness lifestyle planning based on general nutritional guidelines (ICMR-NIN & sports nutrition evidence). It is not a clinical medical diagnosis, prescription, or treatment. Please consult a registered dietitian or medical practitioner before making drastic dietary changes if you have underlying medical conditions.",
+    "created_at": "2026-09-30T20:24:32.486Z",
+    "updated_at": "2026-09-30T20:24:32.486Z"
+  },
+  {
+    "id": "671f0fd6-8833-4a1a-af26-d9fb952e8cf7",
+    "user_id": "747a78a7-066c-47dc-9125-a06d20fa21a4",
+    "goalKey": "bulking",
+    "goalName": "Bulking / Muscle Gain",
+    "profileSnapshot": {
+      "age": 25,
+      "weightKg": 70,
+      "heightCm": 175,
+      "bmi": 22.9,
+      "gender": "female",
+      "activityLevel": "moderate",
+      "dietaryPreference": "vegetarian",
+      "allergies": "None reported"
+    },
+    "targets": {
+      "bmr": 1508,
+      "tdee": 2337,
+      "calories": 2757,
+      "caloriePill": "+420 kcal Surplus",
+      "proteinG": 133,
+      "proteinPerKg": "1.9",
+      "carbsG": 384,
+      "fatsG": 77,
+      "waterL": 2.7,
+      "strategy": "Calculated 15% caloric surplus with progressive complex carbohydrates and 1.9g/kg protein to drive lean muscle hypertrophy and optimize post-workout glycogen recovery without excess adiposity."
+    },
+    "meals": [
+      {
+        "slot": "tiffin",
+        "label": "Morning Tiffin (Breakfast)",
+        "icon": "soup",
+        "timing": "08:00 AM - 08:30 AM",
+        "foods": "2 Paneer & Sprouted Moong Stuffed Parathas with homemade butter + Thick Greek Curd + Banana Almond Milkshake with Chia Seeds",
+        "portion": "2 large stuffed parathas, 1 cup curd, 350ml dense shake",
+        "protein": "~33g protein",
+        "hydration": "300-400ml warm water 20 mins before breakfast"
+      },
+      {
+        "slot": "midmorning",
+        "label": "Mid-Morning Snack",
+        "icon": "apple",
+        "timing": "11:00 AM - 11:30 AM",
+        "foods": "Roasted Chana, Cashews & Raisins Trail Mix + 2 Dried Figs (Anjeer) + 1 Boiled Sweet Potato",
+        "portion": "60g dense dry-fruit mix, 1 sweet potato",
+        "protein": "Natural micronutrients, potassium & healthy lipids",
+        "hydration": "Electrolyte replenishment / coconut water"
+      },
+      {
+        "slot": "lunch",
+        "label": "Afternoon Lunch",
+        "icon": "utensils",
+        "timing": "01:00 PM - 01:45 PM",
+        "foods": "150g Low-fat Paneer Butter Masala (Light Gravy) + 1.5 cups Foxtail Millet Pulao + 1 bowl Rajma (Kidney Beans) + 2 multigrain phulkas / whole wheat toast",
+        "portion": "150g paneer, 1.5 cups millet pulao, 1 large bowl rajma, 2 rotis",
+        "protein": "~45g protein",
+        "hydration": "Sip water slowly; avoid drinking large volumes during meals"
+      },
+      {
+        "slot": "snacks",
+        "label": "Evening Snack",
+        "icon": "coffee",
+        "timing": "04:45 PM - 05:30 PM",
+        "foods": "High-Protein Roasted Sattu Drink with jaggery & lemon or Plant Protein Shake with roasted makhana & walnuts",
+        "portion": "350ml sattu shake, 40g makhana mix",
+        "protein": "Pre-workout fueling / sustained energy crunch",
+        "hydration": "1 cup green tea / warm water"
+      },
+      {
+        "slot": "dinner",
+        "label": "Night Dinner",
+        "icon": "utensils",
+        "timing": "08:00 PM - 08:45 PM",
+        "foods": "Thick Dal Makhani / Chana Dal + 100g Grilled Tofu/Paneer Tikka + 3 multigrain phulkas / whole wheat toast + Steamed Greens",
+        "portion": "100g paneer/tofu, 3 rotis, 1 large bowl dal",
+        "protein": "~37g protein",
+        "hydration": "Gentle hydration, minimum 2 hours prior to sleep"
+      },
+      {
+        "slot": "extra",
+        "label": "Late-Night / Recovery",
+        "icon": "moon",
+        "timing": "10:00 PM - 10:30 PM",
+        "foods": "Warm whole milk with turmeric, saffron & crushed almonds",
+        "portion": "1 large glass (250ml) for overnight myofibrillar protein synthesis",
+        "protein": "~10g recovery protein",
+        "hydration": "Sip warm infusion"
+      }
+    ],
+    "medicalDisclaimer": "Medical Disclaimer: This personalized nutrition guide is designed for educational and wellness lifestyle planning based on general nutritional guidelines (ICMR-NIN & sports nutrition evidence). It is not a clinical medical diagnosis, prescription, or treatment. Please consult a registered dietitian or medical practitioner before making drastic dietary changes if you have underlying medical conditions.",
+    "created_at": "2026-09-30T20:24:42.079Z",
+    "updated_at": "2026-09-30T20:24:42.079Z"
+  },
+  {
+    "id": "8f85c744-44b8-454b-85ff-9c4cf4f7bbfd",
+    "user_id": "c4bcb805-6cfa-40e1-a7c9-cf63c407e771",
+    "goalKey": "bulking",
+    "goalName": "Bulking / Muscle Gain",
+    "profileSnapshot": {
+      "age": 25,
+      "weightKg": 70,
+      "heightCm": 175,
+      "bmi": 22.9,
+      "gender": "female",
+      "activityLevel": "moderate",
+      "dietaryPreference": "vegetarian",
+      "allergies": "None reported"
+    },
+    "targets": {
+      "bmr": 1508,
+      "tdee": 2337,
+      "calories": 2757,
+      "caloriePill": "+420 kcal Surplus",
+      "proteinG": 133,
+      "proteinPerKg": "1.9",
+      "carbsG": 384,
+      "fatsG": 77,
+      "waterL": 2.7,
+      "strategy": "Calculated 15% caloric surplus with progressive complex carbohydrates and 1.9g/kg protein to drive lean muscle hypertrophy and optimize post-workout glycogen recovery without excess adiposity."
+    },
+    "meals": [
+      {
+        "slot": "tiffin",
+        "label": "Morning Tiffin (Breakfast)",
+        "icon": "soup",
+        "timing": "08:00 AM - 08:30 AM",
+        "foods": "2 Paneer & Sprouted Moong Stuffed Parathas with homemade butter + Thick Greek Curd + Banana Almond Milkshake with Chia Seeds",
+        "portion": "2 large stuffed parathas, 1 cup curd, 350ml dense shake",
+        "protein": "~33g protein",
+        "hydration": "300-400ml warm water 20 mins before breakfast"
+      },
+      {
+        "slot": "midmorning",
+        "label": "Mid-Morning Snack",
+        "icon": "apple",
+        "timing": "11:00 AM - 11:30 AM",
+        "foods": "Roasted Chana, Cashews & Raisins Trail Mix + 2 Dried Figs (Anjeer) + 1 Boiled Sweet Potato",
+        "portion": "60g dense dry-fruit mix, 1 sweet potato",
+        "protein": "Natural micronutrients, potassium & healthy lipids",
+        "hydration": "Electrolyte replenishment / coconut water"
+      },
+      {
+        "slot": "lunch",
+        "label": "Afternoon Lunch",
+        "icon": "utensils",
+        "timing": "01:00 PM - 01:45 PM",
+        "foods": "150g Low-fat Paneer Butter Masala (Light Gravy) + 1.5 cups Foxtail Millet Pulao + 1 bowl Rajma (Kidney Beans) + 2 multigrain phulkas / whole wheat toast",
+        "portion": "150g paneer, 1.5 cups millet pulao, 1 large bowl rajma, 2 rotis",
+        "protein": "~45g protein",
+        "hydration": "Sip water slowly; avoid drinking large volumes during meals"
+      },
+      {
+        "slot": "snacks",
+        "label": "Evening Snack",
+        "icon": "coffee",
+        "timing": "04:45 PM - 05:30 PM",
+        "foods": "High-Protein Roasted Sattu Drink with jaggery & lemon or Plant Protein Shake with roasted makhana & walnuts",
+        "portion": "350ml sattu shake, 40g makhana mix",
+        "protein": "Pre-workout fueling / sustained energy crunch",
+        "hydration": "1 cup green tea / warm water"
+      },
+      {
+        "slot": "dinner",
+        "label": "Night Dinner",
+        "icon": "utensils",
+        "timing": "08:00 PM - 08:45 PM",
+        "foods": "Thick Dal Makhani / Chana Dal + 100g Grilled Tofu/Paneer Tikka + 3 multigrain phulkas / whole wheat toast + Steamed Greens",
+        "portion": "100g paneer/tofu, 3 rotis, 1 large bowl dal",
+        "protein": "~37g protein",
+        "hydration": "Gentle hydration, minimum 2 hours prior to sleep"
+      },
+      {
+        "slot": "extra",
+        "label": "Late-Night / Recovery",
+        "icon": "moon",
+        "timing": "10:00 PM - 10:30 PM",
+        "foods": "Warm whole milk with turmeric, saffron & crushed almonds",
+        "portion": "1 large glass (250ml) for overnight myofibrillar protein synthesis",
+        "protein": "~10g recovery protein",
+        "hydration": "Sip warm infusion"
+      }
+    ],
+    "medicalDisclaimer": "Medical Disclaimer: This personalized nutrition guide is designed for educational and wellness lifestyle planning based on general nutritional guidelines (ICMR-NIN & sports nutrition evidence). It is not a clinical medical diagnosis, prescription, or treatment. Please consult a registered dietitian or medical practitioner before making drastic dietary changes if you have underlying medical conditions.",
+    "created_at": "2026-09-30T20:24:51.747Z",
+    "updated_at": "2026-09-30T20:24:51.747Z"
+  },
+  {
+    "id": "018e28e7-a47b-4cdf-8efc-cbb6e80846dc",
+    "user_id": "bfc95f6b-f9bd-4664-bd2d-208c9de295d2",
+    "goalKey": "balanced_healthy",
+    "goalName": "Balanced Healthy Diet",
+    "profileSnapshot": {
+      "age": 25,
+      "weightKg": 70,
+      "heightCm": 175,
+      "bmi": 22.9,
+      "gender": "female",
+      "activityLevel": "moderate",
+      "dietaryPreference": "vegetarian",
+      "allergies": "None reported"
+    },
+    "targets": {
+      "bmr": 1508,
+      "tdee": 2337,
+      "calories": 2337,
+      "caloriePill": "ICMR-NIN Aligned",
+      "proteinG": 84,
+      "proteinPerKg": "1.2",
+      "carbsG": 354,
+      "fatsG": 65,
+      "waterL": 2.7,
+      "strategy": "ICMR-NIN aligned balanced whole-food nutrition emphasizing vibrant dietary diversity, gut microbiome prebiotic fiber, anti-inflammatory whole grains, and micronutrient fullness."
+    },
+    "meals": [
+      {
+        "slot": "tiffin",
+        "label": "Morning Tiffin (Breakfast)",
+        "icon": "soup",
+        "timing": "08:00 AM - 08:30 AM",
+        "foods": "Barnyard Millet (Kuthiraivali) Vegetable Upma packed with carrots, beans & curry leaves + Protein-Rich Sambar",
+        "portion": "1 large bowl upma (200g), 1 bowl sambar",
+        "protein": "~17g protein (ICMR-NIN biodiversity)",
+        "hydration": "300-400ml warm water 20 mins before breakfast"
+      },
+      {
+        "slot": "midmorning",
+        "label": "Mid-Morning Snack",
+        "icon": "apple",
+        "timing": "11:00 AM - 11:30 AM",
+        "foods": "Fresh Sweet Lime (Mosambi) or Papaya bowl + 6 soaked walnuts & pumpkin seeds",
+        "portion": "1 fruit bowl, 20g nuts/seeds",
+        "protein": "Natural micronutrients, potassium & healthy lipids",
+        "hydration": "Electrolyte replenishment / coconut water"
+      },
+      {
+        "slot": "lunch",
+        "label": "Afternoon Lunch",
+        "icon": "utensils",
+        "timing": "01:00 PM - 01:45 PM",
+        "foods": "1 cup Unpolished Red Rice or 2 Jowar Rotis + Mixed Vegetable Sambar + Homemade Probiotic Curd + Methi Dal",
+        "portion": "1 cup red rice / 2 jowar rotis, 1 bowl sambar, 1 cup curd, 1 bowl dal",
+        "protein": "~25g protein",
+        "hydration": "Sip water slowly; avoid drinking large volumes during meals"
+      },
+      {
+        "slot": "snacks",
+        "label": "Evening Snack",
+        "icon": "coffee",
+        "timing": "04:45 PM - 05:30 PM",
+        "foods": "Roasted Black Chana Chaat with lemon & fresh mint + Tulsi herbal tea",
+        "portion": "1 medium cup (45g) chana",
+        "protein": "Pre-workout fueling / sustained energy crunch",
+        "hydration": "1 cup green tea / warm water"
+      },
+      {
+        "slot": "dinner",
+        "label": "Night Dinner",
+        "icon": "utensils",
+        "timing": "08:00 PM - 08:45 PM",
+        "foods": "Steamed Bottle Gourd (Lauki) & Moong Dal Khichdi or 2 multigrain phulkas / whole wheat toast with Palak Dal & Cucumber Raita",
+        "portion": "1.5 cups light khichdi / 2 rotis, 1 cup dal",
+        "protein": "~20g protein",
+        "hydration": "Gentle hydration, minimum 2 hours prior to sleep"
+      },
+      {
+        "slot": "extra",
+        "label": "Late-Night / Recovery",
+        "icon": "moon",
+        "timing": "10:00 PM - 10:30 PM",
+        "foods": "Warm water with roasted cumin & ajwain (Nocturnal gut reset)",
+        "portion": "1 warm cup (180ml)",
+        "protein": "Digestive ease",
+        "hydration": "Sip warm infusion"
+      }
+    ],
+    "medicalDisclaimer": "Medical Disclaimer: This personalized nutrition guide is designed for educational and wellness lifestyle planning based on general nutritional guidelines (ICMR-NIN & sports nutrition evidence). It is not a clinical medical diagnosis, prescription, or treatment. Please consult a registered dietitian or medical practitioner before making drastic dietary changes if you have underlying medical conditions.",
+    "created_at": "2026-09-30T20:25:02.740Z",
+    "updated_at": "2026-09-30T20:25:02.740Z"
+  },
+  {
+    "id": "b5e4ef10-d60b-499e-b8fc-fb7d763f9567",
+    "user_id": "f7ca9c85-e408-457d-a6f7-207de65dad45",
+    "goalKey": "balanced_healthy",
+    "goalName": "Balanced Healthy Diet",
+    "profileSnapshot": {
+      "age": 25,
+      "weightKg": 68,
+      "heightCm": 172,
+      "bmi": 23,
+      "gender": "female",
+      "activityLevel": "moderate",
+      "dietaryPreference": "vegetarian",
+      "allergies": "None reported"
+    },
+    "targets": {
+      "bmr": 1469,
+      "tdee": 2277,
+      "calories": 2277,
+      "caloriePill": "ICMR-NIN Aligned",
+      "proteinG": 82,
+      "proteinPerKg": "1.2",
+      "carbsG": 345,
+      "fatsG": 63,
+      "waterL": 2.6,
+      "strategy": "ICMR-NIN aligned balanced whole-food nutrition emphasizing vibrant dietary diversity, gut microbiome prebiotic fiber, anti-inflammatory whole grains, and micronutrient fullness."
+    },
+    "meals": [
+      {
+        "slot": "tiffin",
+        "label": "Morning Tiffin (Breakfast)",
+        "icon": "soup",
+        "timing": "08:00 AM - 08:30 AM",
+        "foods": "Barnyard Millet (Kuthiraivali) Vegetable Upma packed with carrots, beans & curry leaves + Protein-Rich Sambar",
+        "portion": "1 large bowl upma (200g), 1 bowl sambar",
+        "protein": "~16g protein (ICMR-NIN biodiversity)",
+        "hydration": "300-400ml warm water 20 mins before breakfast"
+      },
+      {
+        "slot": "midmorning",
+        "label": "Mid-Morning Snack",
+        "icon": "apple",
+        "timing": "11:00 AM - 11:30 AM",
+        "foods": "Fresh Sweet Lime (Mosambi) or Papaya bowl + 6 soaked walnuts & pumpkin seeds",
+        "portion": "1 fruit bowl, 20g nuts/seeds",
+        "protein": "Natural micronutrients, potassium & healthy lipids",
+        "hydration": "Electrolyte replenishment / coconut water"
+      },
+      {
+        "slot": "lunch",
+        "label": "Afternoon Lunch",
+        "icon": "utensils",
+        "timing": "01:00 PM - 01:45 PM",
+        "foods": "1 cup Unpolished Red Rice or 2 Jowar Rotis + Mixed Vegetable Sambar + Homemade Probiotic Curd + Methi Dal",
+        "portion": "1 cup red rice / 2 jowar rotis, 1 bowl sambar, 1 cup curd, 1 bowl dal",
+        "protein": "~25g protein",
+        "hydration": "Sip water slowly; avoid drinking large volumes during meals"
+      },
+      {
+        "slot": "snacks",
+        "label": "Evening Snack",
+        "icon": "coffee",
+        "timing": "04:45 PM - 05:30 PM",
+        "foods": "Roasted Black Chana Chaat with lemon & fresh mint + Tulsi herbal tea",
+        "portion": "1 medium cup (45g) chana",
+        "protein": "Pre-workout fueling / sustained energy crunch",
+        "hydration": "1 cup green tea / warm water"
+      },
+      {
+        "slot": "dinner",
+        "label": "Night Dinner",
+        "icon": "utensils",
+        "timing": "08:00 PM - 08:45 PM",
+        "foods": "Steamed Bottle Gourd (Lauki) & Moong Dal Khichdi or 2 multigrain phulkas / whole wheat toast with Palak Dal & Cucumber Raita",
+        "portion": "1.5 cups light khichdi / 2 rotis, 1 cup dal",
+        "protein": "~20g protein",
+        "hydration": "Gentle hydration, minimum 2 hours prior to sleep"
+      },
+      {
+        "slot": "extra",
+        "label": "Late-Night / Recovery",
+        "icon": "moon",
+        "timing": "10:00 PM - 10:30 PM",
+        "foods": "Warm water with roasted cumin & ajwain (Nocturnal gut reset)",
+        "portion": "1 warm cup (180ml)",
+        "protein": "Digestive ease",
+        "hydration": "Sip warm infusion"
+      }
+    ],
+    "medicalDisclaimer": "Medical Disclaimer: This personalized nutrition guide is designed for educational and wellness lifestyle planning based on general nutritional guidelines (ICMR-NIN & sports nutrition evidence). It is not a clinical medical diagnosis, prescription, or treatment. Please consult a registered dietitian or medical practitioner before making drastic dietary changes if you have underlying medical conditions.",
+    "created_at": "2026-09-30T20:28:11.520Z",
+    "updated_at": "2026-09-30T20:28:11.520Z"
+  },
+  {
+    "id": "cdcc637d-d9db-4ce8-ae8c-d8796430c684",
+    "user_id": "f7fcf22d-26a0-4c5e-bb5b-3dcd930a87b2",
+    "goalKey": "balanced_healthy",
+    "goalName": "Balanced Healthy Diet",
+    "profileSnapshot": {
+      "age": 25,
+      "weightKg": 68,
+      "heightCm": 172,
+      "bmi": 23,
+      "gender": "female",
+      "activityLevel": "moderate",
+      "dietaryPreference": "vegetarian",
+      "allergies": "None reported"
+    },
+    "targets": {
+      "bmr": 1469,
+      "tdee": 2277,
+      "calories": 2277,
+      "caloriePill": "ICMR-NIN Aligned",
+      "proteinG": 82,
+      "proteinPerKg": "1.2",
+      "carbsG": 345,
+      "fatsG": 63,
+      "waterL": 2.6,
+      "strategy": "ICMR-NIN aligned balanced whole-food nutrition emphasizing vibrant dietary diversity, gut microbiome prebiotic fiber, anti-inflammatory whole grains, and micronutrient fullness."
+    },
+    "meals": [
+      {
+        "slot": "tiffin",
+        "label": "Morning Tiffin (Breakfast)",
+        "icon": "soup",
+        "timing": "08:00 AM - 08:30 AM",
+        "foods": "Barnyard Millet (Kuthiraivali) Vegetable Upma packed with carrots, beans & curry leaves + Protein-Rich Sambar",
+        "portion": "1 large bowl upma (200g), 1 bowl sambar",
+        "protein": "~16g protein (ICMR-NIN biodiversity)",
+        "hydration": "300-400ml warm water 20 mins before breakfast"
+      },
+      {
+        "slot": "midmorning",
+        "label": "Mid-Morning Snack",
+        "icon": "apple",
+        "timing": "11:00 AM - 11:30 AM",
+        "foods": "Fresh Sweet Lime (Mosambi) or Papaya bowl + 6 soaked walnuts & pumpkin seeds",
+        "portion": "1 fruit bowl, 20g nuts/seeds",
+        "protein": "Natural micronutrients, potassium & healthy lipids",
+        "hydration": "Electrolyte replenishment / coconut water"
+      },
+      {
+        "slot": "lunch",
+        "label": "Afternoon Lunch",
+        "icon": "utensils",
+        "timing": "01:00 PM - 01:45 PM",
+        "foods": "1 cup Unpolished Red Rice or 2 Jowar Rotis + Mixed Vegetable Sambar + Homemade Probiotic Curd + Methi Dal",
+        "portion": "1 cup red rice / 2 jowar rotis, 1 bowl sambar, 1 cup curd, 1 bowl dal",
+        "protein": "~25g protein",
+        "hydration": "Sip water slowly; avoid drinking large volumes during meals"
+      },
+      {
+        "slot": "snacks",
+        "label": "Evening Snack",
+        "icon": "coffee",
+        "timing": "04:45 PM - 05:30 PM",
+        "foods": "Roasted Black Chana Chaat with lemon & fresh mint + Tulsi herbal tea",
+        "portion": "1 medium cup (45g) chana",
+        "protein": "Pre-workout fueling / sustained energy crunch",
+        "hydration": "1 cup green tea / warm water"
+      },
+      {
+        "slot": "dinner",
+        "label": "Night Dinner",
+        "icon": "utensils",
+        "timing": "08:00 PM - 08:45 PM",
+        "foods": "Steamed Bottle Gourd (Lauki) & Moong Dal Khichdi or 2 multigrain phulkas / whole wheat toast with Palak Dal & Cucumber Raita",
+        "portion": "1.5 cups light khichdi / 2 rotis, 1 cup dal",
+        "protein": "~20g protein",
+        "hydration": "Gentle hydration, minimum 2 hours prior to sleep"
+      },
+      {
+        "slot": "extra",
+        "label": "Late-Night / Recovery",
+        "icon": "moon",
+        "timing": "10:00 PM - 10:30 PM",
+        "foods": "Warm water with roasted cumin & ajwain (Nocturnal gut reset)",
+        "portion": "1 warm cup (180ml)",
+        "protein": "Digestive ease",
+        "hydration": "Sip warm infusion"
+      }
+    ],
+    "medicalDisclaimer": "Medical Disclaimer: This personalized nutrition guide is designed for educational and wellness lifestyle planning based on general nutritional guidelines (ICMR-NIN & sports nutrition evidence). It is not a clinical medical diagnosis, prescription, or treatment. Please consult a registered dietitian or medical practitioner before making drastic dietary changes if you have underlying medical conditions.",
+    "created_at": "2026-09-30T20:42:34.752Z",
+    "updated_at": "2026-09-30T20:42:34.752Z"
+  },
+  {
+    "id": "171ec036-4d04-43e9-bfb6-c5c8fc9a4d5c",
+    "user_id": "19dbf97e-0594-4a3a-b9ee-c27904dfc390",
+    "goalKey": "balanced_healthy",
+    "goalName": "Balanced Healthy Diet",
+    "profileSnapshot": {
+      "age": 25,
+      "weightKg": 68,
+      "heightCm": 172,
+      "bmi": 23,
+      "gender": "female",
+      "activityLevel": "moderate",
+      "dietaryPreference": "vegetarian",
+      "allergies": "None reported"
+    },
+    "targets": {
+      "bmr": 1469,
+      "tdee": 2277,
+      "calories": 2277,
+      "caloriePill": "ICMR-NIN Aligned",
+      "proteinG": 82,
+      "proteinPerKg": "1.2",
+      "carbsG": 345,
+      "fatsG": 63,
+      "waterL": 2.6,
+      "strategy": "ICMR-NIN aligned balanced whole-food nutrition emphasizing vibrant dietary diversity, gut microbiome prebiotic fiber, anti-inflammatory whole grains, and micronutrient fullness."
+    },
+    "meals": [
+      {
+        "slot": "tiffin",
+        "label": "Morning Tiffin (Breakfast)",
+        "icon": "soup",
+        "timing": "08:00 AM - 08:30 AM",
+        "foods": "Barnyard Millet (Kuthiraivali) Vegetable Upma packed with carrots, beans & curry leaves + Protein-Rich Sambar",
+        "portion": "1 large bowl upma (200g), 1 bowl sambar",
+        "protein": "~16g protein (ICMR-NIN biodiversity)",
+        "hydration": "300-400ml warm water 20 mins before breakfast"
+      },
+      {
+        "slot": "midmorning",
+        "label": "Mid-Morning Snack",
+        "icon": "apple",
+        "timing": "11:00 AM - 11:30 AM",
+        "foods": "Fresh Sweet Lime (Mosambi) or Papaya bowl + 6 soaked walnuts & pumpkin seeds",
+        "portion": "1 fruit bowl, 20g nuts/seeds",
+        "protein": "Natural micronutrients, potassium & healthy lipids",
+        "hydration": "Electrolyte replenishment / coconut water"
+      },
+      {
+        "slot": "lunch",
+        "label": "Afternoon Lunch",
+        "icon": "utensils",
+        "timing": "01:00 PM - 01:45 PM",
+        "foods": "1 cup Unpolished Red Rice or 2 Jowar Rotis + Mixed Vegetable Sambar + Homemade Probiotic Curd + Methi Dal",
+        "portion": "1 cup red rice / 2 jowar rotis, 1 bowl sambar, 1 cup curd, 1 bowl dal",
+        "protein": "~25g protein",
+        "hydration": "Sip water slowly; avoid drinking large volumes during meals"
+      },
+      {
+        "slot": "snacks",
+        "label": "Evening Snack",
+        "icon": "coffee",
+        "timing": "04:45 PM - 05:30 PM",
+        "foods": "Roasted Black Chana Chaat with lemon & fresh mint + Tulsi herbal tea",
+        "portion": "1 medium cup (45g) chana",
+        "protein": "Pre-workout fueling / sustained energy crunch",
+        "hydration": "1 cup green tea / warm water"
+      },
+      {
+        "slot": "dinner",
+        "label": "Night Dinner",
+        "icon": "utensils",
+        "timing": "08:00 PM - 08:45 PM",
+        "foods": "Steamed Bottle Gourd (Lauki) & Moong Dal Khichdi or 2 multigrain phulkas / whole wheat toast with Palak Dal & Cucumber Raita",
+        "portion": "1.5 cups light khichdi / 2 rotis, 1 cup dal",
+        "protein": "~20g protein",
+        "hydration": "Gentle hydration, minimum 2 hours prior to sleep"
+      },
+      {
+        "slot": "extra",
+        "label": "Late-Night / Recovery",
+        "icon": "moon",
+        "timing": "10:00 PM - 10:30 PM",
+        "foods": "Warm water with roasted cumin & ajwain (Nocturnal gut reset)",
+        "portion": "1 warm cup (180ml)",
+        "protein": "Digestive ease",
+        "hydration": "Sip warm infusion"
+      }
+    ],
+    "medicalDisclaimer": "Medical Disclaimer: This personalized nutrition guide is designed for educational and wellness lifestyle planning based on general nutritional guidelines (ICMR-NIN & sports nutrition evidence). It is not a clinical medical diagnosis, prescription, or treatment. Please consult a registered dietitian or medical practitioner before making drastic dietary changes if you have underlying medical conditions.",
+    "created_at": "2026-09-30T20:45:35.564Z",
+    "updated_at": "2026-09-30T20:45:35.564Z"
+  }
+]

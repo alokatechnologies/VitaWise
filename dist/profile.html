@@ -1,0 +1,1185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Manage your personal VitaWise health profile, account details, picture, and preferences.">
+  <title>Account Profile — VitaWise</title>
+  <link rel="icon" href="./assets/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/tokens.css?v=8.0.0">
+  <link rel="stylesheet" href="./css/vitawise.css?v=8.0.0">
+  <link rel="stylesheet" href="./css/auth.css?v=8.0.0">
+  <link rel="stylesheet" href="./css/dashboard.css?v=8.0.0">
+</head>
+<body style="background-color: #F2F1ED;">
+  <main class="vw-profile-shell">
+    <!-- Top Navigation Bar -->
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+      <a href="./index.html" class="vw-btn" style="display: inline-flex; align-items: center; gap: 0.4rem; background: #FFFFFF; border: 1px solid #E2DFD7; color: #161616; font-size: 0.875rem; font-weight: 600; padding: 0.45rem 0.9rem; border-radius: 10px; text-decoration: none; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span>Back to Dashboard</span>
+      </a>
+      <span style="font-size: 0.875rem; font-weight: 700; color: #710014;">Account & Profile Settings</span>
+    </div>
+
+    <!-- Sleek Compact Profile Hero Header Card with Avatar Upload & Zoom -->
+    <section class="vw-profile-header-card">
+      <!-- Interactive Profile Picture Upload & Zoom Wrapper -->
+      <div class="vw-avatar-upload-container" id="avatar-container" title="Click to Upload Photo or Zoom">
+        <div class="vw-profile-avatar-large" id="profile-avatar" style="overflow: hidden; position: relative;">
+          <span id="profile-avatar-text">VW</span>
+          <img id="profile-avatar-img" class="vw-avatar-img" src="" alt="Profile Picture" style="display: none;">
+        </div>
+        <div class="vw-avatar-hover-overlay" id="change-photo-overlay">
+          <span class="vw-inline-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></span>
+          <span>Change</span>
+        </div>
+        <div class="vw-avatar-zoom-badge" id="zoom-avatar-btn" title="Zoom Profile Picture" style="display:flex;align-items:center;justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+      <!-- Hidden File Input for Avatar Upload -->
+      <input type="file" id="profile-picture-input" accept="image/*" style="display: none;">
+
+      <div class="vw-profile-info" style="flex: 1;">
+        <h1 id="profile-name">VitaWise Member</h1>
+        <p id="profile-email">Email unavailable</p>
+        <p id="profile-phone-display" style="font-size: 0.8125rem; color: rgba(179, 143, 111, 0.9); margin-top: 0.15rem; font-weight: 600;"></p>
+        
+        <!-- Hero Age Pill & Role -->
+        <div class="vw-hero-stat-pill" id="hero-age-pill" style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+          <span style="display:inline-flex;align-items:center;gap:0.35rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg> <strong id="profile-hero-age">Age: Not Set</strong></span>
+          <span style="opacity: 0.5; margin: 0 0.2rem;">|</span>
+          <span id="profile-hero-gender" style="text-transform: capitalize;">Male</span>
+          <span style="opacity: 0.5; margin: 0 0.2rem;">|</span>
+          <span id="profile-hero-role" style="font-weight: 700; background: rgba(255,255,255,0.2); padding: 0.1rem 0.55rem; border-radius: 6px;">Family Member</span>
+        </div>
+      </div>
+
+      <div>
+        <button class="vw-btn" id="logout-btn" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.25); color: #FFFFFF; font-size: 0.8125rem; font-weight: 600; padding: 0.45rem 0.9rem; border-radius: 10px; display: inline-flex; align-items: center; gap: 0.4rem; cursor: pointer;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          <span>Sign Out</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Balanced 2-Column Profile Grid -->
+    <div class="vw-profile-grid">
+      <!-- 1. Unified Card: Personal Details, Gender Option Tiles & Password Security -->
+      <article class="vw-profile-card">
+        <div class="vw-profile-card-header">
+          <div class="vw-profile-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <h3>Profile Settings</h3>
+          </div>
+        </div>
+        <p>Update your personal profile, contact info, date of birth, and baseline vitals.</p>
+        
+        <!-- Live Age & BMI Summary Box -->
+        <div class="vw-vital-highlight-box">
+          <div>
+            <div style="font-size: 0.75rem; font-weight: 700; color: #524B46; text-transform: uppercase; letter-spacing: 0.04em;">Calculated Age</div>
+            <div class="vw-vital-val" id="vital-age-val" style="font-size: 1rem;">Not Set</div>
+            <div style="font-size: 0.75rem; color: #710014; font-weight: 600;" id="vital-dob-val">Select DOB below</div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 0.75rem; font-weight: 700; color: #524B46; text-transform: uppercase; letter-spacing: 0.04em;">BMI Estimate</div>
+            <div class="vw-vital-val" id="vital-bmi-val" style="font-size: 1rem; color: #B38F6F;">—</div>
+            <div style="font-size: 0.75rem; color: #065F46; font-weight: 700;" id="vital-bmi-status">—</div>
+          </div>
+        </div>
+
+        <form id="profile-details-form" style="display: flex; flex-direction: column; gap: 0.85rem;" onsubmit="return false;">
+          <!-- Full Name Edit Input -->
+          <div class="vw-form-group" style="margin-bottom: 0;">
+            <label class="vw-label" for="profile-fullname" style="font-weight: 700; color: #161616;">Full Name</label>
+            <input class="vw-input" id="profile-fullname" type="text" placeholder="Your Full Name" style="border-color: #E2DFD7; font-weight: 600; padding: 0.55rem 0.75rem;">
+          </div>
+
+          <!-- Phone Number Edit Input -->
+          <div class="vw-form-group" style="margin-bottom: 0;">
+            <label class="vw-label" for="profile-phone-input" style="font-weight: 700; color: #161616;">Phone Number</label>
+            <input class="vw-input" id="profile-phone-input" type="tel" placeholder="e.g. 9848863038" style="border-color: #E2DFD7; font-weight: 600; padding: 0.55rem 0.75rem;">
+          </div>
+
+          <!-- Date of Birth Selection Input -->
+          <div class="vw-form-group" style="margin-bottom: 0;">
+            <label class="vw-label" for="profile-dob" style="font-weight: 700; color: #161616;">Date of Birth (DOB)</label>
+            <input class="vw-input" id="profile-dob" type="date" style="border-color: #E2DFD7; font-weight: 600; padding: 0.55rem 0.75rem;">
+          </div>
+
+          <!-- Gender Profile Interactive Option Tiles ONLY -->
+          <div class="vw-form-group" style="margin-bottom: 0;">
+            <label class="vw-label" style="font-weight: 700; color: #161616; display: block; margin-bottom: 0.35rem;">Gender Profile</label>
+            <div class="vw-tile-grid" id="gender-tile-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+              <button type="button" class="vw-option-card-tile selected" data-gender="male">
+                <span class="vw-tile-radio-indicator"></span>
+                <div class="vw-tile-content">
+                  <div class="vw-tile-title" style="display:flex;align-items:center;gap:0.4rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><circle cx="10" cy="14" r="5"/><line x1="19" y1="5" x2="13.6" y2="10.4"/><polyline points="15 5 19 5 19 9"/></svg> Male</div>
+                </div>
+              </button>
+              <button type="button" class="vw-option-card-tile" data-gender="female">
+                <span class="vw-tile-radio-indicator"></span>
+                <div class="vw-tile-content">
+                  <div class="vw-tile-title" style="display:flex;align-items:center;gap:0.4rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><circle cx="12" cy="9" r="5"/><line x1="12" y1="14" x2="12" y2="21"/><line x1="9" y1="18" x2="15" y2="18"/></svg> Female</div>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem;">
+            <div class="vw-form-group" style="margin-bottom: 0;">
+              <label class="vw-label" for="profile-height" style="font-weight: 700; color: #161616;">Height (cm)</label>
+              <input class="vw-input" id="profile-height" type="number" min="80" max="250" step="0.1" placeholder="e.g. 175" style="border-color: #E2DFD7; font-weight: 600;">
+            </div>
+            <div class="vw-form-group" style="margin-bottom: 0;">
+              <label class="vw-label" for="profile-weight" style="font-weight: 700; color: #161616;">Weight (kg)</label>
+              <input class="vw-input" id="profile-weight" type="number" min="20" max="300" step="0.1" placeholder="e.g. 70" style="border-color: #E2DFD7; font-weight: 600;">
+            </div>
+          </div>
+
+          <button class="vw-btn" type="button" id="save-profile-details" style="margin-top: 0.4rem; background: #710014; color: #FFFFFF; font-weight: 700; padding: 0.65rem 1.1rem; border-radius: 10px; border: none; cursor: pointer;">Save Profile Settings</button>
+
+          <!-- Divider for Language Preference (Moved from Language & Preferences) -->
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin: 1.25rem 0 0.5rem;">
+            <hr style="flex: 1; border: 0; border-top: 1px solid #E2DFD7;">
+            <span style="font-size: 0.78rem; font-weight: 700; color: #710014; text-transform: uppercase; letter-spacing: 0.05em; display:inline-flex;align-items:center;gap:0.35rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Language Preference</span>
+            <hr style="flex: 1; border: 0; border-top: 1px solid #E2DFD7;">
+          </div>
+
+          <!-- Language Preference Interactive Option Card Tiles -->
+          <div class="vw-form-group" style="margin-bottom: 0;">
+            <div class="vw-tile-grid" id="lang-tile-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+              <button type="button" class="vw-option-card-tile selected" data-lang="en">
+                <span class="vw-tile-radio-indicator"></span>
+                <div class="vw-tile-content">
+                  <div class="vw-tile-title">
+                    <span>English</span>
+                    <span class="vw-lang-badge">EN</span>
+                  </div>
+                  <div class="vw-tile-desc">Standard Clinical AI</div>
+                </div>
+              </button>
+              <button type="button" class="vw-option-card-tile" data-lang="te">
+                <span class="vw-tile-radio-indicator"></span>
+                <div class="vw-tile-content">
+                  <div class="vw-tile-title">
+                    <span>తెలుగు</span>
+                    <span class="vw-lang-badge">TEL</span>
+                  </div>
+                  <div class="vw-tile-desc">Human Telugu AI</div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </form>
+      </article>
+
+      <!-- 1B. Reset Member Password & Dietary Pattern Card -->
+      <article class="vw-profile-card" id="family-reset-password-card">
+        <div id="vw-head-password-management-block">
+          <div class="vw-profile-card-header">
+            <div class="vw-profile-card-icon" style="background: #710014;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div>
+              <h3>Reset Member Password</h3>
+            </div>
+          </div>
+          <p>As Family Head, securely initiate or reset an authenticated password for any member of your household.</p>
+
+          <form id="family-reset-password-form" style="display: flex; flex-direction: column; gap: 0.85rem;" onsubmit="return false;">
+            <div class="vw-form-group" style="margin-bottom: 0;">
+              <label class="vw-label" for="fam-reset-member-select" style="font-weight: 700; color: #161616;">Select Family Member</label>
+              <select class="vw-select" id="fam-reset-member-select" style="border-color: #E2DFD7; font-weight: 600; padding: 0.55rem 0.75rem; width: 100%;">
+                <option value="">-- Myself (Update Personal Password) --</option>
+              </select>
+            </div>
+
+            <div style="background: #FAF6F2; border: 1px solid #E5D5C5; border-radius: 8px; padding: 0.65rem 0.85rem; font-size: 0.78rem; color: #710014;">
+              <span style="display:inline-flex;align-items:center;gap:0.35rem;vertical-align:middle;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Passwords are never sent in plaintext or viewable by anyone. Updates are applied directly via Supabase Auth Admin.</span>
+            </div>
+
+            <div class="vw-form-group" style="margin-bottom: 0;">
+              <label class="vw-label" for="profile-new-pass" style="font-weight: 700; color: #161616;">New Password</label>
+              <input class="vw-input" id="profile-new-pass" type="password" placeholder="Minimum 8 characters" style="border-color: #E2DFD7; font-weight: 600; padding: 0.55rem 0.75rem;">
+            </div>
+
+            <div class="vw-form-group" style="margin-bottom: 0;">
+              <label class="vw-label" for="profile-confirm-pass" style="font-weight: 700; color: #161616;">Confirm New Password</label>
+              <input class="vw-input" id="profile-confirm-pass" type="password" placeholder="Repeat new password" style="border-color: #E2DFD7; font-weight: 600; padding: 0.55rem 0.75rem;">
+            </div>
+
+            <input type="hidden" id="fam-reset-new-pass">
+            <input type="hidden" id="fam-reset-confirm-pass">
+
+            <div id="password-alert" style="display: none; font-size: 0.8125rem; font-weight: 600; padding: 0.5rem 0.75rem; border-radius: 8px;"></div>
+            <div id="family-reset-pass-alert" style="display: none; font-size: 0.8125rem; font-weight: 600; padding: 0.5rem 0.75rem; border-radius: 8px;"></div>
+
+            <button class="vw-btn" type="button" id="update-password-btn" style="margin-top: 0.2rem; background: #710014; color: #FFFFFF; font-weight: 700; padding: 0.65rem 1.1rem; border-radius: 10px; border: none; cursor: pointer;">Update Password</button>
+            <button type="button" id="btn-submit-fam-reset-pass" style="display: none;" aria-hidden="true"></button>
+          </form>
+        </div>
+
+        <div>
+          <!-- Divider for Dietary Pattern (Moved below Password Management) -->
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin: 1.25rem 0 0.35rem;">
+            <hr style="flex: 1; border: 0; border-top: 1px solid #E2DFD7;">
+            <span style="font-size: 0.78rem; font-weight: 700; color: #710014; text-transform: uppercase; letter-spacing: 0.05em; display:inline-flex;align-items:center;gap:0.35rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20"/><path d="M2 12h20"/></svg> Dietary Pattern</span>
+            <hr style="flex: 1; border: 0; border-top: 1px solid #E2DFD7;">
+          </div>
+
+          <!-- Dietary Pattern Interactive Option Card Tiles with Modern Healthcare Icons -->
+          <div class="vw-form-group" style="margin-bottom: 0;">
+            <div class="vw-tile-grid" id="diet-tile-grid" style="grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 0.55rem;">
+              <button type="button" class="vw-option-card-tile selected" data-diet="south_indian">
+                <span class="vw-tile-radio-indicator"></span>
+                <div class="vw-tile-content">
+                  <div class="vw-tile-title" style="display:flex;align-items:center;gap:0.45rem;">
+                    <!-- Healthy Plate & Nutrition Line Icon -->
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#710014" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20"/><path d="M2 12h20"/></svg>
+                    <span>South Indian Traditional</span>
+                  </div>
+                  <div class="vw-tile-desc">Millet, Pulse &amp; Low-GI Metabolic Focus</div>
+                </div>
+              </button>
+              <button type="button" class="vw-option-card-tile" data-diet="north_indian">
+                <span class="vw-tile-radio-indicator"></span>
+                <div class="vw-tile-content">
+                  <div class="vw-tile-title" style="display:flex;align-items:center;gap:0.45rem;">
+                    <!-- Balanced Meal & Whole Grain Line Icon -->
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#710014" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M12 2v6"/><path d="M12 16v6"/></svg>
+                    <span>North Indian Traditional</span>
+                  </div>
+                  <div class="vw-tile-desc">Whole Wheat, Roti &amp; Protein Balance</div>
+                </div>
+              </button>
+              <button type="button" class="vw-option-card-tile" data-diet="lacto_veg">
+                <span class="vw-tile-radio-indicator"></span>
+                <div class="vw-tile-content">
+                  <div class="vw-tile-title" style="display:flex;align-items:center;gap:0.45rem;">
+                    <!-- Leaf & Plant-Based Wellness Line Icon -->
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#710014" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                    <span>Lacto-Vegetarian</span>
+                  </div>
+                  <div class="vw-tile-desc">Plant-Based, Legumes &amp; Dairy Focus</div>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Save Preferences Button -->
+          <button class="vw-btn" type="button" id="save-preferences-btn" style="margin-top: 0.2rem; background: #710014; color: #FFFFFF; font-weight: 700; padding: 0.65rem 1.1rem; border-radius: 10px; border: none; cursor: pointer; width: 100%;">
+            <span>Save Preferences</span>
+          </button>
+        </form>
+      </article>
+
+      <!-- 2. Achievements & Clinical Guidance Unified Card -->
+      <article class="vw-profile-card" style="grid-column: 1 / -1;">
+        <div class="vw-profile-card-header">
+          <div class="vw-profile-card-icon" style="background: #710014;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div>
+            <h3>Achievements &amp; Clinical Guidance</h3>
+          </div>
+        </div>
+        <p>Monitor your wellness consistency badges and clinical health baseline recommendations.</p>
+
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <!-- Divider for Achievements Section -->
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin: 0.25rem 0 0.25rem;">
+            <hr style="flex: 1; border: 0; border-top: 1px solid #E2DFD7;">
+            <span style="font-size: 0.78rem; font-weight: 700; color: #710014; text-transform: uppercase; letter-spacing: 0.05em; display:inline-flex;align-items:center;gap:0.35rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Achievements &amp; Badges</span>
+            <hr style="flex: 1; border: 0; border-top: 1px solid #E2DFD7;">
+          </div>
+
+          <!-- Achievements Badges Grid -->
+          <div class="vw-achievement-grid" id="profile-achievements-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.65rem;">
+            <!-- Badge 1 -->
+            <div class="vw-achievement-card" style="padding: 0.65rem 0.75rem;">
+              <div class="vw-achievement-badge-icon gold" style="width: 34px; height: 34px; display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+              <div class="vw-achievement-info">
+                <div class="vw-achievement-title" style="font-size: 0.8125rem;">7-Day Log Master</div>
+                <span class="vw-achievement-status-tag unlocked" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;">Unlocked</span>
+              </div>
+            </div>
+
+            <!-- Badge 2 -->
+            <div class="vw-achievement-card" style="padding: 0.65rem 0.75rem;">
+              <div class="vw-achievement-badge-icon green" style="width: 34px; height: 34px; display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+              <div class="vw-achievement-info">
+                <div class="vw-achievement-title" style="font-size: 0.8125rem;">Fiber Guardian</div>
+                <span class="vw-achievement-status-tag unlocked" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;">Unlocked</span>
+              </div>
+            </div>
+
+            <!-- Badge 3 -->
+            <div class="vw-achievement-card" style="padding: 0.65rem 0.75rem;">
+              <div class="vw-achievement-badge-icon blue" style="width: 34px; height: 34px; display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+              <div class="vw-achievement-info">
+                <div class="vw-achievement-title" style="font-size: 0.8125rem;">Hydration Champion</div>
+                <span class="vw-achievement-status-tag unlocked" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;">Unlocked</span>
+              </div>
+            </div>
+
+            <!-- Badge 4 -->
+            <div class="vw-achievement-card" style="padding: 0.65rem 0.75rem;">
+              <div class="vw-achievement-badge-icon purple" style="width: 34px; height: 34px; display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z"/></svg></div>
+              <div class="vw-achievement-info">
+                <div class="vw-achievement-title" style="font-size: 0.8125rem;">Aloka AI Scholar</div>
+                <span class="vw-achievement-status-tag unlocked" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;">Unlocked</span>
+              </div>
+            </div>
+
+            <!-- Badge 5 -->
+            <div class="vw-achievement-card" style="padding: 0.65rem 0.75rem;">
+              <div class="vw-achievement-badge-icon bronze" style="width: 34px; height: 34px; display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></div>
+              <div class="vw-achievement-info">
+                <div class="vw-achievement-title" style="font-size: 0.8125rem;">Circadian Sync</div>
+                <span class="vw-achievement-status-tag progress" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;">80% Complete</span>
+              </div>
+            </div>
+
+            <!-- Badge 6 -->
+            <div class="vw-achievement-card" style="padding: 0.65rem 0.75rem;">
+              <div class="vw-achievement-badge-icon rose" style="width: 34px; height: 34px; display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/></svg></div>
+              <div class="vw-achievement-info">
+                <div class="vw-achievement-title" style="font-size: 0.8125rem;">Cycle Harmony</div>
+                <span class="vw-achievement-status-tag progress" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;">60% Complete</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divider for AI Health Protocol -->
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin: 0.85rem 0 0.25rem;">
+            <hr style="flex: 1; border: 0; border-top: 1px solid #E2DFD7;">
+            <span style="font-size: 0.78rem; font-weight: 700; color: #710014; text-transform: uppercase; letter-spacing: 0.05em; display:inline-flex;align-items:center;gap:0.35rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z"/></svg> AI Health Baseline Guidance</span>
+            <hr style="flex: 1; border: 0; border-top: 1px solid #E2DFD7;">
+          </div>
+
+          <!-- Aloka AI Daily Health Baseline Box -->
+          <div style="background: linear-gradient(135deg, #FAF6F2 0%, #F5ECE3 100%); border: 1px solid #E5D5C5; border-radius: 14px; padding: 0.85rem 1rem; display: flex; flex-direction: column; gap: 0.4rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <div style="display: flex; align-items: center; gap: 0.45rem;">
+                <span class="vw-inline-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></span>
+                <span style="font-size: 0.875rem; font-weight: 700; color: #710014;">Aloka AI Personal Health Protocol</span>
+              </div>
+              <span style="font-size: 0.68rem; font-weight: 800; background: #710014; color: #FFFFFF; padding: 0.15rem 0.45rem; border-radius: 6px;">ICMR Aligned</span>
+            </div>
+            <p style="font-size: 0.78rem; color: #524B46; margin: 0; line-height: 1.45; font-weight: 500;">
+              Your active health profile targets <strong>30g+ daily fiber</strong>, <strong>2.5L hydration</strong>, <strong>7.5h sleep before 11 PM</strong>, and low glycemic load meals tailored for steady energy & metabolic vitality.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Family Space & Consent Management Card -->
+    <article class="vw-profile-card" id="family-privacy-card" style="margin-top: 1.5rem;">
+      <div class="vw-profile-card-header">
+        <div class="vw-profile-card-icon" style="background: linear-gradient(135deg, #710014, #941B2D); font-size: 1.25rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div style="flex: 1;">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+            <h3 id="fam-card-title" style="margin: 0; font-size: 1.15rem; font-weight: 700; color: #161616;">Family Health Space &amp; Privacy Controls</h3>
+            <span class="vw-badge vw-badge-primary" id="fam-user-role-badge" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">Household Linked</span>
+          </div>
+          <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: #524B46;">Household health coordination, explicit consent requests, and zero-leak female health privacy protection.</p>
+        </div>
+      </div>
+
+      <div id="fam-privacy-content" style="padding-top: 1rem;">
+        <div class="vw-loading-state" style="text-align: center; padding: 1.5rem; color: #710014;">
+          Loading family health settings...
+        </div>
+      </div>
+    </article>
+
+    <!-- Footer Branding -->
+    <footer class="vw-brand-footer">
+      <div class="vw-brand-signature">
+        <img src="./assets/aloka-logo.png" alt="Aloka Logo" class="vw-brand-logo">
+        <span class="vw-brand-text">Powered by <strong>Aloka</strong></span>
+      </div>
+    </footer>
+  </main>
+
+  <!-- High-Res Profile Picture Zoom Lightbox Modal -->
+  <div class="vw-image-modal-backdrop" id="image-zoom-modal" aria-hidden="true">
+    <div class="vw-image-modal-content">
+      <div class="vw-image-zoom-frame">
+        <img id="zoomed-profile-img" src="" alt="Profile Picture Zoom View">
+      </div>
+      <div class="vw-image-zoom-controls">
+        <button class="vw-zoom-btn" id="zoom-out-btn" title="Zoom Out">-</button>
+        <span style="color: #FFFFFF; font-size: 0.85rem; font-weight: 700;" id="zoom-percentage">100%</span>
+        <button class="vw-zoom-btn" id="zoom-in-btn" title="Zoom In">+</button>
+        <button class="vw-zoom-btn" id="zoom-reset-btn" title="Reset Zoom" style="font-size: 0.8rem; width: auto; padding: 0 0.5rem;">Reset</button>
+        <button class="vw-zoom-btn" id="close-zoom-modal" title="Close Lightbox" style="margin-left: 0.5rem; background: rgba(220, 38, 38, 0.8);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/vitawise-icons.js"></script>
+  <script src="./js/api.js?v=7.0.0"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      if (!window.VitaWiseApi?.isAuthenticated()) {
+        window.location.replace('./login.html');
+        return;
+      }
+
+      let user = window.VitaWiseApi.getUser() || {};
+      try {
+        const liveRes = await window.VitaWiseApi.auth.getMe();
+        if (liveRes && (liveRes.user || liveRes.email)) {
+          user = liveRes.user || liveRes;
+          window.VitaWiseApi.setSession(window.VitaWiseApi.getToken(), window.VitaWiseApi.getRefreshToken(), user);
+        }
+      } catch {}
+
+      // UI Element References
+      const nameInput = document.getElementById('profile-fullname');
+      const phoneInput = document.getElementById('profile-phone-input');
+      const dobInput = document.getElementById('profile-dob');
+      const langSelect = document.getElementById('profile-lang-select');
+      const dietSelect = document.getElementById('profile-diet-select');
+      const heightInput = document.getElementById('profile-height');
+      const weightInput = document.getElementById('profile-weight');
+
+      const heroNameEl = document.getElementById('profile-name');
+      const heroEmailEl = document.getElementById('profile-email');
+      const heroPhoneEl = document.getElementById('profile-phone-display');
+      const heroAvatarTextEl = document.getElementById('profile-avatar-text');
+      const heroAvatarImgEl = document.getElementById('profile-avatar-img');
+      const heroAgeEl = document.getElementById('profile-hero-age');
+      const heroGenderEl = document.getElementById('profile-hero-gender');
+
+      const vitalAgeEl = document.getElementById('vital-age-val');
+      const vitalDobEl = document.getElementById('vital-dob-val');
+      const bmiValEl = document.getElementById('vital-bmi-val');
+      const bmiStatusEl = document.getElementById('vital-bmi-status');
+
+      // Populate User Details
+      const fullName = user.full_name || user.fullName || (user.email ? user.email.split('@')[0].toUpperCase() : 'VitaWise Member');
+      const email = user.email || 'Email unavailable';
+      const phone = user.phone || '';
+
+      if (nameInput) nameInput.value = fullName;
+      if (phoneInput) phoneInput.value = phone;
+      if (heroNameEl) heroNameEl.textContent = fullName;
+      if (heroEmailEl) heroEmailEl.textContent = email;
+      if (heroPhoneEl) heroPhoneEl.textContent = phone ? `${phone}` : '';
+      
+      const isHead = user.isFamilyHead || user.role === 'family_head' || user.role === 'family_admin' || user.role === 'admin';
+      const roleEl = document.getElementById('profile-hero-role') || document.getElementById('profile-hero-member-id');
+      if (roleEl) roleEl.textContent = isHead ? 'Family Head (Admin)' : 'Family Member';
+
+      const initials = fullName.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase() || 'VW';
+      if (heroAvatarTextEl) heroAvatarTextEl.textContent = initials;
+
+      // Profile Picture Handling (Account-Isolated)
+      localStorage.removeItem('vitawise_avatar_url'); // Clear old shared legacy avatar key
+      const userAccountKey = user.id || user.email || 'guest';
+      const avatarStorageKey = `vitawise_avatar_${userAccountKey}`;
+      const savedAvatarUrl = user.avatarUrl || user.avatar_url || localStorage.getItem(avatarStorageKey);
+
+      if (savedAvatarUrl) {
+        if (heroAvatarImgEl) {
+          heroAvatarImgEl.src = savedAvatarUrl;
+          heroAvatarImgEl.style.display = 'block';
+        }
+        if (heroAvatarTextEl) heroAvatarTextEl.style.display = 'none';
+      } else {
+        if (heroAvatarImgEl) heroAvatarImgEl.style.display = 'none';
+        if (heroAvatarTextEl) heroAvatarTextEl.style.display = 'block';
+      }
+
+      // Profile Picture Upload Handler
+      const avatarContainer = document.getElementById('avatar-container');
+      const pictureInput = document.getElementById('profile-picture-input');
+
+      avatarContainer?.addEventListener('click', (e) => {
+        if (e.target.closest('#zoom-avatar-btn')) return;
+        pictureInput?.click();
+      });
+
+      pictureInput?.addEventListener('change', (e) => {
+        const file = e.target.files?.[0];
+        if (file) {
+          if (file.size > 5 * 1024 * 1024) {
+            window.alert('Please choose an image under 5MB.');
+            return;
+          }
+          const reader = new FileReader();
+          reader.onload = async (event) => {
+            const dataUrl = event.target?.result;
+            if (dataUrl) {
+              localStorage.setItem(avatarStorageKey, dataUrl);
+              if (heroAvatarImgEl) {
+                heroAvatarImgEl.src = dataUrl;
+                heroAvatarImgEl.style.display = 'block';
+              }
+              if (heroAvatarTextEl) heroAvatarTextEl.style.display = 'none';
+              try {
+                await window.VitaWiseApi.auth.updateProfile({ avatarUrl: dataUrl });
+              } catch (_) {}
+            }
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      // Profile Picture Zoom Lightbox Modal Handler
+      const zoomModal = document.getElementById('image-zoom-modal');
+      const zoomedImg = document.getElementById('zoomed-profile-img');
+      const zoomInBtn = document.getElementById('zoom-in-btn');
+      const zoomOutBtn = document.getElementById('zoom-out-btn');
+      const zoomResetBtn = document.getElementById('zoom-reset-btn');
+      const closeZoomBtn = document.getElementById('close-zoom-modal');
+      const zoomPctEl = document.getElementById('zoom-percentage');
+
+      let currentZoomLevel = 1;
+
+      function updateZoomTransform() {
+        if (zoomedImg) {
+          zoomedImg.style.transform = `scale(${currentZoomLevel})`;
+        }
+        if (zoomPctEl) {
+          zoomPctEl.textContent = `${Math.round(currentZoomLevel * 100)}%`;
+        }
+      }
+
+      document.getElementById('zoom-avatar-btn')?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const currentSrc = heroAvatarImgEl?.style.display !== 'none' && heroAvatarImgEl?.src ? heroAvatarImgEl.src : null;
+        if (currentSrc) {
+          if (zoomedImg) zoomedImg.src = currentSrc;
+          currentZoomLevel = 1;
+          updateZoomTransform();
+          zoomModal?.classList.add('open');
+        } else {
+          pictureInput?.click();
+        }
+      });
+
+      closeZoomBtn?.addEventListener('click', () => {
+        zoomModal?.classList.remove('open');
+      });
+
+      zoomModal?.addEventListener('click', (e) => {
+        if (e.target === zoomModal) zoomModal.classList.remove('open');
+      });
+
+      zoomInBtn?.addEventListener('click', () => {
+        if (currentZoomLevel < 3) {
+          currentZoomLevel += 0.25;
+          updateZoomTransform();
+        }
+      });
+
+      zoomOutBtn?.addEventListener('click', () => {
+        if (currentZoomLevel > 0.5) {
+          currentZoomLevel -= 0.25;
+          updateZoomTransform();
+        }
+      });
+
+      zoomResetBtn?.addEventListener('click', () => {
+        currentZoomLevel = 1;
+        updateZoomTransform();
+      });
+
+      // DOB & Age Handler
+      if (user.dob && dobInput) {
+        const rawDob = String(user.dob).split('T')[0];
+        dobInput.value = rawDob;
+      }
+
+      function updateAgeDisplay() {
+        const selectedDob = dobInput?.value;
+        if (selectedDob) {
+          const birth = new Date(selectedDob);
+          if (!isNaN(birth.getTime())) {
+            const today = new Date();
+            let age = today.getFullYear() - birth.getFullYear();
+            const m = today.getMonth() - birth.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+              age--;
+            }
+            if (age >= 0) {
+              const formattedDate = birth.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+              if (heroAgeEl) heroAgeEl.textContent = `Age: ${age} Years`;
+              if (vitalAgeEl) vitalAgeEl.textContent = `${age} Years Old`;
+              if (vitalDobEl) vitalDobEl.textContent = formattedDate;
+              return;
+            }
+          }
+        }
+        
+        if (user.age) {
+          if (heroAgeEl) heroAgeEl.textContent = `Age: ${user.age} Years`;
+          if (vitalAgeEl) vitalAgeEl.textContent = `${user.age} Years Old`;
+          if (vitalDobEl) vitalDobEl.textContent = 'Set DOB below';
+        } else {
+          if (heroAgeEl) heroAgeEl.textContent = 'Age: Not Set';
+          if (vitalAgeEl) vitalAgeEl.textContent = 'Not Set';
+          if (vitalDobEl) vitalDobEl.textContent = 'Select DOB below';
+        }
+      }
+
+      dobInput?.addEventListener('change', updateAgeDisplay);
+      updateAgeDisplay();
+
+      // Interactive Gender Tile Cards ONLY
+      let selectedGender = String(user.gender || 'male').toLowerCase();
+      const genderTiles = document.querySelectorAll('#gender-tile-grid .vw-option-card-tile');
+      
+      function syncGenderTiles() {
+        genderTiles.forEach(tile => {
+          if (tile.dataset.gender === selectedGender) {
+            tile.classList.add('selected');
+          } else {
+            tile.classList.remove('selected');
+          }
+        });
+        if (heroGenderEl) heroGenderEl.textContent = selectedGender === 'female' ? 'Female' : 'Male';
+      }
+
+      genderTiles.forEach(tile => {
+        tile.addEventListener('click', () => {
+          selectedGender = tile.dataset.gender || 'male';
+          syncGenderTiles();
+        });
+      });
+      syncGenderTiles();
+
+      // Language Option Card Tiles Sync
+      let selectedLang = localStorage.getItem('vitawise_language') || user.language_preference || 'en';
+      const langTiles = document.querySelectorAll('#lang-tile-grid .vw-option-card-tile');
+      function syncLangTiles() {
+        langTiles.forEach(tile => {
+          tile.classList.toggle('selected', tile.dataset.lang === selectedLang);
+        });
+        localStorage.setItem('vitawise_language', selectedLang);
+      }
+      langTiles.forEach(tile => {
+        tile.addEventListener('click', () => {
+          selectedLang = tile.dataset.lang || 'en';
+          syncLangTiles();
+        });
+      });
+      syncLangTiles();
+
+      // Dietary Option Card Tiles Sync
+      let selectedDiet = user.dietary_preference || user.dietaryPreference || 'south_indian';
+      const dietTiles = document.querySelectorAll('#diet-tile-grid .vw-option-card-tile');
+      function syncDietTiles() {
+        dietTiles.forEach(tile => {
+          tile.classList.toggle('selected', tile.dataset.diet === selectedDiet);
+        });
+      }
+      dietTiles.forEach(tile => {
+        tile.addEventListener('click', () => {
+          selectedDiet = tile.dataset.diet || 'south_indian';
+          syncDietTiles();
+        });
+      });
+      syncDietTiles();
+
+      // Save Preferences Button Event Listener
+      document.getElementById('save-preferences-btn')?.addEventListener('click', async (event) => {
+        const button = event.currentTarget;
+        button.disabled = true;
+        const originalText = button.textContent;
+        button.textContent = 'Saving...';
+        try {
+          await window.VitaWiseApi.auth.updateProfile({
+            languagePreference: selectedLang,
+            dietaryPreference: selectedDiet,
+          });
+          localStorage.setItem('vitawise_language', selectedLang);
+          button.textContent = 'Saved Preferences Successfully!';
+          setTimeout(() => { button.textContent = originalText; }, 2000);
+        } catch (error) {
+          window.alert(error.message || 'Could not save preferences.');
+          button.textContent = originalText;
+        } finally {
+          button.disabled = false;
+        }
+      });
+
+      // Height & Weight BMI Calculation
+      function recalculateBmi() {
+        const h = Number(heightInput?.value || 0) / 100;
+        const w = Number(weightInput?.value || 0);
+        if (h > 0 && w > 0) {
+          const bmi = (w / (h * h)).toFixed(1);
+          if (bmiValEl) bmiValEl.textContent = `${bmi} kg/m²`;
+          if (bmiStatusEl) {
+            if (bmi < 18.5) { bmiStatusEl.textContent = 'Underweight'; bmiStatusEl.style.color = '#D97706'; }
+            else if (bmi < 24.9) { bmiStatusEl.textContent = 'Normal'; bmiStatusEl.style.color = '#065F46'; }
+            else if (bmi < 29.9) { bmiStatusEl.textContent = 'Overweight'; bmiStatusEl.style.color = '#D97706'; }
+            else { bmiStatusEl.textContent = 'Obese'; bmiStatusEl.style.color = '#DC2626'; }
+          }
+        } else {
+          if (bmiValEl) bmiValEl.textContent = '—';
+          if (bmiStatusEl) bmiStatusEl.textContent = '—';
+        }
+      }
+
+      if (heightInput) {
+        if (user.heightCm) heightInput.value = user.heightCm;
+        heightInput.addEventListener('input', recalculateBmi);
+      }
+      if (weightInput) {
+        if (user.weightKg) weightInput.value = user.weightKg;
+        weightInput.addEventListener('input', recalculateBmi);
+      }
+      recalculateBmi();
+
+      // Save Personal & Health Details
+      document.getElementById('save-profile-details')?.addEventListener('click', async (event) => {
+        const newName = nameInput?.value?.trim();
+        const newPhone = phoneInput?.value?.trim();
+        const selectedDob = dobInput?.value || undefined;
+        const heightCm = Number(heightInput?.value || 0);
+        const weightKg = Number(weightInput?.value || 0);
+
+        if (heightCm && (heightCm < 80 || heightCm > 250)) {
+          window.alert('Please enter a valid height (80-250 cm).');
+          return;
+        }
+        if (weightKg && (weightKg < 20 || weightKg > 300)) {
+          window.alert('Please enter a valid weight (20-300 kg).');
+          return;
+        }
+
+        const button = event.currentTarget;
+        button.disabled = true;
+        const originalText = button.textContent;
+        button.textContent = 'Saving...';
+        try {
+          const result = await window.VitaWiseApi.auth.updateProfile({
+            fullName: newName || undefined,
+            name: newName || undefined,
+            phone: newPhone || undefined,
+            dob: selectedDob,
+            gender: selectedGender,
+            heightCm: heightCm || undefined,
+            weightKg: weightKg || undefined,
+            languagePreference: selectedLang,
+            dietaryPreference: selectedDiet,
+          });
+
+          if (newName && heroNameEl) heroNameEl.textContent = newName;
+          if (newPhone && heroPhoneEl) heroPhoneEl.textContent = `${newPhone}`;
+          if (newName && heroAvatarTextEl && heroAvatarImgEl?.style.display === 'none') {
+            heroAvatarTextEl.textContent = newName.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
+          }
+
+          button.textContent = 'Saved Successfully!';
+          setTimeout(() => { button.textContent = originalText; }, 2000);
+        } catch (error) {
+          window.alert(error.message || 'Could not save profile details.');
+          button.textContent = originalText;
+        } finally {
+          button.disabled = false;
+        }
+      });
+
+      // Update Password Handler (Unified Password Management)
+      document.getElementById('update-password-btn')?.addEventListener('click', async (event) => {
+        const newPass = document.getElementById('profile-new-pass')?.value;
+        const confirmPass = document.getElementById('profile-confirm-pass')?.value;
+        const alertEl = document.getElementById('password-alert');
+        const famAlertEl = document.getElementById('family-reset-pass-alert');
+
+        const showAlert = (msg, isError = true) => {
+          [alertEl, famAlertEl].forEach(el => {
+            if (!el) return;
+            el.textContent = msg;
+            el.style.background = isError ? '#FEE2E2' : '#D1FAE5';
+            el.style.color = isError ? '#991B1B' : '#065F46';
+            el.style.display = 'block';
+          });
+        };
+
+        if (alertEl) alertEl.style.display = 'none';
+        if (famAlertEl) famAlertEl.style.display = 'none';
+
+        if (!newPass || newPass.length < 8) {
+          showAlert('Password must be at least 8 characters long.', true);
+          return;
+        }
+        if (newPass !== confirmPass) {
+          showAlert('Passwords do not match.', true);
+          return;
+        }
+
+        const button = event.currentTarget;
+        button.disabled = true;
+        const originalText = button.textContent;
+        button.textContent = 'Updating...';
+
+        try {
+          const select = document.getElementById('fam-reset-member-select');
+          const memberId = select?.value;
+
+          if (memberId && window.VitaWiseApi?.family?.resetMemberPassword) {
+            const resp = await window.VitaWiseApi.family.resetMemberPassword(memberId, newPass);
+            showAlert(resp?.message || 'Password has been securely reset for family member.', false);
+          } else {
+            await window.VitaWiseApi.auth.updatePassword(newPass);
+            showAlert('Password updated successfully!', false);
+          }
+          const p1 = document.getElementById('profile-new-pass');
+          const p2 = document.getElementById('profile-confirm-pass');
+          const f1 = document.getElementById('fam-reset-new-pass');
+          const f2 = document.getElementById('fam-reset-confirm-pass');
+          if (p1) p1.value = '';
+          if (p2) p2.value = '';
+          if (f1) f1.value = '';
+          if (f2) f2.value = '';
+        } catch (err) {
+          showAlert(err.message || 'Failed to update password.', true);
+        } finally {
+          button.disabled = false;
+          button.textContent = originalText;
+        }
+      });
+
+      // Family Head: Reset Member Password Handler (Requirements 27, 28, 29)
+      const setupFamilyResetPassword = async (currentUser) => {
+        const isHead = currentUser?.isFamilyHead === true || currentUser?.role === 'family_head' || currentUser?.role === 'admin';
+        const card = document.getElementById('family-reset-password-card');
+        const passBlock = document.getElementById('vw-head-password-management-block');
+        const select = document.getElementById('fam-reset-member-select');
+        const submitBtn = document.getElementById('btn-submit-fam-reset-pass');
+
+        if (!isHead) {
+          if (passBlock) passBlock.style.display = 'none';
+          return;
+        }
+        if (passBlock) passBlock.style.display = 'block';
+
+        try {
+          const res = await window.VitaWiseApi.family.getDashboard();
+          const members = res?.members || res?.memberCards || [];
+          if (select) {
+            select.innerHTML = '<option value="">-- Myself (Update Personal Password) --</option>' +
+              members.map(m => `<option value="${m.user_id || m.id}">${m.full_name || m.fullName} (${m.relationship || m.role})</option>`).join('');
+          }
+        } catch (_) {}
+
+        submitBtn?.addEventListener('click', () => {
+          const f1 = document.getElementById('fam-reset-new-pass')?.value;
+          const f2 = document.getElementById('fam-reset-confirm-pass')?.value;
+          if (f1 && document.getElementById('profile-new-pass')) document.getElementById('profile-new-pass').value = f1;
+          if (f2 && document.getElementById('profile-confirm-pass')) document.getElementById('profile-confirm-pass').value = f2;
+          document.getElementById('update-password-btn')?.click();
+        });
+      };
+
+      // Family Space & Privacy Controls Initialization
+      async function initProfileFamilyControls(currentUser) {
+        const contentEl = document.getElementById('fam-privacy-content');
+        const roleBadge = document.getElementById('fam-user-role-badge');
+        if (!contentEl) return;
+
+        try {
+          const famRes = await window.VitaWiseApi.family.getFamily();
+          if (!famRes || !famRes.family) {
+            contentEl.innerHTML = `
+              <div style="background: #FAF6F2; border: 1px solid #E5D5C5; border-radius: 12px; padding: 1.25rem; text-align: center;">
+                <p style="margin: 0 0 0.75rem 0; color: #524B46; font-size: 0.88rem;">You are currently using an Individual VitaWise account.</p>
+                <a href="./signup.html" class="vw-btn vw-btn-primary vw-btn-sm" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+                  <span style="display:inline-flex;align-items:center;gap:0.35rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Set Up VitaWise Family Space</span>
+                </a>
+              </div>
+            `;
+            if (roleBadge) roleBadge.textContent = 'Individual Account';
+            return;
+          }
+
+          const family = famRes.family;
+          const members = famRes.members || [];
+          const currentMember = members.find(m => m.user_id === currentUser.id || m.email === currentUser.email) || {};
+          const isFamilyAdmin = currentUser.role === 'family_admin' || currentMember.role === 'admin';
+          const isFemale = String(currentUser.gender || currentMember.gender || '').toLowerCase() === 'female';
+
+          if (roleBadge) {
+            roleBadge.textContent = isFamilyAdmin ? 'Family Admin' : `${currentMember.relationship || 'Member'} (${family.name})`;
+          }
+
+          // Case A: User is Female Family Member (Daughter, Mother, etc.)
+          if (isFemale && !isFamilyAdmin) {
+            const requestsRes = await window.VitaWiseApi.family.getAccessRequests();
+            const permsRes = await window.VitaWiseApi.family.getPermissions();
+            const activePerm = (permsRes.permissions || []).find(p => p.member_user_id === currentUser.id);
+            const pendingReq = (requestsRes.requests || []).find(r => r.member_user_id === currentUser.id && r.status === 'pending');
+
+            const hasActiveShared = activePerm && (
+              activePerm.pcos_overview || activePerm.cycle_period || activePerm.symptoms_journal ||
+              activePerm.hormonal_wellness || activePerm.medication_records || activePerm.lab_records
+            );
+
+            let html = '';
+
+            // 1. Pending Request Banner
+            if (pendingReq) {
+              html += `
+                <div class="vw-pending-request-card" style="background: #FFFBEB; border: 1.5px solid #F59E0B; border-radius: 14px; padding: 1.25rem; margin-bottom: 1rem;">
+                  <div style="display: flex; align-items: flex-start; gap: 0.85rem;">
+                    <span class="vw-inline-icon-wrap" style="color: #710014;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+                    <div style="flex: 1;">
+                      <h4 style="margin: 0; color: #92400E; font-size: 1rem; font-weight: 700;">Incoming Health Access Request</h4>
+                      <p style="margin: 0.25rem 0 0.85rem 0; font-size: 0.85rem; color: #78350F; line-height: 1.45;">
+                        Family Admin <strong>${family.admin_name || 'Father'}</strong> has requested access to monitor your health. You control precisely what information is unlocked:
+                      </p>
+                      
+                      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.6rem; background: #FFFFFF; border: 1px solid #FDE68A; border-radius: 10px; padding: 0.85rem; margin-bottom: 1rem;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; cursor: pointer;">
+                          <input type="checkbox" id="perm-private" checked style="accent-color: #710014;"> <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> Private Clinical & Lab Vitals</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; cursor: pointer;">
+                          <input type="checkbox" id="perm-cycle" checked style="accent-color: #710014;"> <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg> Cycle & Period History</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; cursor: pointer;">
+                          <input type="checkbox" id="perm-symptoms" checked style="accent-color: #710014;"> <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M9 12h6"/><path d="M9 16h6"/></svg> Symptoms & Mood Journal</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; cursor: pointer;">
+                          <input type="checkbox" id="perm-hormonal" checked style="accent-color: #710014;"> <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg> Hormonal Wellness</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; cursor: pointer;">
+                          <input type="checkbox" id="perm-meds" checked style="accent-color: #710014;"> <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg> Medications Log</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; cursor: pointer;">
+                          <input type="checkbox" id="perm-labs" checked style="accent-color: #710014;"> <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg> Lab Diagnostics</span>
+                        </label>
+                      </div>
+
+                      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                        <button class="vw-btn vw-btn-primary vw-btn-sm" id="btn-approve-access-req" data-req-id="${pendingReq.id}" type="button">
+                          <span style="display:inline-flex;align-items:center;gap:0.35rem;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><polyline points="20 6 9 17 4 12"/></svg> Approve Selected Access</span>
+                        </button>
+                        <button class="vw-btn vw-btn-subtle vw-btn-sm" id="btn-deny-access-req" data-req-id="${pendingReq.id}" type="button" style="color: #DC2626; border-color: #FECACA;">
+                          <span style="display:inline-flex;align-items:center;gap:0.35rem;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Decline Request</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              `;
+            }
+
+            // 2. Active Permissions State
+            if (hasActiveShared) {
+              html += `
+                <div class="vw-active-sharing-card" style="background: #F0FDF4; border: 1.5px solid #22C55E; border-radius: 14px; padding: 1.25rem; margin-bottom: 1rem;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.65rem;">
+                      <span class="vw-inline-icon-wrap" style="color: #15803D;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg></span>
+                      <div>
+                        <h4 style="margin: 0; color: #166534; font-size: 0.95rem; font-weight: 700;">Health Information Shared with Family Admin</h4>
+                        <p style="margin: 0.15rem 0 0 0; font-size: 0.8rem; color: #15803D;">Consent is active. You can revoke access immediately at any moment.</p>
+                      </div>
+                    </div>
+                    <button class="vw-btn vw-btn-sm" id="btn-revoke-perm" type="button" style="background: #DC2626; color: #FFFFFF; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; padding: 0.5rem 1rem;">
+                      <span style="display:inline-flex;align-items:center;gap:0.35rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Revoke Access Immediately</span>
+                    </button>
+                  </div>
+
+                  <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.45rem;">
+                    ${activePerm.pcos_overview ? '<span class="vw-badge" style="background:#DCFCE7; color:#166534;">Private Clinical Records</span>' : ''}
+                    ${activePerm.cycle_period ? '<span class="vw-badge" style="background:#DCFCE7; color:#166534;">Cycle Rhythm</span>' : ''}
+                    ${activePerm.symptoms_journal ? '<span class="vw-badge" style="background:#DCFCE7; color:#166534;">Symptoms Journal</span>' : ''}
+                    ${activePerm.hormonal_wellness ? '<span class="vw-badge" style="background:#DCFCE7; color:#166534;">Hormonal Balance</span>' : ''}
+                    ${activePerm.medication_records ? '<span class="vw-badge" style="background:#DCFCE7; color:#166534;">Medications</span>' : ''}
+                    ${activePerm.lab_records ? '<span class="vw-badge" style="background:#DCFCE7; color:#166534;">Lab Diagnostics</span>' : ''}
+                  </div>
+                </div>
+              `;
+            }
+
+            // 3. Privacy Assurance Card
+            html += `
+              <div style="background: #FAF6F2; border: 1px solid #E5D5C5; border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                <span class="vw-inline-icon-wrap" style="color: #710014;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+                <div>
+                  <h4 style="margin: 0; font-size: 0.88rem; font-weight: 700; color: #710014;">VitaWise Zero-Leak Privacy Guarantee</h4>
+                  <p style="margin: 0.15rem 0 0 0; font-size: 0.8rem; color: #524B46; line-height: 1.4;">
+                    Your personal diagnostic, clinical and private health records belong exclusively to you. They are never shared without your explicit consent.
+                  </p>
+                </div>
+              </div>
+            `;
+
+            contentEl.innerHTML = html;
+
+            // Bind Approval Handler
+            document.getElementById('btn-approve-access-req')?.addEventListener('click', async (e) => {
+              const reqId = e.currentTarget.dataset.reqId;
+              const permissions = {
+                pcos_overview: !!(document.getElementById('perm-private') || document.getElementById('perm-pcos'))?.checked,
+                cycle_period: !!document.getElementById('perm-cycle')?.checked,
+                symptoms_journal: !!document.getElementById('perm-symptoms')?.checked,
+                hormonal_wellness: !!document.getElementById('perm-hormonal')?.checked,
+                medication_records: !!document.getElementById('perm-meds')?.checked,
+                lab_records: !!document.getElementById('perm-labs')?.checked
+              };
+              e.currentTarget.disabled = true;
+              e.currentTarget.textContent = 'Approving...';
+              try {
+                await window.VitaWiseApi.family.respondAccessRequest(reqId, { status: 'approved', permissions });
+                window.alert('Health access granted successfully to Family Admin.');
+                await initProfileFamilyControls(currentUser);
+              } catch (err) {
+                window.alert(err.message || 'Failed to approve request.');
+                e.currentTarget.disabled = false;
+                e.currentTarget.textContent = 'Approve Selected Access';
+              }
+            });
+
+            // Bind Decline Handler
+            document.getElementById('btn-deny-access-req')?.addEventListener('click', async (e) => {
+              const reqId = e.currentTarget.dataset.reqId;
+              e.currentTarget.disabled = true;
+              try {
+                await window.VitaWiseApi.family.respondAccessRequest(reqId, { status: 'denied' });
+                window.alert('Access request declined.');
+                await initProfileFamilyControls(currentUser);
+              } catch (err) {
+                window.alert(err.message || 'Failed to decline request.');
+                e.currentTarget.disabled = false;
+              }
+            });
+
+            // Bind Revoke Handler
+            document.getElementById('btn-revoke-perm')?.addEventListener('click', async (e) => {
+              if (!confirm('Are you sure you want to revoke all health access immediately? The Family Admin will no longer be able to view your private records.')) return;
+              e.currentTarget.disabled = true;
+              e.currentTarget.textContent = 'Revoking...';
+              try {
+                await window.VitaWiseApi.family.revokeAccess(currentUser.id);
+                window.alert('Access revoked immediately. Your records are completely locked.');
+                await initProfileFamilyControls(currentUser);
+              } catch (err) {
+                window.alert(err.message || 'Failed to revoke access.');
+                e.currentTarget.disabled = false;
+                e.currentTarget.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Revoke Access Immediately';
+              }
+            });
+
+          } else if (isFamilyAdmin) {
+            // Case B: User is Family Admin (Father)
+            const membersListHtml = members.map(m => {
+              const mIsFemale = String(m.gender || '').toLowerCase() === 'female';
+              let statusPill = `<span class="vw-badge" style="background: #E0E7FF; color: #3730A3;">General Health</span>`;
+              if (mIsFemale) {
+                statusPill = `<span class="vw-badge" style="background: #FEE2E2; color: #991B1B; display:inline-flex;align-items:center;gap:0.35rem;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Private Records Locked</span>`;
+              }
+              return `
+                <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 0.75rem; border-bottom: 1px solid #F2F1ED;">
+                  <div style="display: flex; align-items: center; gap: 0.65rem;">
+                    <div class="vw-user-avatar" style="width: 32px; height: 32px; font-size: 0.8rem;">${(m.full_name || 'VW').slice(0, 2).toUpperCase()}</div>
+                    <div>
+                      <strong style="font-size: 0.88rem; color: #161616;">${m.full_name}</strong>
+                      <span style="font-size: 0.78rem; color: #524B46; margin-left: 0.35rem;">(${m.relationship || 'Member'})</span>
+                    </div>
+                  </div>
+                  <div>${statusPill}</div>
+                </div>
+              `;
+            }).join('');
+
+            contentEl.innerHTML = `
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; background: #FAF6F2; border: 1px solid #E5D5C5; border-radius: 12px; padding: 1rem;">
+                  <div>
+                    <h4 style="margin: 0; color: #710014; font-size: 1rem;">${family.name || 'Family Health Space'}</h4>
+                    <p style="margin: 0.15rem 0 0 0; font-size: 0.82rem; color: #524B46;">${members.length} Household Members Managed</p>
+                  </div>
+                  <a href="./index.html#family-dashboard" class="vw-btn vw-btn-primary vw-btn-sm" style="text-decoration: none;">
+                    <span>Open Family Dashboard &rarr;</span>
+                  </a>
+                </div>
+
+                <div>
+                  <h5 style="margin: 0 0 0.5rem 0; font-size: 0.82rem; text-transform: uppercase; color: #710014; font-weight: 700; letter-spacing: 0.05em;">Household Members &amp; Privacy Status</h5>
+                  <div style="border: 1px solid #E2DFD7; border-radius: 10px; overflow: hidden; background: #FFFFFF;">
+                    ${membersListHtml}
+                  </div>
+                </div>
+              </div>
+            `;
+          } else {
+            // General male member (e.g. Son)
+            contentEl.innerHTML = `
+              <div style="background: #FAF6F2; border: 1px solid #E5D5C5; border-radius: 12px; padding: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                <span class="vw-inline-icon-wrap" style="color: #710014;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                <div>
+                  <h4 style="margin: 0; color: #710014; font-size: 0.9rem;">${family.name || 'VitaWise Family Space'}</h4>
+                  <p style="margin: 0.15rem 0 0 0; font-size: 0.8rem; color: #524B46;">
+                    You are connected as a <strong>${currentMember.relationship || 'Family Member'}</strong>. Your general wellness vitals, nutrition and streaks are active.
+                  </p>
+                </div>
+              </div>
+            `;
+          }
+
+        } catch (err) {
+          contentEl.innerHTML = `
+            <div style="font-size: 0.85rem; color: #524B46; padding: 0.5rem 0;">
+              Family status currently offline or individual mode active.
+            </div>
+          `;
+        }
+      }
+
+      // Initialize family controls for the current authenticated user
+      initProfileFamilyControls(user);
+      setupFamilyResetPassword(user);
+
+      // Load live database-backed achievements for profile
+      if (window.VitaWiseApi?.achievements) {
+        window.VitaWiseApi.achievements.getStatus().then(res => {
+          const grid = document.getElementById('profile-achievements-grid');
+          if (grid && res?.badges?.length) {
+            grid.innerHTML = res.badges.slice(0, 6).map(b => {
+              const isUnlocked = b.status === 'unlocked';
+              const isInProgress = b.status === 'in-progress';
+              const tagClass = isUnlocked ? 'unlocked' : (isInProgress ? 'progress' : 'locked');
+              const tagLabel = isUnlocked ? 'Unlocked' : (isInProgress ? `${b.current}/${b.target}` : 'Locked');
+              return `
+                <div class="vw-achievement-card" style="padding: 0.65rem 0.75rem;">
+                  <div class="vw-achievement-badge-icon ${isUnlocked ? 'gold' : (isInProgress ? 'blue' : 'bronze')}" style="width: 34px; height: 34px; display:flex;align-items:center;justify-content:center;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  </div>
+                  <div class="vw-achievement-info">
+                    <div class="vw-achievement-title" style="font-size: 0.8125rem;">${b.title}</div>
+                    <span class="vw-achievement-status-tag ${tagClass}" style="font-size: 0.65rem; padding: 0.1rem 0.35rem;">${tagLabel}</span>
+                  </div>
+                </div>
+              `;
+            }).join('');
+          }
+        }).catch(() => {});
+      }
+
+      // Logout
+      document.getElementById('logout-btn')?.addEventListener('click', () => {
+        window.VitaWiseApi.auth.logout();
+      });
+    });
+  </script>
+  <script src="./js/i18n-engine.js?v=2.8.0"></script>
+</body>
+</html>

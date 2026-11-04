@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Set up your personalized VitaWise wellness preferences.">
+  <title>Welcome to VitaWise — Setup</title>
+  <link rel="icon" href="./assets/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/tokens.css?v=2.4.0">
+  <link rel="stylesheet" href="./css/vitawise.css?v=2.4.0">
+  <link rel="stylesheet" href="./css/auth.css?v=2.4.0">
+</head>
+<body class="vw-auth-page">
+  <!-- Top Professional Header Bar -->
+  <header class="vw-auth-topbar">
+    <div class="vw-auth-topbar-inner">
+      <a href="./index.html" class="vw-auth-logo" aria-label="VitaWise">
+        <span class="vw-auth-logo-icon">
+          <svg viewBox="0 0 512 512" width="22" height="22" fill="none" style="display: block;">
+            <g fill="#FFFFFF">
+              <path d="M 112 256 V 184 C 112 144, 144 112, 184 112 H 208 V 256 H 112 Z" />
+              <path d="M 184 256 H 208 V 376 C 208 416, 176 448, 136 448 C 120 448, 112 440, 112 424 C 112 408, 120 400, 136 400 C 162 400, 184 378, 184 352 V 256 Z" />
+              <path d="M 208 256 L 344 112 H 392 C 416 112, 432 128, 432 152 V 256 H 336 L 208 384 V 256 Z" />
+            </g>
+          </svg>
+        </span>
+        <div class="vw-auth-logo-text">
+          <span class="vw-auth-brand-name"><span class="vw-brand-vita">Vita</span><span class="vw-brand-wise">Wise</span></span>
+          <span class="vw-auth-brand-caption">HEALTH INTELLIGENCE</span>
+        </div>
+      </a>
+      <div class="vw-auth-topbar-right">
+        <span class="vw-badge vw-badge-primary" id="onboarding-step-label" style="background: #710014; color: #FFFFFF; font-weight: 700; font-size: 0.8125rem; padding: 0.45rem 0.95rem; border-radius: 10px;">Step 1 of 3</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="vw-auth-body">
+    <section class="vw-onboarding-card">
+      <!-- 3-Step Progress Indicator -->
+      <div class="vw-step-indicator" aria-label="Onboarding Progress">
+        <div class="vw-step-dot active" id="dot-1" title="Step 1: Health Interests"></div>
+        <div class="vw-step-dot" id="dot-2" title="Step 2: Personal Details"></div>
+        <div class="vw-step-dot" id="dot-3" title="Step 3: Review Details"></div>
+      </div>
+
+      <div id="onboarding-alert" class="vw-alert hidden" role="alert" style="margin-bottom: 1.25rem;"></div>
+
+      <!-- =========================================================
+           STEP 1: HEALTH INTERESTS & RECOMMENDATIONS
+           ========================================================= -->
+      <div class="vw-step-content active" id="step-1">
+        <div style="margin-bottom: 1.4rem;">
+          <span class="vw-eyebrow" style="letter-spacing: 0.12em; font-weight: 700;">STEP 1 OF 3</span>
+          <h1 style="font-size: clamp(2rem, 2.5vw, 3rem); margin: 0.45rem 0 0.5rem; font-weight: 700; color: var(--text-primary); line-height: 1.05;">What is your primary wellness focus?</h1>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0; line-height: 1.5;">We tailor recommendations and insights to what matters most to your body.</p>
+        </div>
+
+        <div class="vw-focus-option selected" data-interest-id="fiber_nutrition_habits" data-name="Fiber & Nutrition Habits" data-icon="leaf" data-gender="male" role="radio" aria-checked="true" tabindex="0">
+          <div class="vw-focus-option-icon male" style="display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><circle cx="10" cy="14" r="5"/><line x1="19" y1="5" x2="13.6" y2="10.4"/><polyline points="15 5 19 5 19 9"/></svg></div>
+          <div class="vw-focus-option-copy">
+            <div class="vw-focus-option-title">Fiber &amp; Nutrition Habits</div>
+            <div class="vw-focus-option-subtitle">Traditional millets, protein pacing, and steady energy</div>
+          </div>
+        </div>
+
+        <div class="vw-focus-option" data-interest-id="hormonal_metabolic_balance" data-name="Hormonal & Metabolic Balance" data-icon="sparkles" data-gender="female" role="radio" aria-checked="false" tabindex="0">
+          <div class="vw-focus-option-icon female" style="display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><circle cx="12" cy="9" r="5"/><line x1="12" y1="14" x2="12" y2="21"/><line x1="9" y1="18" x2="15" y2="18"/></svg></div>
+          <div class="vw-focus-option-copy">
+            <div class="vw-focus-option-title">Hormonal &amp; Metabolic Balance</div>
+            <div class="vw-focus-option-subtitle">Endocrine vitality, insulin sensitivity, and cellular recovery</div>
+          </div>
+        </div>
+
+        <div class="vw-focus-option" data-interest-id="cycle_symptom_tracking" data-name="Cycle & Symptom Tracking" data-icon="users" data-gender="both" role="radio" aria-checked="false" tabindex="0">
+          <div class="vw-focus-option-icon both" style="display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vw-ui-icon"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div class="vw-focus-option-copy">
+            <div class="vw-focus-option-title">Cycle &amp; Symptom Tracking</div>
+            <div class="vw-focus-option-subtitle">Identifying patterns in energy, mood, and ovulation</div>
+          </div>
+        </div>
+
+        <button class="vw-btn vw-btn-primary vw-btn-block vw-btn-lg" type="button" id="next-step-1" style="margin-top: 1.1rem; min-height: 50px; border-radius: 14px;">
+          <span>Continue</span>
+        </button>
+      </div>
+
+      <!-- =========================================================
+           STEP 2: PERSONAL DETAILS
+           ========================================================= -->
+      <div class="vw-step-content" id="step-2">
+        <div style="margin-bottom: 1.5rem;">
+          <span class="vw-eyebrow">Personal Profile</span>
+          <h1 style="font-size: 1.5rem; margin: 0.25rem 0 0.5rem; font-weight: 700; color: var(--text-primary);">Personal Details</h1>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0;">Enter your personal details to personalize your experience.</p>
+        </div>
+
+        <!-- 1. Full Name -->
+        <div class="vw-form-group">
+          <label class="vw-label" for="full-name">Full Name <span style="color: var(--error);">*</span></label>
+          <input class="vw-input" id="full-name" name="fullName" type="text" placeholder="e.g. Rahul Verma or Ananya Sharma" autocomplete="name" required>
+        </div>
+
+        <!-- 2. Gender Selection -->
+        <div class="vw-form-group">
+          <label class="vw-label">Gender <span style="color: var(--error);">*</span></label>
+          <div class="vw-gender-grid" id="gender-selection">
+            <button type="button" class="vw-gender-card male" data-gender="male" role="radio" aria-checked="false" tabindex="0">
+              <span class="vw-gender-check" aria-hidden="true"></span>
+              <span class="vw-gender-card-title">Male</span>
+            </button>
+            <button type="button" class="vw-gender-card female" data-gender="female" role="radio" aria-checked="false" tabindex="0">
+              <span class="vw-gender-check" aria-hidden="true"></span>
+              <span class="vw-gender-card-title">Female</span>
+            </button>
+          </div>
+          <input type="hidden" id="selected-gender" name="gender" value="">
+        </div>
+
+        <!-- 3. Date of Birth -->
+        <div class="vw-form-group">
+          <label class="vw-label" for="dob">Date of Birth <span style="color: var(--error);">*</span></label>
+          <input class="vw-input" id="dob" name="dob" type="date" required>
+        </div>
+
+        <!-- 4. Age (Automatically calculated) -->
+        <div class="vw-form-group">
+          <label class="vw-label">Age</label>
+          <div class="vw-age-box" id="age-box">
+            <span class="vw-age-box-label">Calculated from Date of Birth:</span>
+            <span class="vw-age-box-val" id="age-display">Select DOB above</span>
+          </div>
+        </div>
+
+        <!-- 5. Height and Weight -->
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem;">
+          <div class="vw-form-group">
+            <label class="vw-label" for="height-cm">Height (cm) <span style="color: var(--error);">*</span></label>
+            <input class="vw-input" id="height-cm" name="heightCm" type="number" min="80" max="250" step="0.1" placeholder="e.g. 172" required>
+          </div>
+          <div class="vw-form-group">
+            <label class="vw-label" for="weight-kg">Weight (kg) <span style="color: var(--error);">*</span></label>
+            <input class="vw-input" id="weight-kg" name="weightKg" type="number" min="20" max="300" step="0.1" placeholder="e.g. 68" required>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 0.6rem; margin-top: 1.25rem;">
+          <button class="vw-btn vw-btn-secondary vw-btn-sm" type="button" id="back-step-2" style="min-width: 80px;">← Back</button>
+          <button class="vw-btn vw-btn-primary vw-btn-sm" style="flex: 1; min-height: 42px;" type="button" id="next-step-2">
+            <span>Continue →</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           STEP 3: COMPLETE DETAILS PREVIEW
+           ========================================================= -->
+      <div class="vw-step-content" id="step-3">
+        <div style="margin-bottom: 1.5rem;">
+          <span class="vw-eyebrow">Confirmation</span>
+          <h1 style="font-size: 1.5rem; margin: 0.25rem 0 0.5rem; font-weight: 700; color: var(--text-primary);">Review Your Details</h1>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0;">Please check your information before continuing.</p>
+        </div>
+
+        <!-- Personal Details Preview Card -->
+        <div class="vw-review-card">
+          <div class="vw-review-title">
+            <span>Personal Details</span>
+            <button type="button" class="vw-text-link" id="edit-personal-btn" style="font-size: 0.75rem; text-transform: none;">Edit Details</button>
+          </div>
+          <div class="vw-review-row">
+            <span class="vw-review-key">Full Name</span>
+            <span class="vw-review-val" id="preview-name">—</span>
+          </div>
+          <div class="vw-review-row">
+            <span class="vw-review-key">Gender</span>
+            <span class="vw-review-val" id="preview-gender">—</span>
+          </div>
+          <div class="vw-review-row">
+            <span class="vw-review-key">Date of Birth</span>
+            <span class="vw-review-val" id="preview-dob">—</span>
+          </div>
+          <div class="vw-review-row">
+            <span class="vw-review-key">Calculated Age</span>
+            <span class="vw-review-val" id="preview-age">—</span>
+          </div>
+          <div class="vw-review-row">
+            <span class="vw-review-key">Height</span>
+            <span class="vw-review-val" id="preview-height">—</span>
+          </div>
+          <div class="vw-review-row">
+            <span class="vw-review-key">Weight</span>
+            <span class="vw-review-val" id="preview-weight">—</span>
+          </div>
+        </div>
+
+        <!-- Selected Health Interests Preview Card -->
+        <div class="vw-review-card">
+          <div class="vw-review-title">
+            <span>Selected Health Interests</span>
+            <button type="button" class="vw-text-link" id="edit-interests-btn" style="font-size: 0.75rem; text-transform: none;">Change Interests</button>
+          </div>
+          <div class="vw-chip-container" id="preview-interests-container">
+            <!-- Chips populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Submission Actions -->
+        <div style="display: flex; gap: 0.6rem; margin-top: 1.25rem;">
+          <button class="vw-btn vw-btn-secondary vw-btn-sm" type="button" id="back-step-3" style="min-width: 80px;">← Back</button>
+          <button class="vw-btn vw-btn-primary vw-btn-sm" style="flex: 1; min-height: 42px;" type="button" id="finish-btn">
+            <span>Complete Setup & Continue →</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="vw-auth-footer">
+    <p>VitaWise · Evidence-Based Health Intelligence · Private & Client-Scoped</p>
+  </footer>
+
+  <script src="./js/vitawise-icons.js"></script>
+  <script src="./js/api.js?v=2.1.6"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Auth Guard: if not authenticated, redirect to login
+      if (!window.VitaWiseApi?.isAuthenticated()) {
+        window.location.replace('./login.html');
+        return;
+      }
+
+      const alertBox = document.getElementById('onboarding-alert');
+      function showAlert(msg) {
+        if (!alertBox) return;
+        alertBox.textContent = msg;
+        alertBox.className = 'vw-alert error';
+        alertBox.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      function clearAlert() {
+        if (!alertBox) return;
+        alertBox.textContent = '';
+        alertBox.className = 'vw-alert hidden';
+      }
+
+      // Step Navigation State
+      let currentStep = 1;
+      const dots = [
+        document.getElementById('dot-1'),
+        document.getElementById('dot-2'),
+        document.getElementById('dot-3'),
+      ];
+      const steps = [
+        document.getElementById('step-1'),
+        document.getElementById('step-2'),
+        document.getElementById('step-3'),
+      ];
+      const stepLabel = document.getElementById('onboarding-step-label');
+
+      function showStep(stepNum) {
+        clearAlert();
+        currentStep = stepNum;
+        steps.forEach((s, idx) => s.classList.toggle('active', idx === stepNum - 1));
+        dots.forEach((d, idx) => d.classList.toggle('active', idx <= stepNum - 1));
+        if (stepLabel) stepLabel.textContent = `Step ${stepNum} of 3`;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Max Date constraint for DOB input: Cannot be in future
+      const dobInput = document.getElementById('dob');
+      const heightInput = document.getElementById('height-cm');
+      const weightInput = document.getElementById('weight-kg');
+      const todayIso = new Date().toISOString().split('T')[0];
+      if (dobInput) {
+        dobInput.max = todayIso;
+      }
+
+      // --- STATE CONTAINERS ---
+      // Primary wellness focus is a single choice for Step 1.
+      const selectedInterests = new Map(); // key: name, value: { id, name, icon }
+      let selectedGender = '';
+      let calculatedAge = null;
+
+      // Pre-populate existing user data if available
+      const existingUser = window.VitaWiseApi.getUser() || {};
+      const fullNameInput = document.getElementById('full-name');
+      if (fullNameInput && (existingUser.fullName || existingUser.full_name)) {
+        fullNameInput.value = existingUser.fullName || existingUser.full_name;
+      }
+      if (existingUser.gender) {
+        selectedGender = existingUser.gender;
+        const genCard = document.querySelector(`.vw-gender-card[data-gender="${selectedGender}"]`);
+        if (genCard) {
+          genCard.classList.add('selected');
+          genCard.setAttribute('aria-checked', 'true');
+          const hiddenInput = document.getElementById('selected-gender');
+          if (hiddenInput) hiddenInput.value = selectedGender;
+        }
+      }
+      if (existingUser.dob && dobInput) {
+        dobInput.value = existingUser.dob;
+        calculateAndDisplayAge(existingUser.dob);
+      }
+      if (heightInput && existingUser.heightCm) heightInput.value = existingUser.heightCm;
+      if (weightInput && existingUser.weightKg) weightInput.value = existingUser.weightKg;
+      if (Array.isArray(existingUser.healthInterests) && existingUser.healthInterests.length > 0) {
+        existingUser.healthInterests.forEach(name => {
+          // Find matching card
+          const card = document.querySelector(`.vw-interest-card[data-name="${name}"]`);
+          if (card) {
+            const id = card.dataset.interestId;
+            const icon = card.dataset.icon;
+            selectedInterests.set(name, { id, name, icon });
+          } else {
+            selectedInterests.set(name, { id: name, name, icon: 'sparkles' });
+          }
+        });
+        syncInterestCardDom();
+      }
+
+      // Synchronize DOM classes with selectedInterests map
+      function syncInterestCardDom() {
+        document.querySelectorAll('.vw-focus-option').forEach(card => {
+          const name = card.dataset.name;
+          const isSel = selectedInterests.has(name);
+          card.classList.toggle('selected', isSel);
+          card.setAttribute('aria-checked', isSel ? 'true' : 'false');
+        });
+      }
+
+      // --- STEP 1: INTERACTION ---
+      document.querySelectorAll('.vw-focus-option').forEach(card => {
+        const toggleInterest = () => {
+          clearAlert();
+          const name = card.dataset.name;
+          const id = card.dataset.interestId;
+          const icon = card.dataset.icon;
+          const isOption1 = id === 'fiber_nutrition_habits';
+          const isOption2 = id === 'hormonal_metabolic_balance';
+          const isOption3 = id === 'cycle_symptom_tracking';
+
+          const currentlySelected = Array.from(selectedInterests.keys());
+          const hasOption1 = currentlySelected.includes('Fiber & Nutrition Habits');
+          const hasOption2 = currentlySelected.includes('Hormonal & Metabolic Balance');
+          const hasOption3 = currentlySelected.includes('Cycle & Symptom Tracking');
+
+          if (isOption1 && hasOption2) {
+            showAlert('Fiber & Nutrition Habits and Hormonal & Metabolic Balance cannot be selected together.');
+            return;
+          }
+
+          if (isOption2 && hasOption1) {
+            showAlert('Hormonal & Metabolic Balance and Fiber & Nutrition Habits cannot be selected together.');
+            return;
+          }
+
+          if (selectedInterests.has(name)) {
+            selectedInterests.delete(name);
+          } else {
+            if (isOption3) {
+              selectedInterests.set(name, { id, name, icon });
+            } else {
+              selectedInterests.clear();
+              selectedInterests.set(name, { id, name, icon });
+            }
+          }
+
+          syncInterestCardDom();
+        };
+
+        card.addEventListener('click', toggleInterest);
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleInterest();
+          }
+        });
+      });
+
+      // Step 1 Continue Button
+      document.getElementById('next-step-1').addEventListener('click', () => {
+        clearAlert();
+        const selectedNames = Array.from(selectedInterests.keys());
+        const hasOption1 = selectedNames.includes('Fiber & Nutrition Habits');
+        const hasOption2 = selectedNames.includes('Hormonal & Metabolic Balance');
+        const hasOption3 = selectedNames.includes('Cycle & Symptom Tracking');
+
+        if (!selectedNames.length) {
+          showAlert('Please select at least one health focus to continue.');
+          return;
+        }
+
+        const invalidPair = (hasOption1 && hasOption2);
+        if (invalidPair) {
+          showAlert('Fiber & Nutrition Habits and Hormonal & Metabolic Balance cannot be selected together.');
+          return;
+        }
+
+        if (!hasOption1 && !hasOption2 && !hasOption3) {
+          showAlert('Please choose a valid wellness focus combination.');
+          return;
+        }
+
+        showStep(2);
+      });
+
+      // --- STEP 2: PERSONAL DETAILS & AGE CALCULATION ---
+      // Gender Selection Cards
+      const genderCards = document.querySelectorAll('.vw-gender-card');
+      const hiddenGenderInput = document.getElementById('selected-gender');
+
+      genderCards.forEach(card => {
+        const pickGender = () => {
+          clearAlert();
+          genderCards.forEach(c => {
+            c.classList.remove('selected');
+            c.setAttribute('aria-checked', 'false');
+          });
+          card.classList.add('selected');
+          card.setAttribute('aria-checked', 'true');
+          selectedGender = card.dataset.gender;
+          if (hiddenGenderInput) hiddenGenderInput.value = selectedGender;
+        };
+
+        card.addEventListener('click', pickGender);
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            pickGender();
+          }
+        });
+      });
+
+      // Age calculation logic
+      function computeAgeFromDob(dobString) {
+        if (!dobString) return null;
+        const birthDate = new Date(dobString);
+        if (isNaN(birthDate.getTime())) return null;
+
+        const today = new Date();
+        if (birthDate > today) return null;
+
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const monthDiff = today.getMonth() - birthDate.getMonth();
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+          age--;
+        }
+        return age >= 0 ? age : null;
+      }
+
+      function calculateAndDisplayAge(dobString) {
+        const ageDisplay = document.getElementById('age-display');
+        if (!dobString) {
+          calculatedAge = null;
+          if (ageDisplay) {
+            ageDisplay.textContent = 'Select DOB above';
+            ageDisplay.style.color = 'var(--text-muted)';
+          }
+          return;
+        }
+
+        const age = computeAgeFromDob(dobString);
+        if (age === null || age < 0) {
+          calculatedAge = null;
+          if (ageDisplay) {
+            ageDisplay.textContent = 'Invalid date (future date)';
+            ageDisplay.style.color = 'var(--error)';
+          }
+          return;
+        }
+
+        calculatedAge = age;
+        if (ageDisplay) {
+          ageDisplay.textContent = `${age} years old`;
+          ageDisplay.style.color = 'var(--primary)';
+        }
+      }
+
+      if (dobInput) {
+        dobInput.addEventListener('input', (e) => {
+          clearAlert();
+          calculateAndDisplayAge(e.target.value);
+        });
+        dobInput.addEventListener('change', (e) => {
+          clearAlert();
+          calculateAndDisplayAge(e.target.value);
+        });
+      }
+
+      // Step 2 Navigation
+      document.getElementById('back-step-2').addEventListener('click', () => {
+        showStep(1);
+      });
+
+      document.getElementById('next-step-2').addEventListener('click', () => {
+        clearAlert();
+        const fullName = (fullNameInput?.value || '').trim();
+        const dob = (dobInput?.value || '').trim();
+        const heightCm = Number(heightInput?.value || 0);
+        const weightKg = Number(weightInput?.value || 0);
+
+        if (!fullName) {
+          showAlert('Please enter your full name.');
+          fullNameInput?.focus();
+          return;
+        }
+
+        if (!selectedGender) {
+          showAlert('Please select one gender option: Male or Female.');
+          return;
+        }
+
+        if (!dob) {
+          showAlert('Please select your Date of Birth.');
+          dobInput?.focus();
+          return;
+        }
+
+        calculateAndDisplayAge(dob);
+        if (calculatedAge === null) {
+          showAlert('Please enter a valid Date of Birth in the past.');
+          dobInput?.focus();
+          return;
+        }
+
+        if (calculatedAge < 1 || calculatedAge > 120) {
+          showAlert('Please enter a realistic Date of Birth.');
+          dobInput?.focus();
+          return;
+        }
+
+        if (heightCm < 80 || heightCm > 250) {
+          showAlert('Please enter a valid height between 80 and 250 cm.');
+          heightInput?.focus();
+          return;
+        }
+
+        if (weightKg < 20 || weightKg > 300) {
+          showAlert('Please enter a valid weight between 20 and 300 kg.');
+          weightInput?.focus();
+          return;
+        }
+
+        // Populate Step 3 Preview before showing
+        populateStep3Preview(fullName, selectedGender, dob, calculatedAge, heightCm, weightKg);
+        showStep(3);
+      });
+
+      // --- STEP 3: REVIEW DETAILS ---
+      function formatDateDisplay(isoDate) {
+        if (!isoDate) return '—';
+        try {
+          const parts = isoDate.split('-');
+          if (parts.length === 3) {
+            const d = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+            return d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+          }
+          return isoDate;
+        } catch {
+          return isoDate;
+        }
+      }
+
+      function populateStep3Preview(name, gender, dob, age, heightCm, weightKg) {
+        const previewName = document.getElementById('preview-name');
+        const previewGender = document.getElementById('preview-gender');
+        const previewDob = document.getElementById('preview-dob');
+        const previewAge = document.getElementById('preview-age');
+        const previewHeight = document.getElementById('preview-height');
+        const previewWeight = document.getElementById('preview-weight');
+        const chipContainer = document.getElementById('preview-interests-container');
+
+        if (previewName) previewName.textContent = name;
+        if (previewGender) previewGender.textContent = gender.charAt(0).toUpperCase() + gender.slice(1);
+        if (previewDob) previewDob.textContent = formatDateDisplay(dob);
+        if (previewAge) previewAge.textContent = `${age} years old`;
+        if (previewHeight) previewHeight.textContent = `${heightCm} cm`;
+        if (previewWeight) previewWeight.textContent = `${weightKg} kg`;
+
+        if (chipContainer) {
+          chipContainer.innerHTML = '';
+          selectedInterests.forEach(item => {
+            const chip = document.createElement('span');
+            chip.className = 'vw-interest-chip';
+            chip.innerHTML = `<span aria-hidden="true">${item.icon}</span> <span>${item.name}</span>`;
+            chipContainer.appendChild(chip);
+          });
+        }
+      }
+
+      // Step 3 Back / Edit Actions
+      document.getElementById('back-step-3').addEventListener('click', () => {
+        showStep(2);
+      });
+
+      document.getElementById('edit-personal-btn').addEventListener('click', () => {
+        showStep(2);
+      });
+
+      document.getElementById('edit-interests-btn').addEventListener('click', () => {
+        showStep(1);
+      });
+
+      // Final Completion Button
+      document.getElementById('finish-btn').addEventListener('click', async () => {
+        clearAlert();
+        const finishBtn = document.getElementById('finish-btn');
+        const fullName = (fullNameInput?.value || '').trim();
+        const dob = (dobInput?.value || '').trim();
+        const heightCm = Number(heightInput?.value || 0);
+        const weightKg = Number(weightInput?.value || 0);
+
+        // Validate complete profile
+        if (!fullName || !selectedGender || !dob || calculatedAge === null || heightCm < 80 || weightKg < 20) {
+          showAlert('Please ensure all required personal details are provided.');
+          showStep(2);
+          return;
+        }
+
+        if (selectedInterests.size === 0) {
+          showAlert('Please select at least one health focus area.');
+          showStep(1);
+          return;
+        }
+
+        finishBtn.disabled = true;
+        finishBtn.innerHTML = '<span>Saving Profile...</span>';
+
+        const healthInterestsList = Array.from(selectedInterests.values()).map(v => v.name);
+
+        const profilePayload = {
+          fullName,
+          gender: selectedGender,
+          dob,
+          age: calculatedAge,
+          heightCm,
+          weightKg,
+          healthInterests: healthInterestsList,
+          onboardingCompleted: true,
+        };
+
+        try {
+          await window.VitaWiseApi.auth.updateProfile(profilePayload);
+        } catch (err) {
+          console.warn('Profile save note:', err);
+        }
+
+        // Direct user to correct dashboard (gender is already stored in local storage and backend)
+        window.location.assign('./index.html');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "VitaWise — Health Intelligence",
+  "description": "AI-powered health intelligence platform for PCOS wellness and nutrition support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

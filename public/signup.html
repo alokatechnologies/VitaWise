@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Create your private VitaWise health space.">
+  <title>Create Account — VitaWise</title>
+  <link rel="icon" href="./assets/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/tokens.css?v=8.0.0">
+  <link rel="stylesheet" href="./css/vitawise.css?v=8.0.0">
+  <link rel="stylesheet" href="./css/auth.css?v=8.0.0">
+  <link rel="stylesheet" href="./css/dashboard.css?v=8.0.0">
+  <style>
+    .vw-intro-overlay {
+      position: fixed;
+      z-index: 2147483647;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: #FFFFFF;
+    }
+
+    .vw-intro-overlay[hidden] {
+      display: none;
+    }
+
+    .vw-intro-video {
+      width: 100%;
+      height: 100%;
+      max-width: 100vw;
+      max-height: 100vh;
+      object-fit: contain;
+      object-position: center;
+      transform: scale(0.62);
+      transform-origin: center;
+      transition: transform 0.3s ease;
+      mix-blend-mode: multiply;
+      border: none;
+      outline: none;
+      box-shadow: 0 0 0 12px #FFFFFF;
+    }
+
+    .vw-intro-start {
+      position: absolute;
+      bottom: 2rem;
+      padding: 0.85rem 1.75rem;
+      border: 0;
+      border-radius: 12px;
+      color: #ffffff;
+      background: #710014;
+      font: 600 0.95rem/1.2 Inter, sans-serif;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(113, 0, 20, 0.35);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .vw-intro-start:hover {
+      background: #580010;
+      transform: translateY(-2px);
+    }
+
+    .vw-btn-link-subtle:hover {
+      background: rgba(113, 0, 20, 0.06);
+      text-decoration: underline;
+    }
+
+    .vw-auth-body {
+      min-width: 0 !important;
+      max-width: 100vw;
+      box-sizing: border-box;
+    }
+
+    .vw-auth-card.vw-auth-card-wide {
+      max-width: min(1440px, 96vw) !important;
+      width: 100%;
+      min-width: 0 !important;
+      transition: max-width 0.3s ease;
+      box-sizing: border-box;
+      padding: 2.5rem 2rem !important;
+    }
+
+    #stage-family-flow,
+    #family-members-form {
+      width: 100%;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box;
+    }
+
+    .vw-family-grid {
+      display: grid !important;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 0 auto 1.75rem auto;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0 !important;
+      box-sizing: border-box;
+    }
+
+    /* Smaller tablet: 2 cards in one row */
+    @media (min-width: 640px) {
+      .vw-family-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.15rem;
+      }
+    }
+
+    /* Medium desktop/tablet: 3 cards in one row */
+    @media (min-width: 860px) {
+      .vw-family-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.15rem;
+      }
+    }
+
+    /* Large desktop: 4 cards in one row */
+    @media (min-width: 1120px) {
+      .vw-family-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.15rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .vw-auth-card.vw-auth-card-wide {
+        padding: 1.25rem 0.85rem !important;
+        max-width: 100% !important;
+      }
+
+      .vw-family-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+      }
+    }
+
+    .vw-member-card {
+      width: 100% !important;
+      min-width: 0 !important;
+      max-width: 100% !important;
+      box-sizing: border-box;
+      background: #FFFFFF;
+      border: 1.5px solid #E2DFD7;
+      border-radius: 14px;
+      padding: 1.25rem 1.15rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vw-family-grid {
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+    }
+
+    .vw-family-grid::-webkit-scrollbar {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
+
+    .vw-family-grid::-webkit-scrollbar-thumb,
+    .vw-family-grid::-webkit-scrollbar-track {
+      display: none !important;
+      background: transparent !important;
+    }
+
+    .vw-member-card {
+      flex: 0 0 290px !important;
+      width: 290px !important;
+      min-width: 290px !important;
+      max-width: 290px !important;
+      box-sizing: border-box;
+      background: #FFFFFF;
+      border: 1.5px solid #E2DFD7;
+      border-radius: 14px;
+      padding: 1.25rem 1.15rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vw-member-card:hover {
+      border-color: #C4C0B6;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    }
+
+    .vw-member-card-header {
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.65rem;
+      border-bottom: 1px solid #ECEAE4;
+    }
+
+    .vw-member-card-header .member-card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #710014;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .vw-member-card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .vw-member-card .vw-form-group {
+      margin-bottom: 0.8rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .vw-member-card .vw-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #383430;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    .vw-member-card .vw-input {
+      font-size: 0.88rem;
+      padding: 0.55rem 0.75rem;
+      height: auto;
+      border-radius: 8px;
+      border: 1.5px solid #E2DFD7;
+      box-sizing: border-box;
+      width: 100%;
+      min-width: 0;
+      background: #FFFFFF;
+      color: #161616;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .vw-member-card .vw-input:focus {
+      border-color: #710014;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(113, 0, 20, 0.1);
+    }
+
+    .vw-member-card .vw-password-wrap {
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .vw-member-card .btn-confirm-card {
+      margin-top: auto;
+      padding: 0.65rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      width: 100%;
+      border-radius: 8px;
+      border: none;
+      color: #FFFFFF;
+      background: #710014;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      box-shadow: 0 2px 6px rgba(113, 0, 20, 0.25);
+    }
+
+    .vw-member-card .btn-confirm-card:hover {
+      background: #580010;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(113, 0, 20, 0.35);
+    }
+
+    .vw-member-card.card-confirmed {
+      border-color: #2E7D32 !important;
+      background: #FFFFFF !important;
+    }
+
+    .vw-member-card.card-confirmed .btn-confirm-card {
+      background: #2E7D32 !important;
+      color: #FFFFFF !important;
+      border: none !important;
+      box-shadow: 0 2px 6px rgba(46, 125, 50, 0.25) !important;
+    }
+  </style>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body class="vw-auth-page">
+  <div class="vw-intro-overlay" id="nriit-intro" aria-label="NRIIT introduction">
+    <video class="vw-intro-video" id="nriit-intro-video" playsinline preload="auto">
+      <source src="./assets/nriit-intro.mp4" type="video/mp4">
+    </video>
+    <button class="vw-intro-start" id="nriit-intro-start" type="button" hidden>Play intro</button>
+  </div>
+  <script>
+    (() => {
+      const completionKey = 'nriit_intro_completed';
+      const intro = document.getElementById('nriit-intro');
+      const video = document.getElementById('nriit-intro-video');
+      const startButton = document.getElementById('nriit-intro-start');
+      let complete;
+
+      window.addEventListener('keydown', (event) => {
+        const key = typeof event.key === 'string' ? event.key.toLowerCase() : '';
+        if (!event.ctrlKey || !event.shiftKey || (key !== 'r' && key !== 'f5')) return;
+
+        event.preventDefault();
+        try {
+          localStorage.removeItem(completionKey);
+        } catch (_) { }
+        window.location.reload();
+      }, { capture: true });
+
+      window.VitaWiseIntroReady = new Promise((resolve) => {
+        const finish = (markCompleted) => {
+          if (!intro || intro.hidden) return;
+          if (markCompleted) {
+            try {
+              localStorage.setItem(completionKey, 'true');
+            } catch (_) { }
+          }
+          intro.hidden = true;
+          if (video) video.pause();
+          resolve();
+        };
+        complete = () => finish(true);
+
+        try {
+          if (localStorage.getItem(completionKey) === 'true') {
+            if (intro) intro.hidden = true;
+            resolve();
+            return;
+          }
+        } catch (_) { }
+
+        if (video) {
+          video.addEventListener('ended', complete, { once: true });
+          video.addEventListener('error', () => finish(false), { once: true });
+        }
+
+        const playIntro = () => {
+          if (startButton) startButton.hidden = true;
+          if (video) {
+            video.play().catch(() => {
+              if (startButton) startButton.hidden = false;
+            });
+          }
+        };
+
+        if (startButton) startButton.addEventListener('click', playIntro);
+        playIntro();
+      });
+    })();
+  </script>
+  <!-- Top Professional Header Bar -->
+  <header class="vw-auth-topbar">
+    <div class="vw-auth-topbar-inner">
+      <a href="./index.html" class="vw-auth-logo" aria-label="VitaWise">
+        <span class="vw-auth-logo-icon">
+          <svg viewBox="0 0 512 512" width="22" height="22" fill="none" style="display: block;">
+            <g fill="#FFFFFF">
+              <path d="M 112 256 V 184 C 112 144, 144 112, 184 112 H 208 V 256 H 112 Z" />
+              <path
+                d="M 184 256 H 208 V 376 C 208 416, 176 448, 136 448 C 120 448, 112 440, 112 424 C 112 408, 120 400, 136 400 C 162 400, 184 378, 184 352 V 256 Z" />
+              <path d="M 208 256 L 344 112 H 392 C 416 112, 432 128, 432 152 V 256 H 336 L 208 384 V 256 Z" />
+            </g>
+          </svg>
+        </span>
+        <div class="vw-auth-logo-text">
+          <span class="vw-auth-brand-name"><span class="vw-brand-vita">Vita</span><span
+              class="vw-brand-wise">Wise</span></span>
+          <span class="vw-auth-brand-caption">HEALTH INTELLIGENCE</span>
+        </div>
+      </a>
+      <div class="vw-auth-topbar-right">
+        <button class="vw-lang-toggle" id="auth-lang-toggle" type="button"
+          aria-label="Toggle language between English and Telugu">
+          <svg class="vw-lang-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+          <span id="auth-lang-label">EN</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Card -->
+  <main class="vw-auth-body">
+    <section class="vw-auth-card" id="signup-card">
+      <div class="vw-auth-card-header">
+        <h1 id="signup-title">Create Your Account</h1>
+        <p id="signup-subtitle">Parent/Admin verification and personal health space setup.</p>
+      </div>
+
+      <div id="auth-alert" class="vw-alert hidden" role="alert"></div>
+
+      <!-- Google Social Authentication -->
+      <div class="vw-social-auth">
+        <button type="button" class="vw-google-btn" data-google-auth="signup">
+          <svg class="vw-google-icon" viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#4285F4"
+              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+            <path fill="#34A853"
+              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+            <path fill="#FBBC05"
+              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+            <path fill="#EA4335"
+              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+          </svg>
+          <span id="signup-google-text">Continue with Google</span>
+        </button>
+      </div>
+
+      <div class="vw-auth-divider" id="signup-auth-divider">
+        <span id="signup-divider-text">or setup family space with credentials</span>
+      </div>
+
+
+      <!-- STAGE 1: PARENT / ADMIN VERIFICATION -->
+      <section id="stage-verification" class="vw-stage-section" style="display: block;">
+        <form id="verification-form" novalidate>
+          <div class="vw-form-group">
+            <label class="vw-label" for="parentEmail">
+              <span id="lbl-parent-email">Parent/Admin Email</span> <span style="color: var(--error);">*</span>
+            </label>
+            <input class="vw-input" id="parentEmail" name="parentEmail" type="email" placeholder="Enter email address"
+              autocomplete="email" required>
+          </div>
+
+          <div class="vw-form-group">
+            <label class="vw-label" for="parentPassword">
+              <span id="lbl-parent-password">Password</span> <span style="color: var(--error);">*</span>
+            </label>
+            <div class="vw-password-wrap">
+              <input class="vw-input" id="parentPassword" name="parentPassword" type="password"
+                placeholder="••••••••••••" autocomplete="current-password" required>
+              <button type="button" class="vw-password-toggle btn-eye-toggle" data-target="parentPassword"
+                aria-label="Toggle password visibility">
+                <svg class="vw-eye-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="vw-eye-slash-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  style="display: none;">
+                  <path
+                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                  </path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- 2 Selectable Circular Options Directly Above Continue (Side-by-Side) -->
+          <div class="vw-scope-selector"
+            style="margin: 1.25rem 0 0.5rem; display: flex; flex-direction: row; align-items: center; gap: 1.75rem; flex-wrap: wrap;">
+            <label class="vw-scope-option" id="opt-label-single"
+              style="display: flex; align-items: center; gap: 0.65rem; cursor: pointer; user-select: none; font-size: 0.95rem; font-weight: 500; color: #161616; transition: color 0.15s ease;">
+              <input type="radio" name="accountScope" value="single" id="scope-single" style="display: none;">
+              <span class="vw-radio-circle" id="circle-single"
+                style="width: 20px; height: 20px; min-width: 20px; border-radius: 50%; border: 2px solid #C4C0B6; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">
+                <span class="vw-radio-dot" id="dot-single"
+                  style="width: 10px; height: 10px; border-radius: 50%; background: #710014; display: none;"></span>
+              </span>
+              <span id="text-scope-single">Single Member</span>
+            </label>
+
+            <label class="vw-scope-option" id="opt-label-family"
+              style="display: flex; align-items: center; gap: 0.65rem; cursor: pointer; user-select: none; font-size: 0.95rem; font-weight: 500; color: #161616; transition: color 0.15s ease;">
+              <input type="radio" name="accountScope" value="family" id="scope-family" style="display: none;">
+              <span class="vw-radio-circle" id="circle-family"
+                style="width: 20px; height: 20px; min-width: 20px; border-radius: 50%; border: 2px solid #C4C0B6; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">
+                <span class="vw-radio-dot" id="dot-family"
+                  style="width: 10px; height: 10px; border-radius: 50%; background: #710014; display: none;"></span>
+              </span>
+              <span id="text-scope-family">Family Members</span>
+            </label>
+          </div>
+
+          <button class="vw-btn vw-btn-primary vw-btn-block vw-btn-lg" type="button" id="btn-verify-continue"
+            style="margin-top: 1.5rem;">
+            <span id="btn-text-continue">Continue</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- PARENT HEAD AUTH / SETUP SECTION -->
+      <section id="stage-parent-head" class="vw-stage-section" style="display: none;">
+        <form id="parent-head-form" novalidate>
+          <div class="vw-form-group">
+            <label class="vw-label" for="parentHeadEmail">
+              <span id="lbl-parent-head-email">Parent Head Email</span> <span style="color: var(--error);">*</span>
+            </label>
+            <input class="vw-input" id="parentHeadEmail" name="parentHeadEmail" type="email"
+              placeholder="Enter parent head email" autocomplete="email" required>
+          </div>
+
+          <div class="vw-form-group">
+            <label class="vw-label" for="parentHeadPassword">
+              <span id="lbl-parent-head-password">New Password</span> <span style="color: var(--error);">*</span>
+            </label>
+            <div class="vw-password-wrap">
+              <input class="vw-input" id="parentHeadPassword" name="parentHeadPassword" type="password"
+                placeholder="••••••••••••" minlength="8" autocomplete="new-password" required>
+              <button type="button" class="vw-password-toggle btn-eye-toggle" data-target="parentHeadPassword"
+                aria-label="Toggle password visibility">
+                <svg class="vw-eye-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="vw-eye-slash-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  style="display: none;">
+                  <path
+                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                  </path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="vw-form-group">
+            <label class="vw-label" for="parentHeadConfirmPassword">
+              <span id="lbl-parent-head-confirm-password">Re-enter Password</span> <span
+                style="color: var(--error);">*</span>
+            </label>
+            <div class="vw-password-wrap">
+              <input class="vw-input" id="parentHeadConfirmPassword" name="parentHeadConfirmPassword" type="password"
+                placeholder="••••••••••••" minlength="8" autocomplete="new-password" required>
+              <button type="button" class="vw-password-toggle btn-eye-toggle" data-target="parentHeadConfirmPassword"
+                aria-label="Toggle password visibility">
+                <svg class="vw-eye-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <svg class="vw-eye-slash-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  style="display: none;">
+                  <path
+                    d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                  </path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+            <div id="parent-head-password-mismatch-error"
+              style="display: none; color: var(--error); font-size: 0.82rem; margin-top: 0.35rem; font-weight: 600;">
+              Passwords do not match.
+            </div>
+          </div>
+
+          <button class="vw-btn vw-btn-primary vw-btn-block vw-btn-lg" type="submit" id="submit-parent-head-btn"
+            style="margin-top: 1.5rem;">
+            <span id="btn-text-create-parent-head">Create Parent Head Account</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- STAGE 2: PERSONAL DETAILS (Revealed upon successful verification) -->
+      <section id="stage-personal-details" class="vw-stage-section" style="display: none;">
+        <form id="personal-details-form" novalidate>
+          <!-- Verified Email Display (for Google Auth) -->
+          <div class="vw-form-group" id="personal-email-group" style="display: none;">
+            <label class="vw-label" for="personalEmail">
+              <span id="lbl-verified-email">Family Head Email (Verified)</span>
+            </label>
+            <input class="vw-input" id="personalEmail" name="personalEmail" type="email" readonly
+              style="background: #FAF6F2; color: #161616; font-weight: 600; cursor: not-allowed;">
+          </div>
+
+          <!-- 1. Name -->
+          <div class="vw-form-group">
+            <label class="vw-label" for="personalFullName">
+              <span id="lbl-name">Name</span> <span style="color: var(--error);">*</span>
+            </label>
+            <input class="vw-input" id="personalFullName" name="personalFullName" type="text" placeholder="Full name"
+              autocomplete="name" required>
+          </div>
+
+          <!-- 2. Age -->
+          <div class="vw-form-group">
+            <label class="vw-label" for="personalAge">
+              <span id="lbl-age">Age</span> <span style="color: var(--error);">*</span>
+            </label>
+            <input class="vw-input" id="personalAge" name="personalAge" type="number" min="1" max="120"
+              placeholder="e.g. 25" required>
+          </div>
+
+          <!-- 3. Weight -->
+          <div class="vw-form-group">
+            <label class="vw-label" for="personalWeight">
+              <span id="lbl-weight">Weight (kg)</span> <span style="color: var(--error);">*</span>
+            </label>
+            <input class="vw-input" id="personalWeight" name="personalWeight" type="number" step="0.1" min="10"
+              max="300" placeholder="e.g. 62.5" required>
+          </div>
+
+          <!-- 4. Height -->
+          <div class="vw-form-group">
+            <label class="vw-label" for="personalHeight">
+              <span id="lbl-height">Height (cm)</span> <span style="color: var(--error);">*</span>
+            </label>
+            <input class="vw-input" id="personalHeight" name="personalHeight" type="number" step="0.5" min="40"
+              max="250" placeholder="e.g. 165" required>
+          </div>
+
+          <!-- 5. Gender Selection (Using existing VitaWise components) -->
+          <div class="vw-form-group">
+            <label class="vw-label">
+              <span id="lbl-gender">Gender</span> <span style="color: var(--error);">*</span>
+            </label>
+            <div class="vw-gender-tiles" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+              <label class="vw-gender-card active" id="gender-card-female"
+                style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem; border: 1.5px solid #710014; border-radius: 12px; cursor: pointer; background: #FFF9FA; transition: all 0.2s ease;">
+                <input type="radio" name="personalGender" value="female" checked style="accent-color: #710014;">
+                <span style="font-weight: 700; color: #710014;" id="lbl-gender-female">Female</span>
+              </label>
+              <label class="vw-gender-card" id="gender-card-male"
+                style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem; border: 1.5px solid #E2DFD7; border-radius: 12px; cursor: pointer; background: #FFFFFF; transition: all 0.2s ease;">
+                <input type="radio" name="personalGender" value="male" style="accent-color: #710014;">
+                <span style="font-weight: 700; color: #161616;" id="lbl-gender-male">Male</span>
+              </label>
+            </div>
+          </div>
+
+          <div id="personal-password-fields">
+            <!-- 6. Create Password -->
+            <div class="vw-form-group">
+              <label class="vw-label" for="createPassword">
+                <span id="lbl-create-password">Create Password</span> <span style="color: var(--error);">*</span>
+              </label>
+              <div class="vw-password-wrap">
+                <input class="vw-input" id="createPassword" name="createPassword" type="password"
+                  placeholder="At least 8 characters" minlength="8" autocomplete="new-password" required>
+                <button type="button" class="vw-password-toggle btn-eye-toggle" data-target="createPassword"
+                  aria-label="Toggle password visibility">
+                  <svg class="vw-eye-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <svg class="vw-eye-slash-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    style="display: none;">
+                    <path
+                      d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                    </path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- 7. Re-enter Password -->
+            <div class="vw-form-group">
+              <label class="vw-label" for="confirmPassword">
+                <span id="lbl-confirm-password">Re-enter Password</span> <span style="color: var(--error);">*</span>
+              </label>
+              <div class="vw-password-wrap">
+                <input class="vw-input" id="confirmPassword" name="confirmPassword" type="password"
+                  placeholder="Confirm password" minlength="8" autocomplete="new-password" required>
+                <button type="button" class="vw-password-toggle btn-eye-toggle" data-target="confirmPassword"
+                  aria-label="Toggle password visibility">
+                  <svg class="vw-eye-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <svg class="vw-eye-slash-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    style="display: none;">
+                    <path
+                      d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24">
+                    </path>
+                    <line x1="1" y1="1" x2="23" y2="23"></line>
+                  </svg>
+                </button>
+              </div>
+              <div id="password-mismatch-error"
+                style="display: none; color: var(--error); font-size: 0.82rem; margin-top: 0.35rem; font-weight: 600;">
+                Passwords do not match.
+              </div>
+            </div>
+          </div>
+
+          <button class="vw-btn vw-btn-primary vw-btn-block vw-btn-lg" type="submit" id="submit-account-btn"
+            style="margin-top: 1.5rem;">
+            <span id="btn-text-create">Create Account</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- STAGE 2B: FAMILY MEMBERS FLOW -->
+      <section id="stage-family-flow" class="vw-stage-section" style="display: none;">
+        <!-- Step 1: Member Count Stepper -->
+        <div id="family-count-section" style="margin-bottom: 1.5rem; text-align: center;">
+          <h2 style="font-size: 1.2rem; font-weight: 700; color: #161616; margin-bottom: 0.35rem;"
+            id="family-count-heading">How many family members?</h2>
+          <p style="font-size: 0.88rem; color: #6E685E; margin-bottom: 1rem;" id="family-count-subheading">Choose how
+            many people in your family to add.</p>
+
+          <div
+            style="display: inline-flex; align-items: center; gap: 1.25rem; background: #F7F5F0; padding: 0.5rem 1.25rem; border-radius: 30px; border: 1px solid #E2DFD7;">
+            <button type="button" id="btn-count-minus" aria-label="Decrease members"
+              style="width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #710014; background: #FFFFFF; color: #710014; font-size: 1.2rem; font-weight: 700; cursor: pointer; display: grid; place-items: center; line-height: 1;">&minus;</button>
+            <span id="family-count-display"
+              style="font-size: 1.35rem; font-weight: 700; color: #161616; min-width: 2rem; text-align: center;">4</span>
+            <button type="button" id="btn-count-plus" aria-label="Increase members"
+              style="width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #710014; background: #710014; color: #FFFFFF; font-size: 1.2rem; font-weight: 700; cursor: pointer; display: grid; place-items: center; line-height: 1;">&plus;</button>
+          </div>
+        </div>
+
+        <form id="family-members-form" novalidate>
+          <!-- Dynamic Member Cards Container in Responsive Grid -->
+          <div id="family-member-cards-container" class="vw-family-grid">
+            <!-- Generated dynamically in JavaScript -->
+          </div>
+
+          <!-- Clean Review/Confirmation Section -->
+          <div id="family-review-summary"
+            style="background: #FFF9FA; border: 1px solid rgba(113,0,20,0.15); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
+            <h3 style="font-size: 0.95rem; font-weight: 700; color: #710014; margin-bottom: 0.4rem;"
+              id="summary-family-heading">Your Family</h3>
+            <div style="font-size: 0.85rem; color: #4A463F; margin-bottom: 0.35rem;">
+              <span style="font-weight: 600;" id="summary-lbl-head">Family Head:</span> <span
+                id="summary-head-email"></span>
+            </div>
+            <div id="summary-members-list"
+              style="font-size: 0.85rem; color: #4A463F; display: flex; flex-direction: column; gap: 0.25rem;">
+            </div>
+          </div>
+
+          <button class="vw-btn vw-btn-primary vw-btn-block vw-btn-lg" type="submit" id="submit-family-btn">
+            <span id="btn-text-confirm-family">Create Family Health Space</span>
+          </button>
+        </form>
+      </section>
+
+    </section>
+
+    <!-- Lower text area below the Signup Card: side by side -->
+    <div class="vw-auth-below-card" id="signup-lower-area" style="text-align: center; margin-top: 1.25rem; display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+      <span id="prompt-already-registered" style="font-size: 0.95rem; color: var(--text-secondary);">Already registered?</span>
+      <a href="./login.html" class="vw-btn-link-subtle" id="btn-signup-to-login" style="background: none; border: none; color: #710014; font-family: inherit; font-size: 0.95rem; font-weight: 600; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 0.25rem; padding: 0.35rem 0.65rem; border-radius: 6px; transition: color 0.15s ease, background 0.15s ease;">Sign In</a>
+    </div>
+
+    <!-- Multi-stage Back Navigation (Hidden at start) -->
+    <div id="below-card-nav" style="text-align: center; margin-top: 1.25rem; display: none;">
+      <button type="button" id="btn-card-back" class="vw-btn-link-subtle"
+        style="background: none; border: none; color: #710014; font-family: inherit; font-size: 0.95rem; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; padding: 0.35rem 0.75rem; border-radius: 6px; transition: opacity 0.15s ease, transform 0.15s ease;">
+        <span aria-hidden="true">&larr;</span>
+        <span id="btn-card-back-text">Back</span>
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer Branding -->
+  <footer class="vw-brand-footer">
+    <div class="vw-brand-signature">
+      <img src="./assets/aloka-logo.png" alt="Aloka Logo" class="vw-brand-logo">
+      <span class="vw-brand-text">Powered by <strong>Aloka</strong></span>
+    </div>
+  </footer>
+
+  <script src="./js/api.js?v=9.1.0"></script>
+  <script src="./js/i18n-engine.js?v=2.8.0"></script>
+  <script src="./js/auth.js?v=9.1.0"></script>
+</body>
+
+</html>
