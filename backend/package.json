@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "node -e \"try{fs.rmSync('dist',{recursive:true,force:true});fs.rmSync('tsconfig.tsbuildinfo',{force:true})}catch(_){}\"",
-    "build": "nest build",
+    "build": "nest build -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "ts-node --transpile-only src/main.ts",
     "start:dev": "nest start --watch",
